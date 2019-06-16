@@ -27,13 +27,10 @@ h3 {
   font-family: "Averia Gruesa Libre", cursive; }
 
 .nav {
-  color: #f0fff0;
   display: grid;
-  grid-template-rows: 1fr; }
+  grid-template-columns: 1fr; }
   .nav__logo-box {
     height: 15vh;
     background-color: #226767; }
-  .nav__menu li {
-    list-style: none;
-    text-decoration: none;
-    font-family: "Averia Gruesa Libre", cursive; }
+
+/*# sourceMappingURL=style.css.map */

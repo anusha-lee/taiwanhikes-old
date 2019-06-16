@@ -1,0 +1,19 @@
+.nav {
+  color: $color-white;
+
+  display: grid;
+  grid-template-rows: 1fr;
+  &__logo-box {
+    height: 15vh;
+    background-color: $default-color;
+  }
+  &__heading {
+  }
+  &__menu {
+    li {
+      list-style: none;
+      text-decoration: none;
+      font-family: $font-heading;
+    }
+  }
+}
