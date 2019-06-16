@@ -1,7 +1,27 @@
-/* font-family: 'Averia Gruesa Libre', cursive;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: #f0fff0; }
+
+/********************
+font-family: 'Averia Gruesa Libre', cursive;
 font-family: 'Alegreya Sans SC', sans-serif; 
 base-color: #226767;
 heading-font-color: #D24747;
+************************/
+body {
+  font-family: "Alegreya Sans SC", sans-serif; }
 
-
-*/
+.nav__heading,
+h2,
+h3 {
+  font-family: "Averia Gruesa Libre", cursive; }

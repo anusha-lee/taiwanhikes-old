@@ -4,8 +4,7 @@
   "description": "Taiwan Hikes website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "node-sass sass/main.scss css/style.css"
+    "compile:sass": "node-sass --watch sass/main.scss css/style.css"
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,7 @@
   "homepage": "https://github.com/anusha-lee/taiwanhikes#readme",
   "dependencies": {},
   "devDependencies": {
+    "node": "^12.4.0",
     "node-sass": "^4.12.0"
   }
 }
