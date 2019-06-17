@@ -1,19 +1,45 @@
-.nav {
-  color: $color-white;
-
+.header {
+  width: 100%;
+  height: 10vh;
+  background-color: $default-color;
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-columns: 5% 55% 40%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+
   &__logo-box {
-    height: 15vh;
-    background-color: $default-color;
+    display: grid;
+    justify-content: center;
+    align-content: center;
   }
+
+  &__logo {
+    width: 5rem;
+  }
+
   &__heading {
+    font-size: $font-size-medium;
   }
-  &__menu {
-    li {
-      list-style: none;
-      text-decoration: none;
-      font-family: $font-heading;
+
+  &__nav {
+    &--menu {
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+
+      &-item {
+      }
+
+      &-link:link,
+      &-link:visited {
+        color: $color-white;
+        font-size: $font-size-medium;
+      }
+      &-link:hover,
+      &-link:active {
+        color: lighten($default-color-heading, 10%);
+      }
     }
   }
 }

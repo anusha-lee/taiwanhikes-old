@@ -14,3 +14,17 @@ body {
   box-sizing: border-box;
   background-color: $color-white;
 }
+
+.main,
+.footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
