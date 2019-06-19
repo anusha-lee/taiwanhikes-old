@@ -37,17 +37,28 @@
 
   &__nav {
     &--dropdown {
-      display: none;
+      //display: none;
       text-align: left;
       font-size: $font-size-sm;
-      //margin-top: -5rem;
+      margin: 5px 0;
       width: 100%;
-      height: 100rem;
-      padding: 1rem 2rem 4rem;
+      padding: 2px;
+      background-color: $color-white;
+      li {
+        height: 100%;
+        width: 100%;
+      }
+      li > a {
+        display: block;
+      }
     }
-    &--dropdown:hover li {
+
+    &--dropdown > li:hover {
+      background-color: $default-color;
       display: block;
     }
+
+    // https://codepen.io/storyofedd-the-decoder/pen/MLrjjL
 
     &--menu {
       display: grid;
