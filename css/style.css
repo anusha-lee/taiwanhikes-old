@@ -43,15 +43,11 @@ h3 {
   width: 100%;
   height: 10vh;
   background-color: #76a3a3;
+  box-shadow: 0 2px 5px #888888;
   display: grid;
   grid-template-columns: 5% 50% 45%;
   justify-content: space-around;
-  align-items: center;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s; }
+  align-items: center; }
   .header__logo-box {
     display: grid;
     justify-content: center;
@@ -63,21 +59,6 @@ h3 {
     font-size: 2.3rem;
     animation: bounceInDown 0.5s 0.3s ease-in-out;
     -webkit-animation: bounceInDown 0.5s 0.3s ease-in-out; }
-  .header__nav--dropdown {
-    text-align: left;
-    font-size: 1.6rem;
-    margin: 5px 0;
-    width: 100%;
-    padding: 2px;
-    background-color: #fff; }
-    .header__nav--dropdown li {
-      height: 100%;
-      width: 100%; }
-    .header__nav--dropdown li > a {
-      display: block; }
-  .header__nav--dropdown > li:hover {
-    background-color: #76a3a3;
-    display: block; }
   .header__nav--menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -101,8 +82,45 @@ h3 {
       -ms-transition: all 0.4s ease-in-out;
       -o-transition: all 0.4s ease-in-out; }
     .header__nav--menu-link:hover, .header__nav--menu-link:active {
-      color: #dc7070;
-      background-color: aqua; }
+      color: #a2a2a2;
+      background-color: #5c8a8a; }
+
+.menu {
+  display: flex;
+  position: relative; }
+  li:hover .menu__dropdown {
+    display: block; }
+  .menu__item > a {
+    display: inline-block;
+    width: 100%; }
+  .menu__item:hover {
+    color: #fff;
+    background-color: #888888;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out; }
+  .menu__dropdown {
+    display: none;
+    position: absolute;
+    background-color: #d24747; }
+    .menu__dropdown-item {
+      font-size: 1.6rem;
+      padding: 1rem;
+      text-align: left;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s; }
+    .menu__dropdown-item:hover {
+      background-color: #d24747;
+      color: #fff; }
 
 @keyframes bounceInDown {
   from,
