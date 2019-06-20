@@ -83,7 +83,7 @@
 
   &__item:hover {
     color: $color-white;
-    background-color: $color-grey;
+    background-color: darken($default-color, 10%);
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -94,7 +94,7 @@
   &__dropdown {
     display: none;
     position: absolute;
-    background-color: $default-color-heading;
+    background-color: $default-color;
 
     &-item {
       font-size: $font-size-sm;

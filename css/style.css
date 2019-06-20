@@ -95,7 +95,7 @@ h3 {
     width: 100%; }
   .menu__item:hover {
     color: #fff;
-    background-color: #888888;
+    background-color: #5c8a8a;
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -104,7 +104,7 @@ h3 {
   .menu__dropdown {
     display: none;
     position: absolute;
-    background-color: #d24747; }
+    background-color: #76a3a3; }
     .menu__dropdown-item {
       font-size: 1.6rem;
       padding: 1rem;
