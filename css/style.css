@@ -1,3 +1,17 @@
+@-webkit-keyframes zoomInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
+
 *,
 *::after,
 *::before {
@@ -45,7 +59,7 @@ h3 {
   background-color: #76a3a3;
   box-shadow: 0 2px 5px #888888;
   display: grid;
-  grid-template-columns: 5% 50% 45%;
+  grid-template-columns: 5% 45% 50%;
   justify-content: space-around;
   align-items: center; }
   .header__logo-box {
@@ -67,7 +81,7 @@ h3 {
     .header__nav--menu-item {
       display: block;
       width: 100%;
-      height: 100%;
+      height: 3rem;
       text-align: center;
       margin: 0;
       padding: 0.2rem; }
@@ -119,8 +133,62 @@ h3 {
       -ms-transition: all 0.5s;
       -o-transition: all 0.5s; }
     .menu__dropdown-item:hover {
-      background-color: #d24747;
+      background-color: #76a3a3;
       color: #fff; }
+
+#sReasons,
+#eThings {
+  position: relative; }
+
+#sReasons:hover::after {
+  content: "Why You Should Hike in Taiwan";
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem;
+  display: grid;
+  align-content: center;
+  padding-left: 1rem;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: #fff;
+  animation: zoomInLeft 0.4s cubic-bezier(0, -1, 0.88, 0.16); }
+
+#eThings:hover::after {
+  content: "to Know before You Hike in Taiwan";
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem;
+  display: grid;
+  align-content: center;
+  padding-left: 1rem;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: #fff;
+  animation: zoomInLeft 0.4s cubic-bezier(0, -1, 0.88, 0.16); }
+
+.zoomInDown {
+  -webkit-animation-name: zoomInDown;
+  animation-name: zoomInDown; }
+
+@-webkit-keyframes zoomInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
 @keyframes bounceInDown {
   from,

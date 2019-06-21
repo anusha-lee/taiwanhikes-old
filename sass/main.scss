@@ -1,4 +1,5 @@
 @import "02abstracts/variables";
+@import "02abstracts/mixins";
 
 @import "01base/base";
 @import "01base/typography";
@@ -6,3 +7,5 @@
 @import "03components/bg-video";
 
 @import "04layout/header";
+
+@import "06vendors/animations";

@@ -5,7 +5,7 @@
   box-shadow: 0 2px 5px $color-grey;
 
   display: grid;
-  grid-template-columns: 5% 50% 45%;
+  grid-template-columns: 5% 45% 50%;
   justify-content: space-around;
   align-items: center;
 
@@ -36,7 +36,7 @@
       &-item {
         display: block;
         width: 100%;
-        height: 100%;
+        height: 3rem;
         text-align: center;
         margin: 0;
         padding: 0.2rem;
@@ -113,45 +113,22 @@
     }
 
     &-item:hover {
-      background-color: $default-color-heading;
+      background-color: $default-color;
       color: $color-white;
     }
   }
 }
 
-// animation
-@keyframes bounceInDown {
-  from,
-  60%,
-  75%,
-  90%,
-  to {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-
-  0% {
-    opacity: 0;
-    transform: translate3d(0, -3000px, 0);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translate3d(0, 25px, 0);
-  }
-
-  75% {
-    transform: translate3d(0, -10px, 0);
-  }
-
-  90% {
-    transform: translate3d(0, 5px, 0);
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+// Dropdown hover effects
+#sReasons,
+#eThings {
+  position: relative;
 }
-
-.bounceInDown {
-  animation-name: bounceInDown;
+#sReasons:hover::after {
+  content: "Why You Should Hike in Taiwan";
+  @include dropdown-menu-effect;
+}
+#eThings:hover::after {
+  content: "to Know before You Hike in Taiwan";
+  @include dropdown-menu-effect;
 }
