@@ -1,0 +1,24 @@
+.landing-content {
+  margin: 1rem;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 1rem;
+  justify-content: space-around;
+
+  &__main {
+    grid-column: 2 / 9;
+    grid-row: 1 / 6;
+  }
+  &__sidebar {
+    border: 1px solid green;
+    grid-column: 9 / 12;
+    grid-row: 1 / 6;
+  }
+  &__testimony {
+    background-color: olivedrab;
+    grid-column: 3 / 11;
+    grid-row: 6 / 7;
+  }
+}

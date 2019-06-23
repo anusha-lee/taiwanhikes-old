@@ -1,12 +1,11 @@
 @mixin dropdown-menu-effect {
-  width: 100%;
-  height: 100%;
-  padding: 0.2rem;
+  width: 28vw;
+  height: 98%;
   display: grid;
   align-content: center;
   padding-left: 1rem;
-  //background-color: darken($default-color, 10%);
-  background-color: red;
+  background-color: darken($default-color, 10%);
+  // background-color: red;
   position: absolute;
   top: 0;
   left: 0;

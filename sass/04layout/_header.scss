@@ -3,10 +3,9 @@
   height: 10vh;
   background-color: $default-color;
   box-shadow: 0 2px 5px $color-grey;
-
   display: grid;
   grid-template-columns: 5% 45% 50%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   &__logo-box {
@@ -20,13 +19,30 @@
   }
 
   &__heading {
+    letter-spacing: 2px;
     padding-left: 1rem;
+    transition: all 0.3s;
     font-size: $font-size-medium;
     animation: bounceInDown 0.5s 0.3s ease-in-out;
     -webkit-animation: bounceInDown 0.5s 0.3s ease-in-out;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+  }
+
+  &__heading a:link,
+  &__heading a:visited {
+    color: $color-white;
+  }
+
+  &__heading a:hover,
+  &__heading a:active {
+    color: $default-color-heading;
   }
 
   &__nav {
+    z-index: 99;
     &--menu {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -35,15 +51,11 @@
 
       &-item {
         display: block;
-        width: 100%;
+        width: 300px; //100%
         height: 3rem;
-        text-align: center;
+        text-align: left;
         margin: 0;
         padding: 0.2rem;
-      }
-
-      &-link {
-        display: block;
       }
 
       &-link:link,
@@ -59,13 +71,11 @@
 
       &-link:hover,
       &-link:active {
-        color: lighten($color-grey, 10%);
-        background-color: darken($default-color, 10%);
+        color: $default-color-heading;
       }
     }
   }
 }
-
 // Dropdown Menu
 
 .menu {
@@ -82,8 +92,8 @@
   }
 
   &__item:hover {
-    color: $color-white;
-    background-color: darken($default-color, 10%);
+    //color: $color-white;
+    //background-color: darken($default-color, 10%);
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -94,17 +104,17 @@
   &__dropdown {
     display: none;
     position: absolute;
-    background-color: $default-color;
 
     &-item {
       font-size: $font-size-sm;
       //margin: 0.2rem;
-      padding: 1rem;
+      width: 11vw;
+      padding: 0.8rem;
       text-align: left;
       color: $color-white;
       display: flex;
       flex-direction: column;
-      background-color: $color-white;
+      background-color: $default-color;
       transition: all 0.5s;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
@@ -113,7 +123,7 @@
     }
 
     &-item:hover {
-      background-color: $default-color;
+      margin-top: 0.5rem;
       color: $color-white;
     }
   }
@@ -121,14 +131,24 @@
 
 // Dropdown hover effects
 #sReasons,
-#eThings {
+#eThings,
+#fWays,
+#fMistakes {
   position: relative;
 }
 #sReasons:hover::after {
-  content: "Why You Should Hike in Taiwan";
+  content: "7 Reasons Why You Should Hike in Taiwan";
   @include dropdown-menu-effect;
 }
 #eThings:hover::after {
-  content: "to Know before You Hike in Taiwan";
+  content: "11 Things to Know before You Hike in Taiwan";
+  @include dropdown-menu-effect;
+}
+#fWays:hover::after {
+  content: "4 Ways to Enjoy Hikes in Taiwan";
+  @include dropdown-menu-effect;
+}
+#fMistakes:hover::after {
+  content: "5 Deadly Mistakes to Avoid While Hiking in Taiwan";
   @include dropdown-menu-effect;
 }
