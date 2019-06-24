@@ -1,29 +1,45 @@
 .landing-content__main {
-  height: 80vh;
+  height: 62vh;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: 1fr;
 
   &--video {
-    grid-row: 1 / 4;
+    grid-row: 1 / 5;
     grid-column: 1 / 2;
-    background-color: lighten($default-color, 15%);
-    width: 100%;
-    height: 100%;
+    //background-color: #008000; // lighten($default-color, 15%);
+    // width: 100%;
+    // height: 100%;
     position: relative;
+    object-fit: fill;
+    border: 5px solid goldenrod;
 
     &-content {
       position: absolute;
       top: 0;
       left: 0;
-      opacity: 0.15;
-      overflow: hidden;
+      opacity: 0.9;
+      //overflow: hidden;
       width: 100%;
     }
   }
 
   &--title {
-    grid-row: 3 / 4;
+    font-size: $font-size-xl;
+    display: inline-block;
+    opacity: 0.7;
+    padding: 1rem;
+    text-align: center;
+    // background-image: linear-gradient(
+    //   darken($color-grey, 10%),
+    //   darken($color-grey, 20%)
+    // );
+    grid-row: 4 / 5;
     grid-column: 1 / 2;
+    z-index: 99;
+
+    & a {
+      color: $color-white;
+    }
   }
 }
