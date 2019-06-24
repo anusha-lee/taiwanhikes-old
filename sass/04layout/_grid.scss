@@ -12,9 +12,13 @@
     grid-row: 1 / 6;
   }
   &__sidebar {
-    border: 1px solid green;
+    border: 3px solid green;
+    margin: 4rem 0;
     grid-column: 9 / 12;
     grid-row: 1 / 6;
+
+    font-size: $font-size-medium;
+    padding-left: 1rem;
   }
   &__testimony {
     background-color: olivedrab;
