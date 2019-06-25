@@ -91,6 +91,9 @@ h3 {
     .landing-content__main--title a:active {
       text-decoration: underline; }
 
+.trip-avtar {
+  border: 2px solid orangered; }
+
 .header {
   width: 100%;
   height: 8vh;
