@@ -1,7 +1,15 @@
 // landing page side bar
-.trip-avtar {
-  border: 2px solid orangered;
-
+.trip-avatar {
   &-img {
+    width: 100%;
+    height: auto;
   }
+}
+
+.tap-img {
+  cursor: pointer;
+  background-color: transparent;
+  //border: none;
+  overflow: hidden;
+  outline: none;
 }

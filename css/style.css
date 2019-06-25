@@ -91,8 +91,15 @@ h3 {
     .landing-content__main--title a:active {
       text-decoration: underline; }
 
-.trip-avtar {
-  border: 2px solid orangered; }
+.trip-avatar-img {
+  width: 100%;
+  height: auto; }
+
+.tap-img {
+  cursor: pointer;
+  background-color: transparent;
+  overflow: hidden;
+  outline: none; }
 
 .header {
   width: 100%;
@@ -268,8 +275,35 @@ h3 {
     margin: 4rem 0;
     grid-column: 9 / 12;
     grid-row: 1 / 6;
-    font-size: 2.1rem;
+    font-size: 1.6rem;
     padding-left: 1rem; }
+    .landing-content__sidebar--trip {
+      border: 2px solid orangered;
+      margin: 2px;
+      padding: 2px;
+      height: 16vh;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center; }
+      .landing-content__sidebar--trip-avatar {
+        border: 3px solid green;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2; }
+      .landing-content__sidebar--trip-img {
+        border: 3px solid green;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2; }
+      .landing-content__sidebar--trip-text {
+        line-height: 0.8;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3; }
+        .landing-content__sidebar--trip-text button {
+          cursor: pointer;
+          background-color: transparent;
+          overflow: hidden;
+          outline: none;
+          background-repeat: no-repeat; }
   .landing-content__testimony {
     background-color: olivedrab;
     grid-column: 3 / 11;
