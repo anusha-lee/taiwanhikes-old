@@ -39,6 +39,9 @@ li {
 a {
   text-decoration: none; }
 
+.container {
+  margin: 0 auto; }
+
 /********************
 font-family: 'Averia Gruesa Libre', cursive;
 font-family: 'Alegreya Sans SC', sans-serif; 
@@ -99,13 +102,15 @@ h3 {
   fill: #d24747; }
 
 .header {
+  margin: 0;
   width: 100%;
   height: 8vh;
   background-color: #76a3a3;
   box-shadow: 0 2px 5px #888888;
   display: grid;
-  grid-template-columns: 5% 45% 50%;
+  grid-template-columns: 5% 45% 45%;
   justify-content: space-between;
+  grid-column-gap: 0.5rem;
   align-items: center; }
   .header__logo-box {
     display: grid;
@@ -257,12 +262,12 @@ h3 {
   animation: zoomInLeft 0.4s cubic-bezier(0, -1, 0.88, 0.16); }
 
 .landing-content {
-  margin: 1rem;
-  width: 90vw;
+  margin: 2rem auto;
+  width: 85%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
   justify-content: space-around; }
   .landing-content__main {
     grid-column: 2 / 9;
