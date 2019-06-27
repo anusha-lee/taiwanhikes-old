@@ -101,6 +101,13 @@ h3 {
 .svg-icon {
   fill: #d24747; }
 
+.testimonials__heading {
+  font-size: 3.3rem;
+  color: #d24747; }
+
+.testimonials__block--text {
+  font-size: 1.6rem; }
+
 .header {
   margin: 0;
   width: 100%;
@@ -309,10 +316,6 @@ h3 {
         grid-row: 2 / 3;
         justify-self: end;
         align-self: end; }
-  .landing-content__testimony {
-    background-color: olivedrab;
-    grid-column: 3 / 11;
-    grid-row: 6 / 7; }
 
 .zoomInDown {
   -webkit-animation-name: zoomInDown;
