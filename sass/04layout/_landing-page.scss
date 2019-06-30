@@ -1,31 +1,43 @@
 .landing-content {
-  margin: 2rem auto;
+  margin: 3rem auto;
   width: 85%;
+  //height: 90vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 30rem);
   grid-gap: 0.5rem;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-content: start;
 
   &__main {
     grid-column: 2 / 9;
-    grid-row: 1 / 6;
+    grid-row: 1 / 3;
+    // check _bg-video.scss for details
   }
   &__sidebar {
-    // border: 3px solid green;
-    margin: 4rem 0;
+    height: 78vh;
+    margin: 2rem 0;
     grid-column: 9 / 12;
-    grid-row: 1 / 6;
+    grid-row: 1 / 3;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 
     font-size: $font-size-sm;
-    padding-left: 1rem;
+    padding-left: 0.8rem;
+
+    &--heading {
+      display: inline-block;
+      padding-left: 0.3rem;
+    }
 
     &--trip:not(:last-child) {
       border-bottom: 1px solid rgba($color-grey, 0.5);
     }
 
     &--trip {
-      margin: 0.5rem;
+      margin: 0.3rem;
       padding: 2px;
       height: 16vh;
       display: grid;
@@ -41,6 +53,7 @@
         align-self: center;
       }
       &-img {
+        grid-column: 2 / 3;
         grid-row: 1 / 2;
         justify-self: start;
         align-self: center;
@@ -49,7 +62,8 @@
         line-height: 0.8;
         grid-column: 1 / 3;
         grid-row: 2 / 3;
-        padding-right: 2rem;
+        margin-right: 1.3rem;
+        width: 91%;
       }
       &-click {
         cursor: pointer;
@@ -57,7 +71,13 @@
         grid-row: 2 / 3;
         justify-self: end;
         align-self: end;
+        display: inline-block;
+        padding-top: 1.2rem;
       }
     }
+  }
+  &__testimonials {
+    grid-column: 4 / 10;
+    grid-row: 3 / 4;
   }
 }
