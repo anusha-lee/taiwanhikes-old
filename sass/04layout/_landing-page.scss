@@ -4,7 +4,7 @@
   //height: 90vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 30rem);
+  grid-template-rows: repeat(2, 30rem), 40rem;
   grid-gap: 0.5rem;
   justify-content: space-between;
   align-content: start;
@@ -84,7 +84,7 @@
   }
   // check _testimonials.scss for details
   &__testimonials {
-    grid-column: 3 / 11;
+    grid-column: 2 / 12;
     grid-row: 3 / 4;
   }
 }
