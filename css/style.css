@@ -105,7 +105,7 @@ h3 {
 
 .testimonials {
   width: 100%;
-  height: 100%;
+  height: 80%;
   background-image: linear-gradient(to right bottom, rgba(118, 163, 163, 0.6), rgba(136, 136, 136, 0.2)), url(/img/hike-photos/background.jpg);
   background-size: cover;
   margin: 4rem 0;
@@ -131,33 +131,56 @@ h3 {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5); }
     .testimonials__block--person {
-      width: 10rem;
-      height: 10rem;
+      width: 12rem;
+      height: 12rem;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       justify-content: center;
-      align-content: center; }
+      align-content: center;
+      position: relative; }
       .testimonials__block--person-photo {
-        width: 10rem;
+        width: 12rem;
         grid-column: 1 / 2;
-        grid-row: 1 / 2; }
+        grid-row: 1 / 2;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s; }
       .testimonials__block--person-name {
         display: inline-block;
         text-align: center;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
-        z-index: 97; }
-    .testimonials__block--text {
-      font-size: 1.6rem; }
-
-.block-1 {
-  grid-column: 2 / 6;
-  grid-row: 2 / 3; }
-
-.block-2 {
-  grid-column: 6 / 10;
-  grid-row: 2 / 3; }
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        opacity: 0; }
+      .testimonials__block--person--text {
+        font-size: 1.6rem; }
+  .testimonials .block-1 {
+    grid-column: 2 / 6;
+    grid-row: 2 / 3; }
+  .block-1:hover .testimonials__block--person-name {
+    opacity: 1; }
+  .block-1:hover .testimonials__block--person-photo {
+    transform: scale(0.9);
+    filter: blur(3px) brightness(90%);
+    -webkit-filter: blur(5px) brightness(90%);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9); }
+  .testimonials .block-2 {
+    grid-column: 6 / 10;
+    grid-row: 2 / 3; }
+  .block-2:hover .testimonials__block--person-name {
+    opacity: 1; }
+  .block-2:hover .testimonials__block--person-photo {
+    transform: scale(0.9);
+    filter: blur(3px) brightness(90%);
+    -webkit-filter: blur(3px) brightness(90%); }
 
 .header {
   margin: 0;
@@ -179,20 +202,20 @@ h3 {
   .header__heading {
     letter-spacing: 2px;
     padding-left: 1rem;
-    transition: all 0.3s;
     font-size: 2.1rem;
     animation: bounceInDown 0.5s 0.3s ease-in-out;
-    -webkit-animation: bounceInDown 0.5s 0.3s ease-in-out;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s; }
+    -webkit-animation: bounceInDown 0.5s 0.3s ease-in-out; }
   .header__heading a:link,
   .header__heading a:visited {
     color: #76a3a3; }
   .header__heading a:hover,
   .header__heading a:active {
-    color: #d24747; }
+    color: #d24747;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s; }
   .header__nav {
     z-index: 99; }
     .header__nav--menu {
@@ -324,7 +347,7 @@ h3 {
   width: 85%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 30rem), 70rem;
+  grid-template-rows: repeat(2, 30rem), 50rem;
   grid-gap: 0.5rem;
   justify-content: space-between;
   align-content: start; }
@@ -340,14 +363,14 @@ h3 {
     flex-direction: column;
     align-content: space-between;
     font-size: 1.6rem;
-    padding-left: 0.8rem;
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out; }
+    padding-left: 0.8rem; }
     .landing-content__sidebar :hover {
-      background-color: #f0f5f5; }
+      background-color: #f0f5f5;
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out; }
     .landing-content__sidebar--heading {
       display: inline-block;
       padding-left: 0.3rem; }
@@ -389,6 +412,10 @@ h3 {
   .landing-content__testimonials {
     grid-column: 2 / 12;
     grid-row: 3 / 4; }
+
+.footer {
+  width: 100%;
+  background-color: #76a3a3; }
 
 .zoomInDown {
   -webkit-animation-name: zoomInDown;

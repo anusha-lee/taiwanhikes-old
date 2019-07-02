@@ -1,0 +1,20 @@
+.footer {
+  width: 100%;
+  background-color: $default-color;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 5fr 1fr;
+
+  &__logo {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    &--box {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      &-img {
+        width: 50px;
+      }
+    }
+  }
+}

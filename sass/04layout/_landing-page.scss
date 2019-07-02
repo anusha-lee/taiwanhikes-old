@@ -3,7 +3,7 @@
   width: 85%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 30rem), 70rem;
+  grid-template-rows: repeat(2, 30rem), 50rem;
   grid-gap: 0.5rem;
   justify-content: space-between;
   align-content: start;
@@ -23,13 +23,14 @@
     align-content: space-between;
     font-size: $font-size-sm;
     padding-left: 0.8rem;
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -ms-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
+
     :hover {
       background-color: lighten($default-color, 40%);
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
     }
 
     &--heading {
