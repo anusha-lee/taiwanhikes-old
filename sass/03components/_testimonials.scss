@@ -42,9 +42,43 @@
     // -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 10%, 100% 100%, 0% 100%);
     // clip-path: polygon(0% 0%, 90% 0, 100% 10%, 100% 100%, 0% 100%);
     &--person {
+      width: 12rem;
+      height: 12rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      justify-content: center;
+      align-content: center;
+      position: relative;
+
       &-photo {
+        width: 12rem;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        // position: relative;
+        z-index: 97;
       }
       &-name {
+        display: inline-block;
+        text-align: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        position: absolute;
+        top: 20;
+        left: 0;
+        //z-index: 97;
+        //-webkit-transform: translateY(50%);
+        //-moz-transform: translateY(50%);
+        //-ms-transform: translateY(50%);
+        //-o-transform: translateY(50%);
+        //&:hover figcaption;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+{
+        //   visibility: visible;
+        // }
       }
     }
 
