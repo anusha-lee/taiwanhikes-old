@@ -37,11 +37,11 @@
     grid-column: 1 / 2;
     z-index: 99;
     h1 {
-      transition: all 1s ease-in-out;
       & a:link,
       & a:visited {
         color: darken($default-color-heading, 10%);
         text-shadow: 2px 2px 2px $color-white;
+        //transition: all 1s ease-in-out;
       }
 
       & a:hover,
