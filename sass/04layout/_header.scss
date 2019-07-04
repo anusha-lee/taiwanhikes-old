@@ -1,36 +1,43 @@
 .header {
   margin: 0;
   width: 100%;
-  height: 8vh;
+  height: 9vh;
   background-color: $default-color;
   box-shadow: 0 2px 5px $color-grey;
   display: grid;
   grid-template-columns: 5% 45% 45%;
+  grid-template-rows: 1fr;
   justify-content: space-between;
   grid-column-gap: 0.5rem;
   align-items: center;
 
   &__logo-box {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     display: grid;
     justify-content: center;
     align-content: center;
-  }
 
-  &__logo {
-    width: 4.5rem;
+    &-img {
+      width: 4.5rem;
+    }
   }
 
   &__heading {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     letter-spacing: 2px;
     padding-left: 1rem;
-    font-size: $font-size-medium;
-    animation: bounceInDown 0.5s 0.3s ease-in-out;
-    -webkit-animation: bounceInDown 0.5s 0.3s ease-in-out;
+    font-size: $font-size-big;
+    //color: $color-white;
+    // animation: bounceInDown 0.5s 0.3s ease-in-out;
+    // -webkit-animation: bounceInDown 0.5s 0.3s ease-in-out;
   }
 
   &__heading a:link,
   &__heading a:visited {
-    color: $default-color;
+    color: $color-white;
+    font-weight: 600;
   }
 
   &__heading a:hover,
@@ -44,6 +51,8 @@
   }
 
   &__nav {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
     z-index: 99;
     &--menu {
       display: grid;
@@ -94,8 +103,8 @@
   }
 
   &__item:hover {
-    //color: $color-white;
-    //background-color: darken($default-color, 10%);
+    color: $color-white;
+    // background-color: darken($default-color, 10%);
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -109,7 +118,6 @@
 
     &-item {
       font-size: $font-size-sm;
-      //margin: 0.2rem;
       width: 11vw;
       padding: 0.8rem;
       text-align: left;
@@ -123,10 +131,14 @@
       -ms-transition: all 0.5s;
       -o-transition: all 0.5s;
     }
-
-    &-item:hover {
-      margin-top: 0.5rem;
-      color: $color-white;
+    &-item:link,
+    &-item::visited {
+      color: $default-color-heading;
+    }
+    &-item:hover,
+    &-item:active {
+      color: $default-color-heading;
+      text-decoration: underline;
     }
   }
 }
