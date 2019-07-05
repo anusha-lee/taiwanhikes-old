@@ -11,6 +11,10 @@
   justify-content: space-between;
   box-shadow: 6px 6px 12px rgba($color-grey, 0.8);
 
+  @media only screen and (max-width: $bp-m2) {
+    grid-template-rows: 1fr 2fr 2fr;
+  }
+
   &__heading {
     font-size: $font-size-big;
     padding-left: 2rem;
@@ -74,6 +78,11 @@
   .block-1 {
     grid-column: 2 / 6;
     grid-row: 2 / 3;
+
+    @media only screen and (max-width: $bp-m2) {
+      grid-column: 2 / 9;
+      grid-row: 2 / 3;
+    }
   }
   .block-1:hover &__block--person-name {
     opacity: 1;
@@ -89,7 +98,12 @@
   }
   .block-2 {
     grid-column: 6 / 10;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
+
+    @media only screen and (max-width: $bp-m2) {
+      grid-column: 2 / 9;
+      grid-row: 3 / 4;
+    }
   }
   .block-2:hover &__block--person-name {
     opacity: 1;
