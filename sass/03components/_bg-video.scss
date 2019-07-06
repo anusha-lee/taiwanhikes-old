@@ -36,12 +36,25 @@
     grid-row: 4 / 5;
     grid-column: 1 / 2;
     z-index: 99;
+
+    @media only screen and (max-width: $bp-m2) {
+      line-height: 0.5;
+    }
+
     h1 {
       & a:link,
       & a:visited {
         color: darken($default-color-heading, 10%);
         text-shadow: 2px 2px 2px $color-white;
         //transition: all 1s ease-in-out;
+
+        @media only screen and (max-width: $bp-m2) {
+          font-size: $font-size-big;
+        }
+
+        @media only screen and (max-width: $bp-xs) {
+          font-size: $font-size-medium;
+        }
       }
 
       & a:hover,

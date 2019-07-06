@@ -86,10 +86,21 @@ h3 {
     grid-row: 4 / 5;
     grid-column: 1 / 2;
     z-index: 99; }
+    @media only screen and (max-width: 900px) {
+      .landing-content__main--title {
+        line-height: 0.5; } }
     .landing-content__main--title h1 a:link,
     .landing-content__main--title h1 a:visited {
       color: #b92d2d;
       text-shadow: 2px 2px 2px #fff; }
+      @media only screen and (max-width: 900px) {
+        .landing-content__main--title h1 a:link,
+        .landing-content__main--title h1 a:visited {
+          font-size: 3.3rem; } }
+      @media only screen and (max-width: 450px) {
+        .landing-content__main--title h1 a:link,
+        .landing-content__main--title h1 a:visited {
+          font-size: 2.1rem; } }
     .landing-content__main--title h1 a:hover,
     .landing-content__main--title h1 a:active {
       text-decoration: underline; }
@@ -103,19 +114,29 @@ h3 {
 
 .testimonials {
   width: 100%;
-  height: 80%;
+  max-height: 80vh;
   background-image: url(/img/hike-photos/background.jpg);
   background-size: cover;
-  margin: 4rem 0;
+  margin: 3rem 0;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: 1fr 2fr 1fr;
   grid-gap: 1.5rem;
   justify-content: space-between;
   box-shadow: 6px 6px 12px rgba(136, 136, 136, 0.8); }
+  @media only screen and (max-width: 1080px) {
+    .testimonials {
+      min-height: 70vh;
+      grid-gap: 1rem; } }
   @media only screen and (max-width: 900px) {
     .testimonials {
-      grid-template-rows: 1fr 2fr 2fr; } }
+      grid-template-rows: 8% repeat(2, minmax(30%, 40%));
+      justify-content: space-between;
+      min-height: 130vh; } }
+  @media only screen and (max-width: 450px) {
+    .testimonials {
+      min-height: 150vh;
+      border: 2px dotted hotpink; } }
   .testimonials__heading {
     font-size: 3.3rem;
     padding-left: 2rem;
@@ -123,21 +144,40 @@ h3 {
     text-shadow: 2px 2px 2px #fff;
     grid-column: 1 / 11;
     grid-row: 1 / 2; }
+    @media only screen and (max-width: 450px) {
+      .testimonials__heading {
+        font-size: 2.1rem; } }
   .testimonials__block {
     color: #4b3c4c;
     text-shadow: 1px 1px 1px #76a3a3;
     font-size: 2.1rem;
-    padding: 1.5rem;
+    padding: 1.5rem 4rem;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5); }
+    line-height: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); }
+    @media only screen and (max-width: 1080px) {
+      .testimonials__block {
+        min-height: 57vh;
+        padding: 1.2rem 3rem;
+        line-height: 0.9; } }
     @media only screen and (max-width: 900px) {
       .testimonials__block {
-        -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
-        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); } }
+        min-height: 25vh;
+        clip-path: none; } }
+    @media only screen and (max-width: 600px) {
+      .testimonials__block {
+        max-height: 50vh;
+        clip-path: none; } }
+    @media only screen and (max-width: 450px) {
+      .testimonials__block {
+        min-height: 58vh; } }
     .testimonials__block--person {
-      width: 12rem;
-      height: 12rem;
+      margin: 0.3rem 2rem;
+      width: 10rem;
+      height: 10rem;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
@@ -146,10 +186,10 @@ h3 {
       position: relative; }
       @media only screen and (max-width: 600px) {
         .testimonials__block--person {
-          width: 6rem;
-          padding: 1rem;
           display: grid;
-          grid-template-columns: 1fr 2fr; } }
+          grid-template-columns: 1fr 2fr;
+          width: 6.5rem;
+          height: 6.5rem; } }
       .testimonials__block--person-photo {
         width: 12rem;
         grid-column: 1 / 2;
@@ -159,16 +199,21 @@ h3 {
         -moz-transition: all 0.5s;
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s; }
+        @media only screen and (max-width: 1080px) {
+          .testimonials__block--person-photo {
+            width: 9rem; } }
         @media only screen and (max-width: 600px) {
           .testimonials__block--person-photo {
-            width: 8rem;
+            width: 6rem;
             grid-column: 1 / 2;
             transform: translateX(45%);
-            border: 2px solid greenyellow;
             -webkit-transform: translateX(45%);
             -moz-transform: translateX(45%);
             -ms-transform: translateX(45%);
             -o-transform: translateX(45%); } }
+        @media only screen and (max-width: 450px) {
+          .testimonials__block--person-photo {
+            position: relative; } }
       .testimonials__block--person-name {
         display: inline-block;
         text-align: center;
@@ -179,23 +224,45 @@ h3 {
         top: 35%;
         left: 30%;
         opacity: 0; }
+        @media only screen and (max-width: 1080px) {
+          .testimonials__block--person-name {
+            opacity: 1;
+            top: 30%;
+            left: 12rem;
+            font-size: 2.1rem;
+            width: 10rem;
+            color: #4b3c4c; } }
+        @media only screen and (max-width: 900px) {
+          .testimonials__block--person-name {
+            width: 10rem; } }
         @media only screen and (max-width: 600px) {
           .testimonials__block--person-name {
+            top: 40%;
+            left: 20%;
             grid-column: 2 / 3;
             transform: translateX(60%);
-            border: 2px solid greenyellow;
             -webkit-transform: translateX(60%);
             -moz-transform: translateX(60%);
             -ms-transform: translateX(60%);
             -o-transform: translateX(60%); } }
+        @media only screen and (max-width: 450px) {
+          .testimonials__block--person-name {
+            top: 35%;
+            left: -4rem; } }
       .testimonials__block--person--text {
-        font-size: 1.6rem; }
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: 0.5rem 2rem; }
+        @media only screen and (max-width: 1080px) {
+          .testimonials__block--person--text {
+            font-size: 1.2rem;
+            line-height: 0.8; } }
   .testimonials .block-1 {
     grid-column: 2 / 6;
     grid-row: 2 / 3; }
     @media only screen and (max-width: 900px) {
       .testimonials .block-1 {
-        grid-column: 2 / 9;
+        grid-column: 2 / 10;
         grid-row: 2 / 3; } }
   .block-1:hover .testimonials__block--person-name {
     opacity: 1; }
@@ -207,12 +274,21 @@ h3 {
     -moz-transform: scale(0.9);
     -ms-transform: scale(0.9);
     -o-transform: scale(0.9); }
+    @media only screen and (max-width: 900px) {
+      .block-1:hover .testimonials__block--person-photo {
+        filter: unset;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-filter: unset; } }
   .testimonials .block-2 {
     grid-column: 6 / 10;
     grid-row: 2 / 3; }
     @media only screen and (max-width: 900px) {
       .testimonials .block-2 {
-        grid-column: 2 / 9;
+        grid-column: 2 / 10;
         grid-row: 3 / 4; } }
   .block-2:hover .testimonials__block--person-name {
     opacity: 1; }
@@ -220,6 +296,15 @@ h3 {
     transform: scale(0.9);
     filter: blur(3px) brightness(90%);
     -webkit-filter: blur(3px) brightness(90%); }
+    @media only screen and (max-width: 900px) {
+      .block-2:hover .testimonials__block--person-photo {
+        filter: unset;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        -webkit-filter: unset; } }
 
 .header {
   margin: 0;
@@ -394,7 +479,7 @@ h3 {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 30rem), 50rem;
+  grid-template-rows: repeat(2, minmax(30rem, auto-fit)), minmax(50rem, 1300rem);
   grid-gap: 0.5rem;
   justify-content: space-between;
   align-content: start; }
@@ -407,6 +492,9 @@ h3 {
       width: 100%;
       grid-template-rows: repeat(3, 40rem);
       border: 3px solid blue; } }
+  @media only screen and (max-width: 600px) {
+    .landing-content {
+      border: 3px solid peru; } }
   .landing-content__main {
     grid-column: 2 / 9;
     grid-row: 1 / 3; }
@@ -420,10 +508,10 @@ h3 {
     height: 78vh;
     margin: 2rem 0;
     grid-column: 9 / 12;
-    grid-row: 1 / 3;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10%, repeat(4, 22%);
     font-size: 1.6rem;
     padding-left: 0.8rem; }
     @media only screen and (max-width: 1080px) {
@@ -433,6 +521,7 @@ h3 {
       .landing-content__sidebar {
         grid-column: 2 / 12;
         grid-row: 2 / 3;
+        margin: 1rem 0;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr 2fr;
@@ -442,7 +531,7 @@ h3 {
     @media only screen and (max-width: 600px) {
       .landing-content__sidebar {
         margin-top: 2rem;
-        height: 80%;
+        max-height: 90%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -475,7 +564,6 @@ h3 {
       @media only screen and (max-width: 1080px) {
         .landing-content__sidebar--trip {
           border-bottom: 1px solid rgba(136, 136, 136, 0.5);
-          height: 22%;
           display: grid;
           grid-template-columns: 2fr 75% 1fr;
           grid-row: 1fr; } }
@@ -532,6 +620,10 @@ h3 {
   .landing-content__testimonials {
     grid-column: 2 / 12;
     grid-row: 3 / 4; }
+    @media only screen and (max-width: 600px) {
+      .landing-content__testimonials {
+        margin-top: 2rem;
+        height: 90rem; } }
 
 .footer {
   width: 100%;

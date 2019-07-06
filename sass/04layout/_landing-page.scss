@@ -3,20 +3,28 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, 30rem), 50rem;
+  grid-template-rows: repeat(2, minmax(30rem, auto-fit)), minmax(50rem, 1300rem);
   grid-gap: 0.5rem;
   justify-content: space-between;
   align-content: start;
 
   @media only screen and (max-width: $bp-large) {
     width: 96%;
+    // min-height: 60vh;
+    // grid-template-rows: repeat(2, 30rem), 50rem;
     border: 3px solid pink;
   }
 
   @media only screen and (max-width: $bp-m2) {
     width: 100%;
+
     grid-template-rows: repeat(3, 40rem);
     border: 3px solid blue;
+  }
+
+  // delete this later
+  @media only screen and (max-width: $bp-sm) {
+    border: 3px solid peru;
   }
 
   &__main {
@@ -35,10 +43,16 @@
     height: 78vh;
     margin: 2rem 0;
     grid-column: 9 / 12;
-    grid-row: 1 / 3;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
+    grid-row: 1 / 2;
+
+    // display: flex;
+    // flex-direction: column;
+    // align-content: space-between;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10%, repeat(4, 22%);
+
     font-size: $font-size-sm;
     padding-left: 0.8rem;
 
@@ -48,6 +62,7 @@
     @media only screen and (max-width: $bp-m2) {
       grid-column: 2 / 12;
       grid-row: 2 / 3;
+      margin: 1rem 0;
 
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -59,7 +74,7 @@
     }
     @media only screen and (max-width: $bp-sm) {
       margin-top: 2rem;
-      height: 80%;
+      max-height: 90%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -99,7 +114,7 @@
 
       @media only screen and (max-width: $bp-large) {
         border-bottom: 1px solid rgba($color-grey, 0.5);
-        height: 22%;
+        // height: 22%;
 
         display: grid;
         grid-template-columns: 2fr 75% 1fr;
@@ -173,5 +188,10 @@
   &__testimonials {
     grid-column: 2 / 12;
     grid-row: 3 / 4;
+
+    @media only screen and (max-width: $bp-sm) {
+      margin-top: 2rem;
+      height: 90rem;
+    }
   }
 }
