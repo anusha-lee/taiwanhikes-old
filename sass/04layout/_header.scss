@@ -11,12 +11,22 @@
   grid-column-gap: 0.5rem;
   align-items: center;
 
+  @media only screen and (max-width: $bp-large) {
+    grid-template-columns: 5% 30% 60%;
+    justify-content: center;
+  }
+
   &__logo-box {
+    padding-left: 3.5rem;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: grid;
     justify-content: center;
     align-content: center;
+
+    @media only screen and (max-width: $bp-large) {
+      padding-left: 1.5rem;
+    }
 
     &-img {
       width: 4.5rem;

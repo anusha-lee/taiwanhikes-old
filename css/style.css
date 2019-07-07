@@ -160,20 +160,21 @@ h3 {
     clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); }
     @media only screen and (max-width: 1080px) {
       .testimonials__block {
-        height: 50vh;
+        height: 30rem;
         padding: 1rem 3rem;
         line-height: 0.9; } }
     @media only screen and (max-width: 900px) {
       .testimonials__block {
-        min-height: 20vh;
+        min-height: 10rem;
+        line-height: 1.2;
         clip-path: none; } }
     @media only screen and (max-width: 600px) {
       .testimonials__block {
-        max-height: 50vh;
         clip-path: none; } }
     @media only screen and (max-width: 450px) {
       .testimonials__block {
-        max-height: 80vh; } }
+        min-height: 31rem;
+        max-height: 120vh; } }
     .testimonials__block--person {
       margin: 0.3rem 2rem;
       width: 12rem;
@@ -329,12 +330,20 @@ h3 {
   justify-content: space-between;
   grid-column-gap: 0.5rem;
   align-items: center; }
+  @media only screen and (max-width: 1080px) {
+    .header {
+      grid-template-columns: 5% 30% 60%;
+      justify-content: center; } }
   .header__logo-box {
+    padding-left: 3.5rem;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: grid;
     justify-content: center;
     align-content: center; }
+    @media only screen and (max-width: 1080px) {
+      .header__logo-box {
+        padding-left: 1.5rem; } }
     .header__logo-box-img {
       width: 4.5rem; }
   .header__heading {
@@ -516,7 +525,7 @@ h3 {
         grid-column: 2 / 12; } }
   .landing-content__sidebar {
     height: 78vh;
-    margin: 0;
+    margin: 2.5rem 0;
     padding: 2rem;
     grid-column: 9 / 12;
     grid-row: 1 / 2;
@@ -524,7 +533,7 @@ h3 {
     align-content: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 11% repeat(4, 22%);
+    grid-template-rows: 8vh repeat(4, 18vh);
     justify-content: space-between;
     font-size: 1.6rem;
     padding-left: 0.8rem; }
@@ -572,7 +581,7 @@ h3 {
       border-bottom: 1px solid rgba(136, 136, 136, 0.5); }
     .landing-content__sidebar--trip {
       padding: 0.2rem 0.1rem 0.4rem;
-      height: 90%;
+      height: 100%;
       display: grid;
       grid-template-columns: 1fr 10% 4fr 7%;
       grid-template-rows: repeat(2, 1fr);

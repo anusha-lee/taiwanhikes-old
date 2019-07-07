@@ -41,7 +41,7 @@
   }
   &__sidebar {
     height: 78vh;
-    margin: 0;
+    margin: 2.5rem 0;
     padding: 2rem;
     grid-column: 9 / 12;
     grid-row: 1 / 2;
@@ -50,7 +50,7 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 11% repeat(4, 22%);
+    grid-template-rows: 8vh repeat(4, 18vh);
     justify-content: space-between;
 
     font-size: $font-size-sm;
@@ -108,7 +108,7 @@
 
     &--trip {
       padding: 0.2rem 0.1rem 0.4rem;
-      height: 90%;
+      height: 100%;
       display: grid;
       grid-template-columns: 1fr 10% 4fr 7%;
       grid-template-rows: repeat(2, 1fr);

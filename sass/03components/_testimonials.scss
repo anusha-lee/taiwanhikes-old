@@ -54,21 +54,23 @@
     clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 
     @media only screen and (max-width: $bp-large) {
-      height: 50vh;
+      height: 30rem;
       padding: 1rem 3rem;
       line-height: 0.9;
     }
     @media only screen and (max-width: $bp-m2) {
-      min-height: 20vh;
+      min-height: 10rem;
+      line-height: 1.2;
       clip-path: none;
     }
 
     @media only screen and (max-width: $bp-sm) {
-      max-height: 50vh;
+      // max-height: 50vh;
       clip-path: none;
     }
     @media only screen and (max-width: $bp-xs) {
-      max-height: 80vh;
+      min-height: 31rem;
+      max-height: 120vh;
     }
 
     &--person {
