@@ -3,22 +3,22 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, minmax(30rem, auto-fit)), minmax(50rem, 1300rem);
+  //grid-template-rows: repeat(2, minmax(30rem, 40rem)), 70rem;
+  // ****************************
+  // the following makes the landing-content fit the length automatically
+  // ******************************
+  grid-template-rows: repeat(auto-fit);
   grid-gap: 0.5rem;
   justify-content: space-between;
   align-content: start;
 
   @media only screen and (max-width: $bp-large) {
     width: 96%;
-    // min-height: 60vh;
-    // grid-template-rows: repeat(2, 30rem), 50rem;
     border: 3px solid pink;
   }
 
   @media only screen and (max-width: $bp-m2) {
     width: 100%;
-
-    grid-template-rows: repeat(3, 40rem);
     border: 3px solid blue;
   }
 
@@ -29,7 +29,7 @@
 
   &__main {
     grid-column: 2 / 9;
-    grid-row: 1 / 3;
+    grid-row: 1 / 2;
     // check _bg-video.scss for details
 
     @media only screen and (max-width: $bp-large) {
@@ -41,17 +41,17 @@
   }
   &__sidebar {
     height: 78vh;
-    margin: 2rem 0;
+    margin: 0;
+    padding: 2rem;
     grid-column: 9 / 12;
     grid-row: 1 / 2;
-
-    // display: flex;
-    // flex-direction: column;
-    // align-content: space-between;
+    justify-content: space-between;
+    align-content: center;
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10%, repeat(4, 22%);
+    grid-template-rows: 11% repeat(4, 22%);
+    justify-content: space-between;
 
     font-size: $font-size-sm;
     padding-left: 0.8rem;
@@ -60,21 +60,19 @@
       grid-column: 9 / 13;
     }
     @media only screen and (max-width: $bp-m2) {
+      height: 65vh;
       grid-column: 2 / 12;
       grid-row: 2 / 3;
-      margin: 1rem 0;
+      margin: 0;
 
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: 1fr 2fr;
       grid-gap: 1rem;
-
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: 18% repeat(2, 1fr);
     }
     @media only screen and (max-width: $bp-sm) {
-      margin-top: 2rem;
-      max-height: 90%;
+      margin: 2rem;
+      min-height: 90%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -91,9 +89,14 @@
 
     &--heading {
       display: inline-block;
-      padding-left: 0.3rem;
+      color: $default-color-heading;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-bottom: 0.1rem;
+      }
 
       @media only screen and (max-width: $bp-m2) {
+        align-self: center;
         grid-column: 1 / 3;
         grid-row: 1 / 2;
         margin-bottom: 0.2rem;
@@ -104,40 +107,47 @@
     }
 
     &--trip {
-      margin: 0;
-      padding: 4px;
-      height: 23.5%;
+      padding: 0.2rem 0.1rem 0.4rem;
+      height: 90%;
       display: grid;
-      grid-template-columns: 1fr 4fr;
+      grid-template-columns: 1fr 10% 4fr 7%;
       grid-template-rows: repeat(2, 1fr);
-      justify-content: center;
+      justify-content: space-between;
 
       @media only screen and (max-width: $bp-large) {
         border-bottom: 1px solid rgba($color-grey, 0.5);
-        // height: 22%;
 
         display: grid;
-        grid-template-columns: 2fr 75% 1fr;
+        grid-template-columns: 1fr 80% 1fr;
         grid-row: 1fr;
       }
 
       @media only screen and (max-width: $bp-m2) {
         // border: 1px solid rgba($color-grey, 0.5);
+        grid-template-columns: 1fr 70% 1fr;
         padding-top: 2rem;
         box-shadow: 2px 2px 4px rgba($color-grey, 0.5);
-        height: 70%;
+        height: 95%;
       }
 
       @media only screen and (max-width: $bp-sm) {
-        height: 20%;
-        padding-top: 1rem;
+        grid-template-rows: 2fr, 1fr;
+        //width: 100%;
+        height: 24%;
+        padding: 0.8rem 0.6rem;
+        display: grid;
+      }
+
+      @media only screen and (max-width: $bp-xs) {
+        // height: 30%;
+        padding: 0.8rem 0.6rem;
         display: grid;
       }
 
       &-avatar {
         margin: 2px;
         grid-column: 1 / 2;
-        grid-row: 1 / 2;
+        grid-row: 1 / 3;
         justify-self: center;
         align-self: center;
 
@@ -147,39 +157,51 @@
       }
       &-img {
         grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        justify-self: start;
+        grid-row: 1 / 3;
+        justify-self: center;
         align-self: center;
 
         @media only screen and (max-width: $bp-large) {
           grid-column: 1 / 2;
-          grid-row: 1 /2;
+          grid-row: 1 / 2;
         }
       }
       &-text {
-        line-height: 0.8;
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;
-        margin-right: 1.3rem;
-        width: 91%;
+        line-height: 1;
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        margin: 0.2rem;
+        padding: 0.2rem;
+        // width: 91%;
 
         @media only screen and (max-width: $bp-large) {
           grid-column: 2 / 3;
           grid-row: 1 /2;
         }
+
+        @media only screen and (max-width: $bp-m2) {
+          grid-column: 2 / 4;
+          grid-row: 1 / 3;
+        }
       }
       &-click {
         cursor: pointer;
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        justify-self: end;
-        align-self: end;
+        grid-column: 4 /53;
+        grid-row: 1 / 3;
+        justify-self: center;
+        align-self: center;
         display: inline-block;
-        padding-top: 1.2rem;
+        //padding-top: 1rem;
 
         @media only screen and (max-width: $bp-large) {
           grid-column: 3 / 4;
           grid-row: 1 /2;
+        }
+
+        @media only screen and (max-width: $bp-m2) {
+          grid-column: 3 / 4;
+          grid-row: 2 / 3;
+          align-self: end;
         }
       }
     }
@@ -195,3 +217,5 @@
     }
   }
 }
+
+// fix trip height

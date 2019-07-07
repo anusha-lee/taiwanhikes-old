@@ -12,8 +12,9 @@
   box-shadow: 6px 6px 12px rgba($color-grey, 0.8);
 
   @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 12% repeat(2, 40%);
     min-height: 70vh;
-    grid-gap: 1rem;
+    grid-gap: 0.8rem;
   }
 
   @media only screen and (max-width: $bp-m2) {
@@ -24,7 +25,6 @@
 
   @media only screen and (max-width: $bp-xs) {
     min-height: 150vh;
-    border: 2px dotted hotpink;
   }
 
   &__heading {
@@ -44,21 +44,22 @@
     color: $color-dark;
     text-shadow: 1px 1px 1px $default-color;
     font-size: $font-size-medium;
-    padding: 1.5rem 4rem;
+    padding: 1.5rem 5rem;
     width: 100%;
-    height: 100%;
+    height: 45vh;
+    //overflow: hidden;
     line-height: 1;
     background-color: rgba($color-white, 0.5);
     -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
     clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 
     @media only screen and (max-width: $bp-large) {
-      min-height: 57vh;
-      padding: 1.2rem 3rem;
+      height: 50vh;
+      padding: 1rem 3rem;
       line-height: 0.9;
     }
     @media only screen and (max-width: $bp-m2) {
-      min-height: 25vh;
+      min-height: 20vh;
       clip-path: none;
     }
 
@@ -67,13 +68,13 @@
       clip-path: none;
     }
     @media only screen and (max-width: $bp-xs) {
-      min-height: 58vh;
+      max-height: 80vh;
     }
 
     &--person {
       margin: 0.3rem 2rem;
-      width: 10rem;
-      height: 10rem;
+      width: 12rem;
+      height: 12rem;
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
@@ -81,19 +82,29 @@
       align-content: center;
       position: relative;
 
-      @media only screen and (max-width: $bp-sm) {
+      @media only screen and (max-width: $bp-large) {
         display: grid;
         grid-template-columns: 1fr 2fr;
-        width: 6.5rem;
-        height: 6.5rem;
+        width: 8rem;
+        height: 8rem;
       }
 
-      @media only screen and (max-width: $bp-xs) {
-        // width:
+      @media only screen and (max-width: $bp-m2) {
+        width: 7rem;
+        height: 7rem;
       }
+
+      @media only screen and (max-width: $bp-sm) {
+        width: 6rem;
+        height: 6rem;
+      }
+
+      // @media only screen and (max-width: $bp-xs) {
+      //   width:
+      // }
 
       &-photo {
-        width: 12rem;
+        width: 10rem;
         grid-column: 1 / 2;
         grid-row: 1 / 2;
         transition: all 0.5s;
@@ -143,11 +154,6 @@
 
         @media only screen and (max-width: $bp-m2) {
           width: 10rem;
-          // opacity: 1;
-          // top: 30%;
-          // left: 18rem;
-          // font-size: $font-size-medium;
-          // color: $color-dark;
         }
 
         @media only screen and (max-width: $bp-sm) {
@@ -175,15 +181,13 @@
         padding: 0.5rem 2rem;
 
         @media only screen and (max-width: $bp-large) {
-          font-size: $font-size-xs;
+          font-size: $font-size-sm;
           line-height: 0.8;
         }
 
-        // @media only screen and (max-width: $bp-xs) {
-        //   font-size: $font-size-xs;
-
-        //   //line-height: 0.5rem;
-        // }
+        @media only screen and (max-width: $bp-sm) {
+          font-size: $font-size-xs;
+        }
       }
     }
   }
