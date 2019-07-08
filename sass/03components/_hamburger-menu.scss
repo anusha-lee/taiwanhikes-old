@@ -1,19 +1,24 @@
 .hamnav {
   //display: none;
-  height: 100vh;
+  height: 40vh;
   width: 100%;
   background-color: aqua;
+
+  @include responsive(tab-port) {
+    background-color: pink;
+  }
+
   &__checkbox {
-    display: none;
+    //display: none;
   }
 
   &__button {
     background-color: $color-white;
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
     position: fixed;
-    top: 6rem;
-    left: 6rem;
+    top: 2rem;
+    right: 2rem;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -22,13 +27,29 @@
   }
 
   &__background {
-    height: 6rem;
-    width: 6rem;
+    height: 5.5rem;
+    width: 5.5rem;
+    border: 1px solid orangered;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     position: fixed;
+    top: 1.7rem;
+    right: 1.7rem;
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 }

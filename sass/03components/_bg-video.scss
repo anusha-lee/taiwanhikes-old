@@ -1,3 +1,13 @@
+.landing-content__main {
+  margin: 2rem 0;
+  //height: 78vh;
+  display: grid;
+
+  &--video {
+    display: none;
+  }
+}
+
 /* =========================== Desktop CSS ================================
 
 .landing-content__main {

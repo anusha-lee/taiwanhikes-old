@@ -1,3 +1,28 @@
+/*
+0 - 400px    phone [where mobile-first styles apply]
+400 - 600px   tablet portrait
+600 - 900px   tablet landscape
+1280 - 1800px desktop 
+1800px +      big desktop
+
+****** Old Breakpoints ******
+$bp-large: 1080px;
+$bp-m2: 900px;
+$bp-sm: 600px;
+$bp-xs: 450px;
+
+******** Breakpoint argument choices:
+- tab-port
+- tab-land
+- desktop
+- big-desktop
+
+how to apply:
+@include responsive(tab-port) {
+    background-color: pink;
+  }
+
+******************************************/
 @-webkit-keyframes zoomInLeft {
   from {
     opacity: 0;
@@ -55,6 +80,12 @@ body {
 h2,
 h3 {
   font-family: "Averia Gruesa Libre", cursive; }
+
+.landing-content__main {
+  margin: 2rem 0;
+  display: grid; }
+  .landing-content__main--video {
+    display: none; }
 
 /* =========================== Desktop CSS ================================
 
@@ -129,32 +160,46 @@ h3 {
 }
 */
 .hamnav {
-  height: 100vh;
+  height: 40vh;
   width: 100%;
   background-color: aqua; }
-  .hamnav__checkbox {
-    display: none; }
+  @media only screen and (min-width: 400px) {
+    .hamnav {
+      background-color: pink; } }
   .hamnav__button {
     background-color: #fff;
-    height: 7rem;
-    width: 7rem;
+    height: 5rem;
+    width: 5rem;
     position: fixed;
-    top: 6rem;
-    left: 6rem;
+    top: 2rem;
+    right: 2rem;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%; }
   .hamnav__background {
-    height: 6rem;
-    width: 6rem;
+    height: 5.5rem;
+    width: 5.5rem;
+    border: 1px solid orangered;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    position: fixed; }
+    position: fixed;
+    top: 1.7rem;
+    right: 1.7rem; }
+  .hamnav__nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -webkit-transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -moz-transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -ms-transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 0.8s chubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 .trip-avatar-img {
   width: 100%;
@@ -419,6 +464,77 @@ h3 {
   }
 }
 ================================================================= */
+.header {
+  margin: 0;
+  width: 100%;
+  box-shadow: 0 4px 10px #888888;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto-fit;
+  justify-content: space-between;
+  grid-column-gap: 0.5rem;
+  align-items: center; }
+  .header__logo-box {
+    padding: 0.5rem;
+    background-color: #76a3a3;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-column: repeat(3, 1fr); }
+    .header__logo-box-img {
+      width: 4.5rem;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-content: center;
+      align-content: center;
+      border: 1px dotted khaki; }
+  .header__heading {
+    display: none;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2; }
+  .header__heading a:link,
+  .header__heading a:visited {
+    color: #fff;
+    font-weight: 600; }
+  .header__heading a:hover,
+  .header__heading a:active {
+    color: #d24747;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s; }
+  .header__nav {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3; }
+    .header__nav--menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      justify-content: space-around;
+      align-content: center; }
+      .header__nav--menu-item {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0.2rem; }
+      .header__nav--menu-item:not(:last-child) {
+        border-bottom: 1px solid #76a3a3; }
+      .header__nav--menu-link:link, .header__nav--menu-link:visited {
+        color: #76a3a3;
+        font-size: 2.1rem;
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out; }
+      .header__nav--menu-link:hover, .header__nav--menu-link:active {
+        color: #d24747; }
+
+.menu__dropdown {
+  display: none; }
+
 /* =========================== Desktop CSS ================================
 
 .header {
@@ -601,7 +717,16 @@ h3 {
 }
 
 ================================================================================== */
-/* =========================== Desktop CSS ================================
+.landing-content__main {
+  margin: 2rem auto;
+  width: 90%;
+  height: 50vh;
+  background-image: url("../img/hike-photos/background-heading.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+/* ============== Desktop CSS ===================
 
 .landing-content {
   margin: 3rem auto;

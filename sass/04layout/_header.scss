@@ -1,3 +1,96 @@
+.header {
+  margin: 0;
+  width: 100%;
+  box-shadow: 0 4px 10px $color-grey;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto-fit;
+  justify-content: space-between;
+  grid-column-gap: 0.5rem;
+  align-items: center;
+  &__logo-box {
+    padding: 0.5rem;
+    background-color: $default-color;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-column: repeat(3, 1fr);
+
+    &-img {
+      width: 4.5rem;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-content: center;
+      align-content: center;
+      border: 1px dotted khaki;
+    }
+  }
+  &__heading {
+    display: none;
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+  }
+  &__heading a:link,
+  &__heading a:visited {
+    color: $color-white;
+    font-weight: 600;
+  }
+
+  &__heading a:hover,
+  &__heading a:active {
+    color: $default-color-heading;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+  }
+  &__nav {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+
+    &--menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      justify-content: space-around;
+      align-content: center;
+
+      &-item {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0.2rem;
+      }
+      &-item:not(:last-child) {
+        border-bottom: 1px solid $default-color;
+      }
+
+      &-link:link,
+      &-link:visited {
+        color: $default-color;
+        font-size: $font-size-medium;
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -ms-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+      }
+
+      &-link:hover,
+      &-link:active {
+        color: $default-color-heading;
+      }
+    }
+  }
+}
+
+.menu__dropdown {
+  display: none;
+}
+
 /* =========================== Desktop CSS ================================
 
 .header {
