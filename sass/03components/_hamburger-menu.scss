@@ -122,6 +122,14 @@
   }
 
   // Functionality
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+    -webkit-transform: scale(80);
+    -moz-transform: scale(80);
+    -ms-transform: scale(80);
+    -o-transform: scale(80);
+  }
+
   &__checkbox:checked ~ &__navi {
     opacity: 1;
     width: 100%;

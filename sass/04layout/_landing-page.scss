@@ -1,13 +1,9 @@
 .landing-content {
-  &__main {
-    margin: 2rem auto;
-    width: 90%;
-    height: 50vh;
-    background-image: url("../img/hike-photos/background-heading.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
+  // main section is on big-video file
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto-fit);
 }
 
 /* ============== Desktop CSS ===================

@@ -23,7 +23,7 @@
       grid-row: 1 / 2;
       justify-content: center;
       align-content: center;
-      border: 1px dotted khaki;
+      border: 2px dotted khaki;
     }
   }
   &__heading {
@@ -79,11 +79,6 @@
         color: $default-color;
         width: 100%;
         font-size: $font-size-medium;
-        transition: all 0.4s ease-in-out;
-        -webkit-transition: all 0.4s ease-in-out;
-        -moz-transition: all 0.4s ease-in-out;
-        -ms-transition: all 0.4s ease-in-out;
-        -o-transition: all 0.4s ease-in-out;
       }
 
       &-link:hover,

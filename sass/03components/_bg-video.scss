@@ -1,10 +1,52 @@
 .landing-content__main {
-  margin: 2rem 0;
-  //height: 78vh;
+  margin: 4rem auto;
+  width: 95%;
+  height: 60vh;
+  background-image: url("../img/hike-photos/background-heading.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
 
   &--video {
     display: none;
+  }
+
+  &--title {
+    font-size: $font-size-medium;
+    display: grid;
+    opacity: 0.8;
+    padding: 3.7rem 1rem;
+    text-align: center;
+    line-height: 1;
+    background-image: linear-gradient(
+      rgba(255, 255, 0, 0) 10%,
+      darken($color-dark, 50%) 90%
+    );
+    grid-row: 3 / 4;
+    z-index: 99;
+    transition: all s ease.5-in-out;
+    -webkit-transition: all s ease.5-in-out;
+    -moz-transition: all s ease.5-in-out;
+    -ms-transition: all s ease.5-in-out;
+    -o-transition: all s ease.5-in-out;
+
+    h1 {
+      display: inline-block;
+      & a:link,
+      & a:visited {
+        color: darken($default-color-heading, 5%);
+        text-shadow: 2px 2px 2px $color-white;
+      }
+
+      & a:hover,
+      & a:active {
+        text-decoration: underline;
+      }
+    }
   }
 }
 

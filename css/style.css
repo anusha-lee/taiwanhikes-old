@@ -82,10 +82,42 @@ h3 {
   font-family: "Averia Gruesa Libre", cursive; }
 
 .landing-content__main {
-  margin: 2rem 0;
-  display: grid; }
+  margin: 4rem auto;
+  width: 95%;
+  height: 60vh;
+  background-image: url("../img/hike-photos/background-heading.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr); }
   .landing-content__main--video {
     display: none; }
+  .landing-content__main--title {
+    font-size: 2.1rem;
+    display: grid;
+    opacity: 0.8;
+    padding: 3.7rem 1rem;
+    text-align: center;
+    line-height: 1;
+    background-image: linear-gradient(rgba(255, 255, 0, 0) 10%, black 90%);
+    grid-row: 3 / 4;
+    z-index: 99;
+    transition: all s ease 0.5-in-out;
+    -webkit-transition: all s ease 0.5-in-out;
+    -moz-transition: all s ease 0.5-in-out;
+    -ms-transition: all s ease 0.5-in-out;
+    -o-transition: all s ease 0.5-in-out; }
+    .landing-content__main--title h1 {
+      display: inline-block; }
+      .landing-content__main--title h1 a:link,
+      .landing-content__main--title h1 a:visited {
+        color: #cd3333;
+        text-shadow: 2px 2px 2px #fff; }
+      .landing-content__main--title h1 a:hover,
+      .landing-content__main--title h1 a:active {
+        text-decoration: underline; }
 
 /* =========================== Desktop CSS ================================
 
@@ -250,16 +282,25 @@ h3 {
         -moz-transform: translateX(1rem);
         -ms-transform: translateX(1rem);
         -o-transform: translateX(1rem); }
+  .hamnav__checkbox:checked ~ .hamnav__background {
+    transform: scale(80);
+    -webkit-transform: scale(80);
+    -moz-transform: scale(80);
+    -ms-transform: scale(80);
+    -o-transform: scale(80); }
   .hamnav__checkbox:checked ~ .hamnav__navi {
     opacity: 1;
     width: 100%; }
 
-.trip-avatar-img {
+.sidebar__trip--avatar-img {
   width: 100%;
   height: auto; }
 
 .svg-icon {
   fill: #d24747; }
+
+.sidebar {
+  background-color: khaki; }
 
 /* =========================== Desktop CSS ================================
 
@@ -540,7 +581,7 @@ h3 {
       grid-row: 1 / 2;
       justify-content: center;
       align-content: center;
-      border: 1px dotted khaki; }
+      border: 2px dotted khaki; }
   .header__heading {
     display: none;
     grid-column: 2 / 4;
@@ -583,12 +624,7 @@ h3 {
         display: block;
         color: #76a3a3;
         width: 100%;
-        font-size: 2.1rem;
-        transition: all 0.4s ease-in-out;
-        -webkit-transition: all 0.4s ease-in-out;
-        -moz-transition: all 0.4s ease-in-out;
-        -ms-transition: all 0.4s ease-in-out;
-        -o-transition: all 0.4s ease-in-out; }
+        font-size: 2.1rem; }
       .header__nav--menu-link:hover, .header__nav--menu-link:active {
         font-style: italic;
         font-weight: 700;
@@ -781,14 +817,10 @@ h3 {
 }
 
 ================================================================================== */
-.landing-content__main {
-  margin: 2rem auto;
-  width: 90%;
-  height: 50vh;
-  background-image: url("../img/hike-photos/background-heading.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+.landing-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto-fit); }
 
 /* ============== Desktop CSS ===================
 
