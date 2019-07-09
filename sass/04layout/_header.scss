@@ -63,6 +63,11 @@
         text-align: center;
         margin: 0;
         padding: 0.2rem;
+        transition: all 0.5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
       }
       &-item:not(:last-child) {
         border-bottom: 1px solid $default-color;
@@ -70,7 +75,9 @@
 
       &-link:link,
       &-link:visited {
+        display: block;
         color: $default-color;
+        width: 100%;
         font-size: $font-size-medium;
         transition: all 0.4s ease-in-out;
         -webkit-transition: all 0.4s ease-in-out;
@@ -81,7 +88,13 @@
 
       &-link:hover,
       &-link:active {
-        color: $default-color-heading;
+        font-style: italic;
+        font-weight: 700;
+        color: $color-white;
+      }
+
+      &-item:hover {
+        background-color: $default-color-heading;
       }
     }
   }
