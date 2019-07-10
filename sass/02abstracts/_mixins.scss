@@ -25,6 +25,12 @@ how to apply:
 
 ******************************************/
 
+@mixin sm-screen-heading {
+  display: inline-block;
+  color: $default-color-heading;
+  font-size: $font-size-medium;
+}
+
 @mixin responsive($breakpoint) {
   @if $breakpoint == tab-port {
     @media only screen and (min-width: 400px) {

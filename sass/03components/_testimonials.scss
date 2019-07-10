@@ -1,3 +1,35 @@
+.testimonials {
+  background-image: url("../img/hike-photos/background.jpg");
+  background-size: cover;
+  margin: 2rem auto;
+  height: auto;
+  width: 95%;
+
+  &__heading {
+    width: 95%;
+    padding: 2rem 1rem;
+    @include sm-screen-heading;
+  }
+
+  &__block {
+    // background-color: $default-color;
+
+    // box-shadow: 10px 10px 35px -12px $color-grey;
+
+    margin: 3rem auto;
+    color: $color-dark;
+    text-shadow: 1px 1px 1px $default-color;
+    font-size: $font-size-sm;
+    padding: 2rem 1.5rem;
+    width: 80%;
+    height: auto;
+    //overflow: hidden;
+    line-height: 1;
+    background-color: rgba($color-white, 0.5);
+    box-shadow: 10px 10px 35px -12px $color-dark;
+  }
+}
+
 /* =========================== Desktop CSS ================================
 
 .testimonials {

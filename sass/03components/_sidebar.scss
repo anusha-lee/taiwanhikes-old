@@ -1,3 +1,221 @@
 .sidebar {
-  background-color: khaki;
+  width: 95%;
+  height: auto;
+  margin: 2rem auto;
+  padding: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: space-between;
+  align-content: center;
+
+  &__heading {
+    @include sm-screen-heading;
+  }
+
+  // us JavaScript to make the trip section clickable
+  &__trip {
+    padding: 2rem 1rem;
+    border-bottom: 0.5px solid $color-grey;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+
+    &--avatar {
+      display: none;
+    }
+
+    &--img {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &--text {
+      font-size: $font-size-sm;
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+    }
+
+    &--click {
+      margin: 0;
+      padding: 0;
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      justify-self: end;
+      align-self: end;
+      z-index: 100;
+    }
+  }
 }
+
+/*
+
+&__sidebar {
+    height: 78vh;
+    margin: 2.5rem 0;
+    padding: 2rem;
+    grid-column: 9 / 12;
+    grid-row: 1 / 2;
+    justify-content: space-between;
+    align-content: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh repeat(4, 18vh);
+    justify-content: space-between;
+
+    font-size: $font-size-sm;
+    padding-left: 0.8rem;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 9 / 13;
+    }
+    @media only screen and (max-width: $bp-m2) {
+      height: 65vh;
+      grid-column: 2 / 12;
+      grid-row: 2 / 3;
+      margin: 0;
+
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 18% repeat(2, 1fr);
+    }
+    @media only screen and (max-width: $bp-sm) {
+      margin: 2rem;
+      min-height: 90%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: space-around;
+    }
+    :hover {
+      background-color: lighten($default-color, 40%);
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+    }
+
+    &--heading {
+      display: inline-block;
+      color: $default-color-heading;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-bottom: 0.1rem;
+      }
+
+      @media only screen and (max-width: $bp-m2) {
+        align-self: center;
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        margin-bottom: 0.2rem;
+      }
+    }
+    &--trip:not(:last-child) {
+      border-bottom: 1px solid rgba($color-grey, 0.5);
+    }
+
+    &--trip {
+      padding: 0.2rem 0.1rem 0.4rem;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 10% 4fr 7%;
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: space-between;
+
+      @media only screen and (max-width: $bp-large) {
+        border-bottom: 1px solid rgba($color-grey, 0.5);
+
+        display: grid;
+        grid-template-columns: 1fr 80% 1fr;
+        grid-row: 1fr;
+      }
+
+      @media only screen and (max-width: $bp-m2) {
+        // border: 1px solid rgba($color-grey, 0.5);
+        grid-template-columns: 1fr 70% 1fr;
+        padding-top: 2rem;
+        box-shadow: 2px 2px 4px rgba($color-grey, 0.5);
+        height: 95%;
+      }
+
+      @media only screen and (max-width: $bp-sm) {
+        grid-template-rows: 2fr, 1fr;
+        //width: 100%;
+        height: 24%;
+        padding: 0.8rem 0.6rem;
+        display: grid;
+      }
+
+      @media only screen and (max-width: $bp-xs) {
+        // height: 30%;
+        padding: 0.8rem 0.6rem;
+        display: grid;
+      }
+
+      &-avatar {
+        margin: 2px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        justify-self: center;
+        align-self: center;
+
+        @media only screen and (max-width: $bp-large) {
+          display: none;
+        }
+      }
+      &-img {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        justify-self: center;
+        align-self: center;
+
+        @media only screen and (max-width: $bp-large) {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+        }
+      }
+      &-text {
+        line-height: 1;
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+        margin: 0.2rem;
+        padding: 0.2rem;
+        // width: 91%;
+
+        @media only screen and (max-width: $bp-large) {
+          grid-column: 2 / 3;
+          grid-row: 1 /2;
+        }
+
+        @media only screen and (max-width: $bp-m2) {
+          grid-column: 2 / 4;
+          grid-row: 1 / 3;
+        }
+      }
+      &-click {
+        cursor: pointer;
+        grid-column: 4 /53;
+        grid-row: 1 / 3;
+        justify-self: center;
+        align-self: center;
+        display: inline-block;
+        //padding-top: 1rem;
+
+        @media only screen and (max-width: $bp-large) {
+          grid-column: 3 / 4;
+          grid-row: 1 /2;
+        }
+
+        @media only screen and (max-width: $bp-m2) {
+          grid-column: 3 / 4;
+          grid-row: 2 / 3;
+          align-self: end;
+        }
+      }
+    }
+  }
+
+  */
