@@ -300,7 +300,7 @@ h3 {
   height: auto; }
 
 .svg-icon {
-  fill: #d24747; }
+  fill: aquamarine; }
 
 .sidebar {
   width: 95%;
@@ -316,12 +316,13 @@ h3 {
     color: #d24747;
     font-size: 2.1rem; }
   .sidebar__trip {
+    margin: 2rem auto;
     padding: 2rem 1rem;
-    border-bottom: 0.5px solid #888888;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: repeat(2, 1fr);
-    justify-content: space-between; }
+    justify-content: space-between;
+    box-shadow: 10px 5px 35px -12px #888888; }
     .sidebar__trip--avatar {
       display: none; }
     .sidebar__trip--img {
@@ -514,9 +515,10 @@ h3 {
 .testimonials {
   background-image: url("../img/hike-photos/background.jpg");
   background-size: cover;
-  margin: 2rem auto;
+  margin: 2rem auto 4rem;
   height: auto;
-  width: 95%; }
+  width: 95%;
+  box-shadow: 10px 5px 35px -12px #888888; }
   .testimonials__heading {
     width: 95%;
     padding: 2rem 1rem;
@@ -524,16 +526,36 @@ h3 {
     color: #d24747;
     font-size: 2.1rem; }
   .testimonials__block {
-    margin: 3rem auto;
+    margin: 1.5rem auto 3rem;
     color: #4b3c4c;
     text-shadow: 1px 1px 1px #76a3a3;
     font-size: 1.6rem;
     padding: 2rem 1.5rem;
     width: 80%;
-    height: auto;
-    line-height: 1;
+    min-height: 13rem;
+    max-height: auto;
+    line-height: 1.4;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 10px 10px 35px -12px #4b3c4c; }
+    .testimonials__block--person {
+      height: 8rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 1fr;
+      grid-gap: 1rem; }
+      .testimonials__block--person-photo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: center; }
+      .testimonials__block--person-name {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: start;
+        align-self: center; }
+    .testimonials__block--text {
+      margin: 1rem auto; }
 
 /* =========================== Desktop CSS ================================
 
@@ -1112,6 +1134,42 @@ h3 {
 }
 
 =============================================================== */
+.footer {
+  width: 100%;
+  padding: 3rem;
+  background-color: #76a3a3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto-fit;
+  justify-content: space-around;
+  color: #d24747; }
+  .footer__logo {
+    margin: 1rem auto;
+    padding: 0.5rem 1rem 1rem 1rem;
+    width: 100%;
+    text-align: center; }
+    .footer__logo--box-img {
+      width: 5rem; }
+  .footer__nav {
+    font-size: 2.1rem; }
+  .footer__copyright {
+    width: 100%;
+    min-height: 18rem;
+    font-size: 1.6rem;
+    color: #4b3c4c;
+    height: 10rem;
+    margin: 2rem auto;
+    padding: 1rem; }
+    .footer__copyright-text-box {
+      margin: 1rem auto;
+      text-align: center; }
+    .footer__copyright-social-facebook, .footer__copyright-social-instagram, .footer__copyright-social-twitter {
+      margin: 0 1.5rem;
+      width: 2.5rem; }
+  .footer .love {
+    width: 1.5rem;
+    fill: red; }
+
 /* =========================== Desktop CSS ================================
 
 .footer {

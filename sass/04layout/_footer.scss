@@ -1,3 +1,63 @@
+.footer {
+  width: 100%;
+  padding: 3rem;
+  background-color: $default-color;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto-fit;
+  justify-content: space-around;
+  color: $default-color-heading;
+
+  &__logo {
+    margin: 1rem auto;
+    padding: 0.5rem 1rem 1rem 1rem;
+    width: 100%;
+    text-align: center;
+    // border: 2px dotted firebrick;
+    &--box-img {
+      width: 5rem;
+    }
+  }
+
+  &__nav {
+    font-size: $font-size-medium;
+    &--list {
+    }
+    // &--list {
+    //   &-item li {
+    //     font-size: $font-size-medium;
+    //   }
+    // }
+  }
+
+  &__copyright {
+    width: 100%;
+    min-height: 18rem;
+    font-size: $font-size-sm;
+    color: $color-dark;
+    height: 10rem;
+    margin: 2rem auto;
+    padding: 1rem;
+
+    &-text-box {
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    &-social-facebook,
+    &-social-instagram,
+    &-social-twitter {
+      margin: 0 1.5rem;
+      width: 2.5rem;
+    }
+  }
+  .love {
+    width: 1.5rem;
+    // fill: $default-color-heading;
+    fill: red;
+  }
+}
+
 /* =========================== Desktop CSS ================================
 
 .footer {

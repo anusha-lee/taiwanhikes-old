@@ -14,12 +14,14 @@
 
   // us JavaScript to make the trip section clickable
   &__trip {
+    margin: 2rem auto;
     padding: 2rem 1rem;
-    border-bottom: 0.5px solid $color-grey;
+    //border-bottom: 0.5px solid $color-grey;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
+    box-shadow: 10px 5px 35px -12px $color-grey;
 
     &--avatar {
       display: none;
