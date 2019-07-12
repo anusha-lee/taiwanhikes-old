@@ -826,19 +826,20 @@ h3 {
   grid-column-gap: 0.5rem;
   align-items: center; }
   .header__logo-box {
-    padding: 0.5rem;
+    height: auto;
+    padding: 1rem;
     background-color: #76a3a3;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
     display: grid;
     grid-column: repeat(3, 1fr); }
     .header__logo-box-img {
-      width: 4.5rem;
+      width: 5.5rem;
+      padding-left: 1rem;
       grid-column: 1 / 2;
       grid-row: 1 / 2;
       justify-content: center;
-      align-content: center;
-      border: 2px dotted khaki; }
+      align-content: center; }
   .header__heading {
     display: none;
     grid-column: 2 / 4;
@@ -1155,7 +1156,6 @@ h3 {
   .footer__nav {
     display: none; }
   .footer__copyright {
-    border: 2px solid sandybrown;
     width: 100%;
     min-height: 18rem;
     font-size: 1.6rem;
