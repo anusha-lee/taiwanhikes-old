@@ -20,17 +20,11 @@
   }
 
   &__nav {
-    font-size: $font-size-medium;
-    &--list {
-    }
-    // &--list {
-    //   &-item li {
-    //     font-size: $font-size-medium;
-    //   }
-    // }
+    display: none;
   }
 
   &__copyright {
+    border: 2px solid sandybrown;
     width: 100%;
     min-height: 18rem;
     font-size: $font-size-sm;
@@ -40,7 +34,7 @@
     padding: 1rem;
 
     &-text-box {
-      margin: 1rem auto;
+      margin: 0.5rem auto;
       text-align: center;
     }
 
@@ -52,9 +46,9 @@
     }
   }
   .love {
-    width: 1.5rem;
+    width: 2rem;
     // fill: $default-color-heading;
-    fill: red;
+    fill: $default-color-heading;
   }
 }
 
