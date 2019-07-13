@@ -191,17 +191,88 @@ h3 {
   }
 }
 */
+.hamburger {
+  background-color: #76a3a3;
+  border: 2px dashed khaki;
+  /*
+  &__content {
+    // display: none;
+    font-size: $font-size-big;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+
+    &--menu {
+      margin: 0.2rem auto;
+      padding: 2rem;
+      text-align: center;
+      border: 2px dashed lightblue;
+    }
+  } */ }
+  .hamburger__btn {
+    display: none; }
+  .hamburger__btn:checked ~ .hamburger__content .hamburger__icon {
+    padding: 2.8rem 2rem;
+    position: relative;
+    float: right;
+    cursor: pointer; }
+    .hamburger__btn:checked ~ .hamburger__content .hamburger__icon-span {
+      background: #4b3c4c;
+      display: block;
+      height: 0.2rem;
+      width: 2rem;
+      position: relative;
+      transition: background 0.2s ease-out;
+      -webkit-transition: background 0.2s ease-out;
+      -moz-transition: background 0.2s ease-out;
+      -ms-transition: background 0.2s ease-out;
+      -o-transition: background 0.2s ease-out; }
+      .hamburger__btn:checked ~ .hamburger__content .hamburger__icon-span::before {
+        content: "";
+        background: #4b3c4c;
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0.5rem;
+        transition: all 0.2 ease-in-out;
+        -webkit-transition: all 0.2 ease-in-out;
+        -moz-transition: all 0.2 ease-in-out;
+        -ms-transition: all 0.2 ease-in-out;
+        -o-transition: all 0.2 ease-in-out; }
+      .hamburger__btn:checked ~ .hamburger__content .hamburger__icon-span::after {
+        content: "";
+        background: #4b3c4c;
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: -0.5rem;
+        transition: all 0.2 ease-in-out;
+        -webkit-transition: all 0.2 ease-in-out;
+        -moz-transition: all 0.2 ease-in-out;
+        -ms-transition: all 0.2 ease-in-out;
+        -o-transition: all 0.2 ease-in-out; }
+
+/*
 .hamnav {
+  //display: none;
   height: 40vh;
   width: 100%;
-  background-color: aqua; }
-  @media only screen and (min-width: 400px) {
-    .hamnav {
-      background-color: pink; } }
-  .hamnav__checkbox {
-    display: none; }
-  .hamnav__button {
-    background-color: #fff;
+  background-color: aqua;
+
+  @include responsive(tab-port) {
+    background-color: pink;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    background-color: $color-white;
     height: 6rem;
     width: 6rem;
     position: fixed;
@@ -212,12 +283,16 @@ h3 {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+
     z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba(75, 60, 76, 0.2);
-    cursor: pointer; }
-  .hamnav__background {
+    box-shadow: 0 1rem 3rem rgba($color-dark, 0.2);
+    cursor: pointer;
+  }
+
+  &__background {
     height: 5.5rem;
     width: 5.5rem;
+    //border: 1px solid orangered;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -226,7 +301,7 @@ h3 {
     position: fixed;
     top: 1.7rem;
     right: 1.7rem;
-    background-image: radial-gradient(#888888, #76a3a3);
+    background-image: radial-gradient($color-grey, $default-color);
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     -webkit-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     -moz-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -237,20 +312,27 @@ h3 {
     -webkit-transform: scale(80);
     -moz-transform: scale(80);
     -ms-transform: scale(80);
-    -o-transform: scale(80); }
-  .hamnav__navi {
+    -o-transform: scale(80);
+  }
+
+  &__navi {
     height: 100vh;
     width: 100%;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1500;
+    //opacity: 0;
+
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -moz-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -ms-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -o-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  .hamnav__list {
+    -o-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &__list {
+    // should i use grid?
     position: absolute;
     top: 50%;
     left: 50%;
@@ -260,41 +342,61 @@ h3 {
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%); }
-    .hamnav__list--item {
-      margin: 1rem; }
-    .hamnav__list-link:link, .hamnav__list-link:visited {
-      display: inline-block;
-      font-size: 3.3rem;
-      font-weight: 300;
-      color: #fff;
-      text-decoration: none;
-      padding: 1rem 2rem;
-      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
-      background-size: 220%;
-      transition: all 0.4s;
-      -webkit-transition: all 0.4s;
-      -moz-transition: all 0.4s;
-      -ms-transition: all 0.4s;
-      -o-transition: all 0.4s; }
-    .hamnav__list-link:hover, .hamnav__list-link:active {
-      background-position: 100%;
-      color: #76a3a3;
-      transform: translateX(1rem);
-      -webkit-transform: translateX(1rem);
-      -moz-transform: translateX(1rem);
-      -ms-transform: translateX(1rem);
-      -o-transform: translateX(1rem); }
-  .hamnav__checkbox:checked ~ .hamnav__background {
+    -o-transform: translate(-50%, -50%);
+
+    &--item {
+      margin: 1rem;
+    }
+    &-link {
+      &:link,
+      &:visited {
+        display: inline-block;
+        font-size: $font-size-big;
+        font-weight: 300;
+        color: $color-white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        background-image: linear-gradient(
+          120deg,
+          transparent 0%,
+          transparent 50%,
+          $color-white 50%
+        );
+        background-size: 220%;
+        transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -ms-transition: all 0.4s;
+        -o-transition: all 0.4s;
+      }
+      &:hover,
+      &:active {
+        background-position: 100%;
+        color: $default-color;
+        transform: translateX(1rem);
+        -webkit-transform: translateX(1rem);
+        -moz-transform: translateX(1rem);
+        -ms-transform: translateX(1rem);
+        -o-transform: translateX(1rem);
+      }
+    }
+  }
+
+  // Functionality
+  &__checkbox:checked ~ &__background {
     transform: scale(80);
     -webkit-transform: scale(80);
     -moz-transform: scale(80);
     -ms-transform: scale(80);
-    -o-transform: scale(80); }
-  .hamnav__checkbox:checked ~ .hamnav__navi {
-    opacity: 1;
-    width: 100%; }
+    -o-transform: scale(80);
+  }
 
+  &__checkbox:checked ~ &__navi {
+    opacity: 1;
+    width: 100%;
+  }
+}
+*/
 .sidebar__trip--avatar-img {
   width: 100%;
   height: auto; }
