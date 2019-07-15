@@ -191,10 +191,31 @@ h3 {
   }
 }
 */
-.hamburger {
-  background-color: #76a3a3;
-  border: 2px dashed khaki;
-  /*
+.hamburger__checkbox {
+  display: none; }
+
+.hamburger__icon {
+  border: 2px solid khaki;
+  background-color: #fff;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  border-radius: 50%;
+  z-index: 2000; }
+
+.hamburger__background {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 4.5rem;
+  right: 4.5rem;
+  background-image: radial-gradient(#76a3a3, #d24747);
+  z-index: 1000; }
+
+/*
   &__content {
     // display: none;
     font-size: $font-size-big;
@@ -210,52 +231,7 @@ h3 {
       text-align: center;
       border: 2px dashed lightblue;
     }
-  } */ }
-  .hamburger__btn {
-    display: none; }
-  .hamburger__btn:checked ~ .hamburger__content .hamburger__icon {
-    padding: 2.8rem 2rem;
-    position: relative;
-    float: right;
-    cursor: pointer; }
-    .hamburger__btn:checked ~ .hamburger__content .hamburger__icon-span {
-      background: #4b3c4c;
-      display: block;
-      height: 0.2rem;
-      width: 2rem;
-      position: relative;
-      transition: background 0.2s ease-out;
-      -webkit-transition: background 0.2s ease-out;
-      -moz-transition: background 0.2s ease-out;
-      -ms-transition: background 0.2s ease-out;
-      -o-transition: background 0.2s ease-out; }
-      .hamburger__btn:checked ~ .hamburger__content .hamburger__icon-span::before {
-        content: "";
-        background: #4b3c4c;
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0.5rem;
-        transition: all 0.2 ease-in-out;
-        -webkit-transition: all 0.2 ease-in-out;
-        -moz-transition: all 0.2 ease-in-out;
-        -ms-transition: all 0.2 ease-in-out;
-        -o-transition: all 0.2 ease-in-out; }
-      .hamburger__btn:checked ~ .hamburger__content .hamburger__icon-span::after {
-        content: "";
-        background: #4b3c4c;
-        display: block;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: -0.5rem;
-        transition: all 0.2 ease-in-out;
-        -webkit-transition: all 0.2 ease-in-out;
-        -moz-transition: all 0.2 ease-in-out;
-        -ms-transition: all 0.2 ease-in-out;
-        -o-transition: all 0.2 ease-in-out; }
-
+  } */
 /*
 .hamnav {
   //display: none;
