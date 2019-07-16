@@ -38,12 +38,12 @@ how to apply:
     }
   }
   @if $breakpoint == tab-land {
-    @media only screen and (min-width: 520px) {
+    @media only screen and (min-width: 560px) {
       @content;
     }
   }
-  @if $breakpoint == desktop {
-    @media only screen and (min-width: 900px) {
+  @if $breakpoint == sm-desktop {
+    @media only screen and (min-width: 720px) {
       @content;
     }
   }

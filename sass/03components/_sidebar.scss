@@ -21,7 +21,13 @@
     min-height: 90%;
     display: grid;
     grid-template-columns: repeat(2, minmax(40%, 48%));
-    grid-template-rows: 12% repeat(2, minmax(40%, 45%));
+    grid-template-rows: 12% repeat(2, minmax(37%, 45%));
+  }
+
+  @include responsive(sm-desktop) {
+    margin: auto;
+    width: 75%;
+    grid-template-rows: 12% repeat(2, minmax(55%, 62%));
   }
 
   &__heading {
@@ -67,6 +73,14 @@
       justify-self: end;
       align-self: end;
       z-index: 100;
+    }
+    &:hover {
+      background-color: lighten($color-grey, 40%);
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
     }
   }
 }

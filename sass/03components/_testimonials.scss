@@ -6,10 +6,21 @@
   width: 95%;
   box-shadow: 10px 5px 35px -12px $color-grey;
 
+  @include responsive(sm-desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 15% 1fr;
+  }
+
   &__heading {
     width: 95%;
     padding: 2rem 1rem;
     @include sm-screen-heading;
+
+    @include responsive(sm-desktop) {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
   }
 
   &__block {
@@ -26,6 +37,16 @@
     background-color: rgba($color-white, 0.5);
     box-shadow: 10px 10px 35px -12px $color-dark;
 
+    @include responsive(tab-land) {
+      width: 60%;
+    }
+
+    @include responsive(sm-desktop) {
+      width: 80%;
+      -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+      clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
     &--person {
       height: 8rem;
       width: 100%;
@@ -33,6 +54,14 @@
       grid-template-columns: 1fr 3fr;
       grid-template-rows: 1fr;
       grid-gap: 1rem;
+
+      @include responsive(tab-land) {
+        height: 5rem;
+      }
+      @include responsive(sm-desktop) {
+        margin: auto;
+        width: 80%;
+      }
 
       &-photo {
         //margin: 0 auto;
@@ -54,6 +83,10 @@
 
     &--text {
       margin: 1rem auto;
+
+      @include responsive(sm-desktop) {
+        width: 80%;
+      }
     }
   }
 }

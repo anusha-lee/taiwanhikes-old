@@ -1,7 +1,7 @@
 .landing-content__main {
   margin: 4rem auto;
-  width: 95%;
-  height: 60vh;
+  width: 90%;
+  height: 70vh;
   background-image: url("../img/hike-photos/background-heading.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -13,6 +13,7 @@
 
   @include responsive(tab-land) {
     width: 70%;
+    height: 85vh;
   }
 
   &--video {

@@ -8,6 +8,10 @@
   justify-content: space-between;
   grid-column-gap: 0.5rem;
   align-items: center;
+
+  @include responsive(sm-desktop) {
+  }
+
   &__logo-box {
     height: auto;
     padding: 1rem;
@@ -58,6 +62,11 @@
       justify-content: space-around;
       align-content: center;
 
+      @include responsive(sm-desktop) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+      }
+
       &-item {
         display: inline-block;
         width: 100%;
@@ -72,6 +81,9 @@
       }
       &-item:not(:last-child) {
         border-bottom: 1px solid $default-color;
+        @include responsive(sm-desktop) {
+          border-bottom: none;
+        }
       }
 
       &-link:link,

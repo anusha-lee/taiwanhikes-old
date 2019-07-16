@@ -83,8 +83,8 @@ h3 {
 
 .landing-content__main {
   margin: 4rem auto;
-  width: 95%;
-  height: 60vh;
+  width: 90%;
+  height: 70vh;
   background-image: url("../img/hike-photos/background-heading.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -92,9 +92,10 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr); }
-  @media only screen and (min-width: 520px) {
+  @media only screen and (min-width: 560px) {
     .landing-content__main {
-      width: 70%; } }
+      width: 70%;
+      height: 85vh; } }
   .landing-content__main--video {
     display: none; }
   .landing-content__main--title {
@@ -313,18 +314,23 @@ h3 {
   grid-template-rows: 15%, repeat(4, 1fr);
   justify-content: space-between;
   align-content: center; }
-  @media only screen and (min-width: 520px) {
+  @media only screen and (min-width: 560px) {
     .sidebar {
       margin: 2rem;
       min-height: 90%;
       display: grid;
       grid-template-columns: repeat(2, minmax(40%, 48%));
-      grid-template-rows: 12% repeat(2, minmax(40%, 45%)); } }
+      grid-template-rows: 12% repeat(2, minmax(37%, 45%)); } }
+  @media only screen and (min-width: 720px) {
+    .sidebar {
+      margin: auto;
+      width: 75%;
+      grid-template-rows: 12% repeat(2, minmax(55%, 62%)); } }
   .sidebar__heading {
     display: inline-block;
     color: #d24747;
     font-size: 2.1rem; }
-    @media only screen and (min-width: 520px) {
+    @media only screen and (min-width: 560px) {
       .sidebar__heading {
         grid-column: 1 / 3;
         grid-row: 1 / 2; } }
@@ -354,6 +360,13 @@ h3 {
       justify-self: end;
       align-self: end;
       z-index: 100; }
+    .sidebar__trip:hover {
+      background-color: #eeeeee;
+      transition: all 0.5s ease-in-out;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out; }
 
 /*
 
@@ -533,12 +546,21 @@ h3 {
   height: auto;
   width: 95%;
   box-shadow: 10px 5px 35px -12px #888888; }
+  @media only screen and (min-width: 720px) {
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 15% 1fr; } }
   .testimonials__heading {
     width: 95%;
     padding: 2rem 1rem;
     display: inline-block;
     color: #d24747;
     font-size: 2.1rem; }
+    @media only screen and (min-width: 720px) {
+      .testimonials__heading {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2; } }
   .testimonials__block {
     margin: 1.5rem auto 3rem;
     color: #4b3c4c;
@@ -551,6 +573,14 @@ h3 {
     line-height: 1.4;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 10px 10px 35px -12px #4b3c4c; }
+    @media only screen and (min-width: 560px) {
+      .testimonials__block {
+        width: 60%; } }
+    @media only screen and (min-width: 720px) {
+      .testimonials__block {
+        width: 80%;
+        -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); } }
     .testimonials__block--person {
       height: 8rem;
       width: 100%;
@@ -558,6 +588,13 @@ h3 {
       grid-template-columns: 1fr 3fr;
       grid-template-rows: 1fr;
       grid-gap: 1rem; }
+      @media only screen and (min-width: 560px) {
+        .testimonials__block--person {
+          height: 5rem; } }
+      @media only screen and (min-width: 720px) {
+        .testimonials__block--person {
+          margin: auto;
+          width: 80%; } }
       .testimonials__block--person-photo {
         width: 8rem;
         grid-column: 1 / 2;
@@ -571,6 +608,9 @@ h3 {
         align-self: center; }
     .testimonials__block--text {
       margin: 1rem auto; }
+      @media only screen and (min-width: 720px) {
+        .testimonials__block--text {
+          width: 80%; } }
 
 /* =========================== Desktop CSS ================================
 
@@ -878,6 +918,10 @@ h3 {
       grid-template-rows: repeat(4, 1fr);
       justify-content: space-around;
       align-content: center; }
+      @media only screen and (min-width: 720px) {
+        .header__nav--menu {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: 1fr; } }
       .header__nav--menu-item {
         display: inline-block;
         width: 100%;
@@ -891,6 +935,9 @@ h3 {
         -o-transition: all 0.5s ease-in-out; }
       .header__nav--menu-item:not(:last-child) {
         border-bottom: 1px solid #76a3a3; }
+        @media only screen and (min-width: 720px) {
+          .header__nav--menu-item:not(:last-child) {
+            border-bottom: none; } }
       .header__nav--menu-link:link, .header__nav--menu-link:visited {
         display: block;
         color: #76a3a3;
