@@ -38,7 +38,7 @@ how to apply:
     }
   }
   @if $breakpoint == tab-land {
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 520px) {
       @content;
     }
   }

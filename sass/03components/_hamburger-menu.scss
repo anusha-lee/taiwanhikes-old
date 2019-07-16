@@ -1,3 +1,9 @@
+// When the header is on the top
+// the hamburger menu will not show up.
+// Make a JavaScript function to make
+// the hamburger menu show up
+// when user scrolling down
+
 .hamburger {
   &__checkbox {
     display: none;
@@ -12,7 +18,7 @@
     right: 2rem;
     border-radius: 50%;
     z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba($color-dark, 0.1);
+    box-shadow: 0 1rem 5rem rgba($color-dark, 0.3);
     text-align: center;
     cursor: pointer;
   }

@@ -11,6 +11,10 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
 
+  @include responsive(tab-land) {
+    width: 70%;
+  }
+
   &--video {
     display: none;
   }
