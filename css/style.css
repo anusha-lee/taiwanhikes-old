@@ -881,7 +881,7 @@ h3 {
   @media only screen and (min-width: 960px) {
     .header {
       background-color: #76a3a3;
-      grid-template-columns: 35% 65%;
+      grid-template-columns: 32% 63%;
       grid-template-rows: 1fr;
       justify-content: space-between;
       grid-column-gap: 0.5rem;
@@ -913,8 +913,7 @@ h3 {
     @media only screen and (min-width: 960px) {
       .header__heading {
         display: block;
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
+        padding-left: 1rem;
         font-size: 3.3rem; } }
   .header__heading a:link,
   .header__heading a:visited {
@@ -933,9 +932,9 @@ h3 {
     grid-row: 2 / 3; }
     @media only screen and (min-width: 960px) {
       .header__nav {
-        border: 2px solid lightcoral;
+        margin-right: 1rem;
         grid-column: 2 / 3;
-        z-index: 999; } }
+        grid-row: 1 / 2; } }
     .header__nav--menu {
       display: grid;
       grid-template-columns: 1fr;
@@ -957,9 +956,6 @@ h3 {
         -moz-transition: all 0.5s ease-in-out;
         -ms-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out; }
-        @media only screen and (min-width: 960px) {
-          .header__nav--menu-item {
-            color: #fff; } }
       .header__nav--menu-item:not(:last-child) {
         border-bottom: 1px solid #76a3a3; }
         @media only screen and (min-width: 720px) {
@@ -970,12 +966,24 @@ h3 {
         color: #76a3a3;
         width: 100%;
         font-size: 2.1rem; }
+        @media only screen and (min-width: 960px) {
+          .header__nav--menu-link:link, .header__nav--menu-link:visited {
+            color: #fff;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #d24747 50%);
+            background-size: 250%;
+            transition: all 0.4s ease-in-out; } }
       .header__nav--menu-link:hover, .header__nav--menu-link:active {
         font-style: italic;
         font-weight: 700;
         color: #fff; }
+        @media only screen and (min-width: 960px) {
+          .header__nav--menu-link:hover, .header__nav--menu-link:active {
+            background-position: 100%; } }
       .header__nav--menu-item:hover {
         background-color: #d24747; }
+        @media only screen and (min-width: 960px) {
+          .header__nav--menu-item:hover {
+            background-color: #76a3a3; } }
 
 .menu__dropdown {
   display: none; }
