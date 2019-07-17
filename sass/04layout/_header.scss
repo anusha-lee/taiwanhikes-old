@@ -9,7 +9,13 @@
   grid-column-gap: 0.5rem;
   align-items: center;
 
-  @include responsive(sm-desktop) {
+  @include responsive(normal-desktop) {
+    background-color: $default-color;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    grid-column-gap: 0.5rem;
+    align-items: center;
   }
 
   &__logo-box {
@@ -21,6 +27,12 @@
 
     display: grid;
     grid-column: repeat(3, 1fr);
+
+    @include responsive(normal-desktop) {
+      width: 100%;
+      padding-left: 3.5rem;
+      grid-column: 1 / 2;
+    }
 
     &-img {
       width: 5.5rem;
@@ -35,6 +47,15 @@
     display: none;
     grid-column: 2 / 4;
     grid-row: 1 / 2;
+
+    @include responsive(normal-desktop) {
+      display: block;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      // letter-spacing: 2px;
+      // padding-left: 1rem;
+      font-size: $font-size-big;
+    }
   }
   &__heading a:link,
   &__heading a:visited {
@@ -54,6 +75,13 @@
   &__nav {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
+
+    @include responsive(normal-desktop) {
+      border: 2px solid lightcoral;
+      grid-column: 2 / 3;
+      z-index: 999;
+      // grid-row: 2 / 3;
+    }
 
     &--menu {
       display: grid;
@@ -78,6 +106,10 @@
         -moz-transition: all 0.5s ease-in-out;
         -ms-transition: all 0.5s ease-in-out;
         -o-transition: all 0.5s ease-in-out;
+
+        @include responsive(normal-desktop) {
+          color: $color-white;
+        }
       }
       &-item:not(:last-child) {
         border-bottom: 1px solid $default-color;

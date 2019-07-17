@@ -47,6 +47,11 @@ how to apply:
       @content;
     }
   }
+  @if $breakpoint == normal-desktop {
+    @media only screen and (min-width: 960px) {
+      @content;
+    }
+  }
   @if $breakpoint == big-desktop {
     @media only screen and (min-width: 1280px) {
       @content;
