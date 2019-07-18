@@ -103,8 +103,7 @@
         display: inline-block;
         width: 100%;
         text-align: center;
-        margin: 0;
-        padding: 0.2rem;
+        //padding: 0.2rem;
         transition: all 0.5s ease-in-out;
         -webkit-transition: all 0.5s ease-in-out;
         -moz-transition: all 0.5s ease-in-out;
@@ -123,7 +122,9 @@
         display: block;
         color: $default-color;
         width: 100%;
+        // height: 100%;
         font-size: $font-size-medium;
+        transition: all 0.4s ease-in-out;
 
         @include responsive(sm-desktop) {
           background-image: linear-gradient(
@@ -133,7 +134,7 @@
             $default-color-heading 50%
           );
           background-size: 250%;
-          transition: all 0.4s ease-in-out;
+          // transition: all 0.4s ease-in-out;
         }
 
         @include responsive(normal-desktop) {
@@ -146,14 +147,15 @@
         font-style: italic;
         font-weight: 700;
         color: $color-white;
+        background-color: $default-color-heading;
+        // margin: 0;
         @include responsive(sm-desktop) {
           background-position: 100%;
-          color: $color-white;
         }
       }
 
       &-item:hover {
-        background-color: $default-color-heading;
+        // background-color: $default-color-heading;
 
         @include responsive(normal-desktop) {
           background-color: $default-color;

@@ -49,12 +49,17 @@ how to apply:
     }
   }
   @if $breakpoint == normal-desktop {
-    @media only screen and (min-width: 960px) {
+    @media only screen and (min-width: 940px) {
       @content;
     }
   }
   @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 1280px) {
+    @media only screen and (min-width: 1180px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl-desktop {
+    @media only screen and (min-width: 1340px) {
       @content;
     }
   }

@@ -1,9 +1,35 @@
 .landing-content {
   // main section is on big-video file
-
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto-fit);
+  grid-template-rows: repeat(2, auto-fit);
+  // grid-template-rows: repeat(auto-fit);
+
+  @include responsive(big-desktop) {
+    grid-template-columns: repeat(12, 1fr);
+
+    // grid-gap: 0.5rem;
+    // justify-content: space-between;
+    // align-content: start;
+
+    &__main {
+      border: 10px solid khaki;
+      grid-column: 2 / 9;
+      grid-row: 1 / 2;
+      // check _bg-video.scss for details
+    }
+
+    &__sidebar {
+      grid-column: 10 / 12;
+      grid-row: 1 / 2;
+    }
+
+    &__testimonials {
+      display: none;
+      grid-column: 2 / 12;
+      grid-row: 2 / 3;
+    }
+  }
 }
 
 /* ============== Desktop CSS ===================
