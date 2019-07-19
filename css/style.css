@@ -95,12 +95,32 @@ h3 {
   grid-template-rows: repeat(3, 1fr); }
   @media only screen and (min-width: 560px) {
     .landing-content__main {
+      position: relative;
       width: 70%;
-      height: 85vh; } }
+      height: 85vh;
+      grid-template-rows: repeat(4, 1fr); } }
+  @media only screen and (min-width: 940px) {
+    .landing-content__main {
+      position: relative;
+      background-image: none;
+      width: 90%;
+      height: 65vh; } }
   .landing-content__main--video {
     display: none; }
+    @media only screen and (min-width: 940px) {
+      .landing-content__main--video {
+        display: block; }
+        .landing-content__main--video-content {
+          object-fit: cover;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0.9;
+          overflow: hidden;
+          width: 100%; } }
   .landing-content__main--title {
-    font-size: 2.1rem;
+    font-size: 3.3rem;
     display: grid;
     opacity: 0.8;
     padding: 3.7rem 1rem;
@@ -114,6 +134,13 @@ h3 {
     -moz-transition: all s ease 0.5-in-out;
     -ms-transition: all s ease 0.5-in-out;
     -o-transition: all s ease 0.5-in-out; }
+    @media only screen and (min-width: 560px) {
+      .landing-content__main--title {
+        grid-row: 4 / 5; } }
+    @media only screen and (min-width: 1180px) {
+      .landing-content__main--title {
+        grid-row: 4 / 5;
+        font-size: 4.4rem; } }
     .landing-content__main--title h1 {
       display: inline-block; }
       .landing-content__main--title h1 a:link,
@@ -326,14 +353,33 @@ h3 {
     .sidebar {
       margin: auto;
       width: 75%;
-      grid-template-rows: 12% repeat(2, minmax(55%, 62%)); } }
+      grid-template-rows: 12% repeat(2, minmax(32%, 42%)); } }
+  @media only screen and (min-width: 940px) {
+    .sidebar {
+      margin: 2rem auto;
+      grid-template-rows: 15% repeat(2, minmax(30%, 40%)); } }
+  @media only screen and (min-width: 1180px) {
+    .sidebar {
+      width: 100%;
+      height: 60vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: 8% repeat(4, 1fr);
+      justify-content: space-around;
+      border: 1px dashed palevioletred; } }
   .sidebar__heading {
     display: inline-block;
     color: #d24747;
     font-size: 2.1rem; }
     @media only screen and (min-width: 560px) {
       .sidebar__heading {
+        display: inline-block;
+        margin-bottom: 1rem;
+        padding: 0;
         grid-column: 1 / 3;
+        grid-row: 1 / 2; } }
+    @media only screen and (min-width: 1180px) {
+      .sidebar__heading {
+        grid-column: 1 / 2;
         grid-row: 1 / 2; } }
   .sidebar__trip {
     margin: 2rem auto;
@@ -343,6 +389,15 @@ h3 {
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
     box-shadow: 10px 5px 35px -12px #888888; }
+    @media only screen and (min-width: 940px) {
+      .sidebar__trip {
+        margin: 0.5rem auto;
+        padding: 1rem;
+        grid-template-rows: 12% 45% 30%; } }
+    @media only screen and (min-width: 1180px) {
+      .sidebar__trip {
+        padding: 1rem;
+        grid-template-rows: 10% 40% 40%; } }
     .sidebar__trip--avatar {
       display: none; }
     .sidebar__trip--img {
@@ -549,6 +604,7 @@ h3 {
   box-shadow: 10px 5px 35px -12px #888888; }
   @media only screen and (min-width: 720px) {
     .testimonials {
+      width: 90%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 15% 1fr; } }
@@ -560,6 +616,7 @@ h3 {
     font-size: 2.1rem; }
     @media only screen and (min-width: 720px) {
       .testimonials__heading {
+        margin-left: 2rem;
         grid-column: 1 / 3;
         grid-row: 1 / 2; } }
   .testimonials__block {
@@ -1176,16 +1233,20 @@ h3 {
   grid-template-rows: repeat(2, auto-fit); }
   @media only screen and (min-width: 1180px) {
     .landing-content {
-      grid-template-columns: repeat(12, 1fr); }
+      width: 100%;
+      height: 100%;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 0.5rem;
+      justify-content: space-between;
+      align-content: start; }
       .landing-content__main {
-        border: 10px solid khaki;
         grid-column: 2 / 9;
         grid-row: 1 / 2; }
       .landing-content__sidebar {
-        grid-column: 10 / 12;
+        grid-column: 9 / 12;
         grid-row: 1 / 2; }
       .landing-content__testimonials {
-        display: none;
         grid-column: 2 / 12;
         grid-row: 2 / 3; } }
 

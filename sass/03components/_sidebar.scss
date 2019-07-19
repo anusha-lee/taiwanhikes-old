@@ -9,13 +9,6 @@
   justify-content: space-between;
   align-content: center;
 
-  // @media only screen and (min-width: $bp-sm) {
-  //   margin: 2rem;
-  //   min-height: 90%;
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
-  //   grid-template-rows: repeat(2, 1fr);
-  // }
   @include responsive(tab-land) {
     margin: 2rem;
     min-height: 90%;
@@ -27,14 +20,35 @@
   @include responsive(sm-desktop) {
     margin: auto;
     width: 75%;
-    grid-template-rows: 12% repeat(2, minmax(55%, 62%));
+    grid-template-rows: 12% repeat(2, minmax(32%, 42%));
+  }
+
+  @include responsive(normal-desktop) {
+    margin: 2rem auto;
+    grid-template-rows: 15% repeat(2, minmax(30%, 40%));
+  }
+
+  @include responsive(big-desktop) {
+    width: 100%;
+    height: 60vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8% repeat(4, 1fr);
+    justify-content: space-around;
+    border: 1px dashed palevioletred;
   }
 
   &__heading {
     @include sm-screen-heading;
 
     @include responsive(tab-land) {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0;
       grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+    @include responsive(big-desktop) {
+      grid-column: 1 / 2;
       grid-row: 1 / 2;
     }
   }
@@ -48,6 +62,17 @@
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
     box-shadow: 10px 5px 35px -12px $color-grey;
+
+    @include responsive(normal-desktop) {
+      margin: 0.5rem auto;
+      padding: 1rem;
+      grid-template-rows: 12% 45% 30%;
+    }
+
+    @include responsive(big-desktop) {
+      padding: 1rem;
+      grid-template-rows: 10% 40% 40%;
+    }
 
     &--avatar {
       display: none;
