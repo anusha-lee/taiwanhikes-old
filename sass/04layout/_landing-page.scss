@@ -2,18 +2,17 @@
   // main section is on big-video file
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto-fit);
-  // grid-template-rows: repeat(auto-fit);
+  //grid-template-rows: repeat(2, auto-fit);
+  grid-template-rows: repeat(auto-fit);
 
   @include responsive(big-desktop) {
     width: 100%;
-    height: 100%;
+
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 1fr); //minmax(40%, 50%) minmax(30%, 40%);
+    grid-template-rows: repeat(2, 1fr);
     justify-content: space-around;
 
     grid-gap: 0.5rem;
-    justify-content: space-between;
     align-content: start;
 
     &__main {

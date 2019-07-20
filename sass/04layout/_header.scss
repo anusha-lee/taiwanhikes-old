@@ -165,8 +165,62 @@
   }
 }
 
+// Dropdown Menu
 .menu__dropdown {
   display: none;
+
+  @include responsive(big-desktop) {
+    display: none;
+    position: relative;
+
+    &-item {
+      font-size: $font-size-sm;
+      width: 11vw;
+      padding: 0.8rem;
+      text-align: left;
+      color: $color-white;
+      display: flex;
+      flex-direction: column;
+      background-color: $default-color;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+    }
+    &-item:link,
+    &-item::visited {
+      color: $default-color-heading;
+    }
+    &-item:hover,
+    &-item:active {
+      //color: $default-color-heading;
+      text-decoration: underline;
+    }
+  }
+
+  #sReasons,
+  #eThings,
+  #fWays,
+  #fMistakes {
+    position: absolute;
+  }
+  #sReasons:hover::after {
+    content: "7 Reasons Why You Should Hike in Taiwan";
+    @include dropdown-menu-effect;
+  }
+  #eThings:hover::after {
+    content: "11 Things to Know before You Hike in Taiwan";
+    @include dropdown-menu-effect;
+  }
+  #fWays:hover::after {
+    content: "4 Ways to Enjoy Hikes in Taiwan";
+    @include dropdown-menu-effect;
+  }
+  #fMistakes:hover::after {
+    content: "5 Deadly Mistakes to Avoid While Hiking in Taiwan";
+    @include dropdown-menu-effect;
+  }
 }
 
 /* =========================== Desktop CSS ================================
