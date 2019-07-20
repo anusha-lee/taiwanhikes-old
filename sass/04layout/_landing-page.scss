@@ -10,6 +10,7 @@
     height: 100%;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr); //minmax(40%, 50%) minmax(30%, 40%);
+    justify-content: space-around;
 
     grid-gap: 0.5rem;
     justify-content: space-between;

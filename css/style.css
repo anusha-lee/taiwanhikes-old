@@ -101,6 +101,7 @@ h3 {
       grid-template-rows: repeat(4, 1fr); } }
   @media only screen and (min-width: 940px) {
     .landing-content__main {
+      margin: 3rem auto;
       position: relative;
       background-image: none;
       width: 90%;
@@ -128,12 +129,7 @@ h3 {
     line-height: 1;
     background-image: linear-gradient(rgba(255, 255, 0, 0) 10%, black 90%);
     grid-row: 3 / 4;
-    z-index: 99;
-    transition: all s ease 0.5-in-out;
-    -webkit-transition: all s ease 0.5-in-out;
-    -moz-transition: all s ease 0.5-in-out;
-    -ms-transition: all s ease 0.5-in-out;
-    -o-transition: all s ease 0.5-in-out; }
+    z-index: 99; }
     @media only screen and (min-width: 560px) {
       .landing-content__main--title {
         grid-row: 4 / 5; } }
@@ -142,7 +138,10 @@ h3 {
         grid-row: 4 / 5;
         font-size: 4.4rem; } }
     .landing-content__main--title h1 {
-      display: inline-block; }
+      display: inline-block;
+      transition: all 0.5s ease-in-out; }
+      .landing-content__main--title h1:hover {
+        transform: translateY(-0.8rem); }
       .landing-content__main--title h1 a:link,
       .landing-content__main--title h1 a:visited {
         color: #cd3333;
@@ -151,78 +150,6 @@ h3 {
       .landing-content__main--title h1 a:active {
         text-decoration: underline; }
 
-/* =========================== Desktop CSS ================================
-
-.landing-content__main {
-  margin: 2rem 0;
-  height: 78vh;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: 1fr;
-
-  &--video {
-    grid-row: 1 / 5;
-    grid-column: 1 / 2;
-    position: relative;
-
-    &-content {
-      object-fit: cover;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.9;
-      overflow: hidden;
-      width: 100%;
-    }
-  }
-
-  &--title {
-    font-size: $font-size-xl;
-    display: inline-block;
-    opacity: 0.8;
-    padding: 3.7rem 1rem;
-    text-align: center;
-    line-height: 1;
-    background-image: linear-gradient(
-      rgba(255, 255, 0, 0) 10%,
-      darken($color-dark, 50%) 90%
-    );
-    grid-row: 4 / 5;
-    grid-column: 1 / 2;
-    z-index: 99;
-
-    @media only screen and (max-width: $bp-m2) {
-      //font-size: $font-size-xl;
-      line-height: 0.5;
-    }
-
-    h1 {
-      & a:link,
-      & a:visited {
-        color: darken($default-color-heading, 10%);
-        text-shadow: 2px 2px 2px $color-white;
-        //transition: all 1s ease-in-out;
-
-        @media only screen and (max-width: $bp-m2) {
-          font-size: $font-size-big;
-        }
-
-        @media only screen and (max-width: $bp-xs) {
-          font-size: $font-size-medium;
-        }
-      }
-
-      & a:hover,
-      & a:active {
-        text-decoration: underline;
-        // animation: bounceInDown;
-        // -webkit-animation: bounceInDown;
-      }
-    }
-  }
-}
-*/
 .hamburger__checkbox {
   display: none; }
 
@@ -351,21 +278,22 @@ h3 {
       grid-template-rows: 12% repeat(2, minmax(37%, 45%)); } }
   @media only screen and (min-width: 720px) {
     .sidebar {
-      margin: auto;
+      margin: 1rem auto;
       width: 75%;
       grid-template-rows: 12% repeat(2, minmax(32%, 42%)); } }
   @media only screen and (min-width: 940px) {
     .sidebar {
-      margin: 2rem auto;
+      margin: 3rem auto;
       grid-template-rows: 15% repeat(2, minmax(30%, 40%)); } }
   @media only screen and (min-width: 1180px) {
     .sidebar {
+      border: 3px solid blueviolet;
       width: 100%;
-      height: 60vh;
+      height: 60%;
+      padding: 0.5rem;
       grid-template-columns: 1fr;
-      grid-template-rows: 8% repeat(4, 1fr);
-      justify-content: space-around;
-      border: 1px dashed palevioletred; } }
+      grid-template-rows: 5% repeat(4, 22%);
+      justify-content: space-between; } }
   .sidebar__heading {
     display: inline-block;
     color: #d24747;
@@ -379,6 +307,7 @@ h3 {
         grid-row: 1 / 2; } }
     @media only screen and (min-width: 1180px) {
       .sidebar__heading {
+        margin: 0;
         grid-column: 1 / 2;
         grid-row: 1 / 2; } }
   .sidebar__trip {
@@ -389,15 +318,24 @@ h3 {
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
     box-shadow: 10px 5px 35px -12px #888888; }
+    @media only screen and (min-width: 720px) {
+      .sidebar__trip {
+        padding: 1rem;
+        margin: 0.5rem auto;
+        min-height: 12rem;
+        grid-template-columns: 12% 85%;
+        grid-template-rows: 12% 84%; } }
     @media only screen and (min-width: 940px) {
       .sidebar__trip {
-        margin: 0.5rem auto;
+        min-height: 8rem;
         padding: 1rem;
-        grid-template-rows: 12% 45% 30%; } }
+        grid-template-columns: 12% 85%;
+        grid-template-rows: 2fr 1fr; } }
     @media only screen and (min-width: 1180px) {
       .sidebar__trip {
-        padding: 1rem;
-        grid-template-rows: 10% 40% 40%; } }
+        padding: 0.5rem;
+        max-height: 23%;
+        border: 3px solid brown; } }
     .sidebar__trip--avatar {
       display: none; }
     .sidebar__trip--img {
@@ -415,7 +353,8 @@ h3 {
       grid-row: 2 / 3;
       justify-self: end;
       align-self: end;
-      z-index: 100; }
+      z-index: 100;
+      border: 1px solid blue; }
     .sidebar__trip:hover {
       background-color: #eeeeee;
       transition: all 0.5s ease-in-out;
@@ -608,6 +547,9 @@ h3 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 15% 1fr; } }
+  @media only screen and (min-width: 1180px) {
+    .testimonials {
+      width: 75%; } }
   .testimonials__heading {
     width: 95%;
     padding: 2rem 1rem;
@@ -624,21 +566,28 @@ h3 {
     color: #4b3c4c;
     text-shadow: 1px 1px 1px #76a3a3;
     font-size: 1.6rem;
-    padding: 2rem 1.5rem;
+    padding: 2rem;
     width: 80%;
     min-height: 13rem;
     max-height: auto;
     line-height: 1.4;
     background-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 10px 10px 35px -12px #4b3c4c; }
+    box-shadow: 10px 10px 35px -12px #4b3c4c;
+    transition: all 0.5s ease-in-out; }
     @media only screen and (min-width: 560px) {
       .testimonials__block {
-        width: 60%; } }
-    @media only screen and (min-width: 720px) {
+        font-size: 2.1rem;
+        line-height: 1.6; } }
+    @media only screen and (min-width: 940px) {
       .testimonials__block {
-        width: 80%;
+        width: 85%;
+        height: auto;
+        padding: 3rem;
         -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
         clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); } }
+    @media only screen and (min-width: 1180px) {
+      .testimonials__block {
+        width: 75%; } }
     .testimonials__block--person {
       height: 8rem;
       width: 100%;
@@ -1237,6 +1186,7 @@ h3 {
       height: 100%;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      justify-content: space-around;
       grid-gap: 0.5rem;
       justify-content: space-between;
       align-content: start; }

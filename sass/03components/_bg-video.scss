@@ -18,10 +18,12 @@
     grid-template-rows: repeat(4, 1fr);
   }
   @include responsive(normal-desktop) {
+    margin: 3rem auto;
     position: relative;
     background-image: none;
     width: 90%;
     height: 65vh;
+
     // grid-template-rows: repeat(4, 1fr);
   }
 
@@ -57,11 +59,6 @@
     );
     grid-row: 3 / 4;
     z-index: 99;
-    transition: all s ease.5-in-out;
-    -webkit-transition: all s ease.5-in-out;
-    -moz-transition: all s ease.5-in-out;
-    -ms-transition: all s ease.5-in-out;
-    -o-transition: all s ease.5-in-out;
 
     @include responsive(tab-land) {
       grid-row: 4 / 5;
@@ -74,6 +71,12 @@
 
     h1 {
       display: inline-block;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        transform: translateY(-0.8rem);
+      }
+
       & a:link,
       & a:visited {
         color: darken($default-color-heading, 5%);
@@ -87,76 +90,3 @@
     }
   }
 }
-
-/* =========================== Desktop CSS ================================
-
-.landing-content__main {
-  margin: 2rem 0;
-  height: 78vh;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: 1fr;
-
-  &--video {
-    grid-row: 1 / 5;
-    grid-column: 1 / 2;
-    position: relative;
-
-    &-content {
-      object-fit: cover;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.9;
-      overflow: hidden;
-      width: 100%;
-    }
-  }
-
-  &--title {
-    font-size: $font-size-xl;
-    display: inline-block;
-    opacity: 0.8;
-    padding: 3.7rem 1rem;
-    text-align: center;
-    line-height: 1;
-    background-image: linear-gradient(
-      rgba(255, 255, 0, 0) 10%,
-      darken($color-dark, 50%) 90%
-    );
-    grid-row: 4 / 5;
-    grid-column: 1 / 2;
-    z-index: 99;
-
-    @media only screen and (max-width: $bp-m2) {
-      //font-size: $font-size-xl;
-      line-height: 0.5;
-    }
-
-    h1 {
-      & a:link,
-      & a:visited {
-        color: darken($default-color-heading, 10%);
-        text-shadow: 2px 2px 2px $color-white;
-        //transition: all 1s ease-in-out;
-
-        @media only screen and (max-width: $bp-m2) {
-          font-size: $font-size-big;
-        }
-
-        @media only screen and (max-width: $bp-xs) {
-          font-size: $font-size-medium;
-        }
-      }
-
-      & a:hover,
-      & a:active {
-        text-decoration: underline;
-        // animation: bounceInDown;
-        // -webkit-animation: bounceInDown;
-      }
-    }
-  }
-}
-*/

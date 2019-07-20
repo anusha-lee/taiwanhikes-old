@@ -13,6 +13,10 @@
     grid-template-rows: 15% 1fr;
   }
 
+  @include responsive(big-desktop) {
+    width: 75%;
+  }
+
   &__heading {
     width: 95%;
     padding: 2rem 1rem;
@@ -30,7 +34,7 @@
     color: $color-dark;
     text-shadow: 1px 1px 1px $default-color;
     font-size: $font-size-sm;
-    padding: 2rem 1.5rem;
+    padding: 2rem;
     width: 80%;
     min-height: 13rem;
     max-height: auto;
@@ -38,15 +42,23 @@
     line-height: 1.4;
     background-color: rgba($color-white, 0.5);
     box-shadow: 10px 10px 35px -12px $color-dark;
+    transition: all 0.5s ease-in-out;
 
     @include responsive(tab-land) {
-      width: 60%;
+      font-size: $font-size-medium;
+      line-height: 1.6;
     }
 
-    @include responsive(sm-desktop) {
-      width: 80%;
+    @include responsive(normal-desktop) {
+      width: 85%;
+      height: auto;
+      padding: 3rem;
       -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
       clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    @include responsive(big-desktop) {
+      width: 75%;
     }
 
     &--person {

@@ -18,23 +18,25 @@
   }
 
   @include responsive(sm-desktop) {
-    margin: auto;
+    margin: 1rem auto;
     width: 75%;
     grid-template-rows: 12% repeat(2, minmax(32%, 42%));
   }
 
   @include responsive(normal-desktop) {
-    margin: 2rem auto;
+    margin: 3rem auto;
     grid-template-rows: 15% repeat(2, minmax(30%, 40%));
   }
 
   @include responsive(big-desktop) {
+    border: 3px solid blueviolet;
     width: 100%;
-    height: 60vh;
+    height: 60%;
+    padding: 0.5rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 8% repeat(4, 1fr);
-    justify-content: space-around;
-    border: 1px dashed palevioletred;
+    grid-template-rows: 5% repeat(4, 22%);
+    justify-content: space-between;
+    // grid-gap: 0.5rem;
   }
 
   &__heading {
@@ -47,7 +49,11 @@
       grid-column: 1 / 3;
       grid-row: 1 / 2;
     }
+    // @include responsive(sm-desktop) {
+    //   border: 2px solid khaki;
+    // }
     @include responsive(big-desktop) {
+      margin: 0;
       grid-column: 1 / 2;
       grid-row: 1 / 2;
     }
@@ -63,15 +69,26 @@
     justify-content: space-between;
     box-shadow: 10px 5px 35px -12px $color-grey;
 
-    @include responsive(normal-desktop) {
-      margin: 0.5rem auto;
+    @include responsive(sm-desktop) {
       padding: 1rem;
-      grid-template-rows: 12% 45% 30%;
+      margin: 0.5rem auto;
+      min-height: 12rem;
+      grid-template-columns: 12% 85%;
+      grid-template-rows: 12% 84%;
+    }
+
+    @include responsive(normal-desktop) {
+      min-height: 8rem;
+      padding: 1rem;
+      grid-template-columns: 12% 85%;
+      grid-template-rows: 2fr 1fr;
+      // justify-content: 80% 15%;
     }
 
     @include responsive(big-desktop) {
-      padding: 1rem;
-      grid-template-rows: 10% 40% 40%;
+      padding: 0.5rem;
+      max-height: 23%;
+      border: 3px solid brown;
     }
 
     &--avatar {
@@ -98,6 +115,7 @@
       justify-self: end;
       align-self: end;
       z-index: 100;
+      border: 1px solid blue;
     }
     &:hover {
       background-color: lighten($color-grey, 40%);
