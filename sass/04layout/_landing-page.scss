@@ -9,7 +9,7 @@
     width: 100%;
 
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 50% auto;
+    grid-template-rows: minmax(45%, 55%) auto;
     justify-content: space-between;
     align-content: start;
 
