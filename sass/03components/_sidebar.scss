@@ -24,21 +24,21 @@
   }
 
   @include responsive(normal-desktop) {
-    margin: 3rem auto;
+    margin: 2rem auto;
     grid-template-rows: 15% repeat(2, auto);
     //grid-template-rows: 15% repeat(2, minmax(30%, 40%));
   }
 
   @include responsive(big-desktop) {
-    border: 1px solid blue;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     width: 100%;
-    height: 55vh;
+    max-height: 90%;
     //padding: 0.5rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 10% repeat(4, 22%);
-    grid-row-gap: 0rem;
-    //justify-content: space-between;
+    grid-template-rows: 8% repeat(4, minmax(15%, 24%));
+    // grid-template-rows: 8vh repeat(4, 18vh);
+    //grid-row-gap: 0rem;
+    justify-content: space-between;
   }
 
   &__heading {
@@ -51,12 +51,10 @@
       grid-column: 1 / 3;
       grid-row: 1 / 2;
     }
-    // @include responsive(sm-desktop) {
-    //   border: 2px solid khaki;
-    // }
+
     @include responsive(big-desktop) {
       margin-bottom: 1rem;
-      height: auto;
+      // height: auto;
 
       grid-column: 1 / 2;
       grid-row: 1 / 2;
@@ -92,7 +90,8 @@
     @include responsive(big-desktop) {
       margin: 0.5rem;
       padding: 0.5rem;
-      max-height: 23%;
+      grid-template-columns: 1fr 5fr;
+      grid-template-rows: 72% 25%;
     }
 
     &--avatar {
@@ -122,11 +121,7 @@
     }
     &:hover {
       background-color: lighten($color-grey, 40%);
-      transition: all 0.5s ease-in-out;
-      -webkit-transition: all 0.5s ease-in-out;
-      -moz-transition: all 0.5s ease-in-out;
-      -ms-transition: all 0.5s ease-in-out;
-      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 }

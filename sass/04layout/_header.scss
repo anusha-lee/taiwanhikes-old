@@ -168,42 +168,71 @@
 // Dropdown Menu
 .menu__dropdown {
   display: none;
+}
 
-  @include responsive(big-desktop) {
-    display: none;
+@include responsive(normal-desktop) {
+  .menu {
+    display: flex;
     position: relative;
 
-    &-item {
-      font-size: $font-size-sm;
-      width: 11vw;
-      padding: 0.8rem;
-      text-align: left;
-      color: $color-white;
-      display: flex;
-      flex-direction: column;
-      background-color: $default-color;
-      transition: all 0.5s;
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -ms-transition: all 0.5s;
-      -o-transition: all 0.5s;
+    li:hover &__dropdown {
+      display: block;
     }
-    &-item:link,
-    &-item::visited {
-      color: $default-color-heading;
+
+    &__item > a {
+      display: inline-block;
+      width: 100%;
     }
-    &-item:hover,
-    &-item:active {
-      //color: $default-color-heading;
-      text-decoration: underline;
+
+    &__item:hover {
+      z-index: 4000;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+
+      &-item {
+        font-size: $font-size-sm;
+        width: 11vw;
+        padding: 0.8rem;
+        text-align: left;
+        //color: $color-white;
+        display: flex;
+        flex-direction: column;
+        background-color: $default-color;
+        transition: all 0.5s ease-in-out;
+        a {
+          color: $color-dark;
+        }
+      }
+      &-item:link,
+      &-item:visited {
+        color: $color-grey;
+      }
+      &-item:hover,
+      &-item:active {
+        background-color: darken($default-color, 10%);
+
+        a {
+          color: $color-white;
+          font-style: italic;
+        }
+      }
     }
   }
 
+  // Dropdown hover effects
   #sReasons,
   #eThings,
   #fWays,
   #fMistakes {
-    position: absolute;
+    position: relative;
   }
   #sReasons:hover::after {
     content: "7 Reasons Why You Should Hike in Taiwan";

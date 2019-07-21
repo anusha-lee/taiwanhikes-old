@@ -150,6 +150,10 @@ h3 {
       .landing-content__main--title h1 a:active {
         text-decoration: underline; }
 
+.btn-click:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-0.5rem); }
+
 .hamburger__checkbox {
   display: none; }
 
@@ -283,17 +287,16 @@ h3 {
       grid-template-rows: 12% repeat(2, minmax(32%, 42%)); } }
   @media only screen and (min-width: 940px) {
     .sidebar {
-      margin: 3rem auto;
+      margin: 2rem auto;
       grid-template-rows: 15% repeat(2, auto); } }
   @media only screen and (min-width: 1180px) {
     .sidebar {
-      border: 1px solid blue;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
       width: 100%;
-      height: 55vh;
+      max-height: 90%;
       grid-template-columns: 1fr;
-      grid-template-rows: 10% repeat(4, 22%);
-      grid-row-gap: 0rem; } }
+      grid-template-rows: 8% repeat(4, minmax(15%, 24%));
+      justify-content: space-between; } }
   .sidebar__heading {
     display: inline-block;
     color: #d24747;
@@ -308,7 +311,6 @@ h3 {
     @media only screen and (min-width: 1180px) {
       .sidebar__heading {
         margin-bottom: 1rem;
-        height: auto;
         grid-column: 1 / 2;
         grid-row: 1 / 2; } }
   .sidebar__trip {
@@ -336,7 +338,8 @@ h3 {
       .sidebar__trip {
         margin: 0.5rem;
         padding: 0.5rem;
-        max-height: 23%; } }
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: 72% 25%; } }
     .sidebar__trip--avatar {
       display: none; }
     .sidebar__trip--img {
@@ -357,11 +360,7 @@ h3 {
       z-index: 100; }
     .sidebar__trip:hover {
       background-color: #eeeeee;
-      transition: all 0.5s ease-in-out;
-      -webkit-transition: all 0.5s ease-in-out;
-      -moz-transition: all 0.5s ease-in-out;
-      -ms-transition: all 0.5s ease-in-out;
-      -o-transition: all 0.5s ease-in-out; }
+      transition: all 0.3s ease-in-out; }
 
 /*
 
@@ -549,7 +548,8 @@ h3 {
       grid-template-rows: 15% 1fr; } }
   @media only screen and (min-width: 1180px) {
     .testimonials {
-      width: 75%; } }
+      max-width: 75%;
+      max-height: 85%; } }
   .testimonials__heading {
     width: 95%;
     padding: 2rem 1rem;
@@ -562,22 +562,24 @@ h3 {
         grid-column: 1 / 3;
         grid-row: 1 / 2; } }
   .testimonials__block {
-    margin: 1.5rem auto 3rem;
+    margin: 1.5rem auto;
     color: #4b3c4c;
     text-shadow: 1px 1px 1px #76a3a3;
     font-size: 1.6rem;
     padding: 2rem;
     width: 80%;
     min-height: 13rem;
-    max-height: auto;
-    line-height: 1.4;
+    max-height: 82%;
+    line-height: 1.2;
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 10px 10px 35px -12px #4b3c4c;
     transition: all 0.5s ease-in-out; }
     @media only screen and (min-width: 560px) {
       .testimonials__block {
         font-size: 2.1rem;
-        line-height: 1.6; } }
+        height: auto;
+        padding: 0.5rem;
+        line-height: 1.4; } }
     @media only screen and (min-width: 940px) {
       .testimonials__block {
         width: 85%;
@@ -993,34 +995,50 @@ h3 {
 
 .menu__dropdown {
   display: none; }
-  @media only screen and (min-width: 1180px) {
+
+@media only screen and (min-width: 940px) {
+  .menu {
+    display: flex;
+    position: relative; }
+    li:hover .menu__dropdown {
+      display: block; }
+    .menu__item > a {
+      display: inline-block;
+      width: 100%; }
+    .menu__item:hover {
+      z-index: 4000;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out; }
     .menu__dropdown {
       display: none;
-      position: relative; }
+      position: absolute; }
       .menu__dropdown-item {
         font-size: 1.6rem;
         width: 11vw;
         padding: 0.8rem;
         text-align: left;
-        color: #fff;
         display: flex;
         flex-direction: column;
         background-color: #76a3a3;
-        transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -ms-transition: all 0.5s;
-        -o-transition: all 0.5s; }
-      .menu__dropdown-item:link, .menu__dropdown-item::visited {
-        color: #d24747; }
+        transition: all 0.5s ease-in-out; }
+        .menu__dropdown-item a {
+          color: #4b3c4c; }
+      .menu__dropdown-item:link, .menu__dropdown-item:visited {
+        color: #888888; }
       .menu__dropdown-item:hover, .menu__dropdown-item:active {
-        text-decoration: underline; } }
-  .menu__dropdown #sReasons,
-  .menu__dropdown #eThings,
-  .menu__dropdown #fWays,
-  .menu__dropdown #fMistakes {
-    position: absolute; }
-  .menu__dropdown #sReasons:hover::after {
+        background-color: #5c8a8a; }
+        .menu__dropdown-item:hover a, .menu__dropdown-item:active a {
+          color: #fff;
+          font-style: italic; }
+  #sReasons,
+  #eThings,
+  #fWays,
+  #fMistakes {
+    position: relative; }
+  #sReasons:hover::after {
     content: "7 Reasons Why You Should Hike in Taiwan";
     width: 28vw;
     height: 98%;
@@ -1034,7 +1052,7 @@ h3 {
     pointer-events: none;
     color: #fff;
     animation: zoomInLeft 0.4s cubic-bezier(0, -1, 0.88, 0.16); }
-  .menu__dropdown #eThings:hover::after {
+  #eThings:hover::after {
     content: "11 Things to Know before You Hike in Taiwan";
     width: 28vw;
     height: 98%;
@@ -1048,7 +1066,7 @@ h3 {
     pointer-events: none;
     color: #fff;
     animation: zoomInLeft 0.4s cubic-bezier(0, -1, 0.88, 0.16); }
-  .menu__dropdown #fWays:hover::after {
+  #fWays:hover::after {
     content: "4 Ways to Enjoy Hikes in Taiwan";
     width: 28vw;
     height: 98%;
@@ -1062,7 +1080,7 @@ h3 {
     pointer-events: none;
     color: #fff;
     animation: zoomInLeft 0.4s cubic-bezier(0, -1, 0.88, 0.16); }
-  .menu__dropdown #fMistakes:hover::after {
+  #fMistakes:hover::after {
     content: "5 Deadly Mistakes to Avoid While Hiking in Taiwan";
     width: 28vw;
     height: 98%;
@@ -1075,7 +1093,7 @@ h3 {
     left: 0;
     pointer-events: none;
     color: #fff;
-    animation: zoomInLeft 0.4s cubic-bezier(0, -1, 0.88, 0.16); }
+    animation: zoomInLeft 0.4s cubic-bezier(0, -1, 0.88, 0.16); } }
 
 /* =========================== Desktop CSS ================================
 
@@ -1267,11 +1285,11 @@ h3 {
     .landing-content {
       width: 100%;
       grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      justify-content: space-around;
-      grid-gap: 0.5rem;
+      grid-template-rows: 50% auto;
+      justify-content: space-between;
       align-content: start; }
       .landing-content__main {
+        width: 100%;
         grid-column: 2 / 9;
         grid-row: 1 / 2; }
       .landing-content__sidebar {
