@@ -39,19 +39,15 @@
       justify-content: space-around;
 
       &--list {
-        border: 2px solid pink;
+        //border: 2px solid pink;
         height: 100%;
+        font-size: $font-size-medium;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
-
-        > li {
-          font-size: $font-size-medium;
-          border: 2px solid greenyellow;
-        }
 
         &-item {
         }
@@ -68,15 +64,31 @@
     }
 
     &--nested {
-      height: 100%;
+      height: auto;
       display: flex;
       flex-direction: column;
       align-content: stretch;
 
-      border: 2px solid blue;
+      //border: 2px solid blue;
       &-list {
         display: inline-block;
-        font-size: $font-size-xs;
+        line-height: 1.1;
+        height: 5rem;
+        padding: 1.5rem 0.5rem;
+
+        a:link,
+        a:visited {
+          display: inline-block;
+          width: 100%;
+          font-size: $font-size-sm;
+          color: $color-grey;
+          transition: all 0.3s ease-in-out;
+        }
+        a:hover,
+        a:active {
+          color: $color-dark;
+          transform: translateX(0.2rem);
+        }
       }
     }
   }
