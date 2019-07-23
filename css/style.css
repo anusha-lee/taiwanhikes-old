@@ -1370,10 +1370,12 @@ h3 {
   color: #d24747; }
   @media only screen and (min-width: 940px) {
     .footer {
-      padding-top: 4rem;
+      padding-top: 3rem;
+      height: auto;
       display: grid;
       grid-template-columns: 1fr 4fr;
-      grid-template-rows: 70% 30%; } }
+      grid-template-rows: 70% 20%;
+      grid-row-gap: 2rem; } }
   .footer__logo {
     margin: 1rem auto;
     padding: 0.5rem 1rem 1rem 1rem;
@@ -1408,8 +1410,8 @@ h3 {
       .footer__nav--nested-list {
         display: inline-block;
         line-height: 1.1;
-        height: 5rem;
-        padding: 1.5rem 0.5rem; }
+        height: 4.5rem;
+        padding: 1.2rem 0.5rem; }
         .footer__nav--nested-list a:link,
         .footer__nav--nested-list a:visited {
           display: inline-block;
@@ -1426,7 +1428,6 @@ h3 {
     min-height: 18rem;
     font-size: 1.6rem;
     color: #4b3c4c;
-    height: 10rem;
     margin: 2rem auto;
     padding: 1rem; }
     .footer__copyright-text-box {
@@ -1437,6 +1438,8 @@ h3 {
       width: 2.5rem; }
     @media only screen and (min-width: 940px) {
       .footer__copyright {
+        margin: 1rem auto;
+        padding: 0.5rem;
         grid-column: 1 / 3;
         grid-row: 2 / 3; } }
 

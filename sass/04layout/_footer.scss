@@ -9,10 +9,12 @@
   color: $default-color-heading;
 
   @include responsive(normal-desktop) {
-    padding-top: 4rem;
+    padding-top: 3rem;
+    height: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 70% 20%;
+    grid-row-gap: 2rem;
   }
 
   &__logo {
@@ -52,15 +54,6 @@
         &-item {
         }
       }
-
-      // &-item1 {
-      //   grid-column: 1 / 2;
-      //   grid-row: 1 / 2;
-      // }
-      // &-item2 {
-      //   grid-column: 2 / 3;
-      //   grid-row: 1 / 2;
-      // }
     }
 
     &--nested {
@@ -73,8 +66,8 @@
       &-list {
         display: inline-block;
         line-height: 1.1;
-        height: 5rem;
-        padding: 1.5rem 0.5rem;
+        height: 4.5rem;
+        padding: 1.2rem 0.5rem;
 
         a:link,
         a:visited {
@@ -102,7 +95,7 @@
     min-height: 18rem;
     font-size: $font-size-sm;
     color: $color-dark;
-    height: 10rem;
+    //height: 10rem;
     margin: 2rem auto;
     padding: 1rem;
 
@@ -119,6 +112,8 @@
     }
 
     @include responsive(normal-desktop) {
+      margin: 1rem auto;
+      padding: 0.5rem;
       grid-column: 1 / 3;
       grid-row: 2 / 3;
     }
