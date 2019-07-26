@@ -1,0 +1,7 @@
+{
+    "editor.tabCompletion": "on",
+    "editor.wordWrap": "on",
+    "editor.wordWrapColumn": 50,
+    "editor.wrappingIndent": "deepIndent",
+    "editor.minimap.maxColumn": 60
+}
