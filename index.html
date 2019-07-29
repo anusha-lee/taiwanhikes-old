@@ -1,632 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Averia+Gruesa+Libre&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="img/favicon-logo.png" />
-    <title>Taiwan Hikes &mdash; Hike with locals, hike with fun</title>
-  </head>
-  <body>     
-    <div class="hamburger">
-        <input type="checkbox" class="hamburger__checkbox" id="hamburger-toggle">
-        <label for="hamburger-toggle" class="hamburger__icon">
-          <span class="hamburger__line">&nbsp;</span>
 
-        </label>
-        <div class="hamburger__background">&nbsp;</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Averia+Gruesa+Libre&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="img/favicon-logo.png" />
+  <title>Taiwan Hikes &mdash; Hike with locals, hike with fun</title>
+</head>
 
-        <nav class="hamburger__nav">
-            <ul class="hamburger__content">
-              <li class="hamburger__content--menu"><a href="#" class="hamburger__content--link">About</a></li>
-              <li class="hamburger__content--menu"><a href="#" class="hamburger__content--link">Why Taiwan</a></li>
-              <li class="hamburger__content--menu"><a href="#" class="hamburger__content--link">Trips</a></li>
-              <li class="hamburger__content--menu"><a href="#" class="hamburger__content--link">Blog</a></li>
+<body>
+  <div class="hamburger">
+    <input type="checkbox" class="hamburger__checkbox" id="hamburger-toggle">
+    <label for="hamburger-toggle" class="hamburger__icon">
+      <span class="hamburger__line">&nbsp;</span>
+
+    </label>
+    <div class="hamburger__background">&nbsp;</div>
+
+    <nav class="hamburger__nav">
+      <ul class="hamburger__content">
+        <li class="hamburger__content--menu"><a href="#" class="hamburger__content--link">About</a></li>
+        <li class="hamburger__content--menu"><a href="#" class="hamburger__content--link">Why Taiwan</a></li>
+        <li class="hamburger__content--menu"><a href="#" class="hamburger__content--link">Trips</a></li>
+        <li class="hamburger__content--menu"><a href="#" class="hamburger__content--link">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <header class="header">
+      <div class="header__logo-box">
+        <img src="img/logo.svg" alt="logo" class="header__logo-box-img" />
+        <div class="header__heading bounceInDown">
+          <a href="#">Taiwan Hikes</a>
+        </div>
+      </div>
+      <nav class="header__nav menu__box">
+        <ul class="header__nav--menu menu">
+          <li class="header__nav--menu-item menu__item">
+            <a href="#" class="header__nav--menu-link" target="_blank">About</a>
+            <ul class="header__nav--dropdown menu__dropdown">
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">The Creator</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">The Partners</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Disclaimer</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Privacy Policy</a>
+              </li>
             </ul>
-          </nav>
-    </div>
-    
-    <div class="container">
-      <header class="header">
-        <div class="header__logo-box">
-          <img src="img/logo.svg" alt="logo" class="header__logo-box-img" />
-          <div class="header__heading bounceInDown">
-            <a href="#">Taiwan Hikes</a>
-          </div>
+          </li>
+          <li class="header__nav--menu-item menu__item">
+            <a href="#" class="header__nav--menu-link">Why Taiwan</a>
+            <ul class="header__nav--dropdown menu__dropdown">
+              <li class="header__nav--dropdown-item menu__dropdown-item" id="sReasons">
+                <a href="seven-reasons-why-visiting-taiwan.html" class="header__dropdown-link">7 Reasons</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item" id="eThings">
+                <a href="#" class="header__dropdown-link">11 Things</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item" id="fWays">
+                <a href="#" class="header__dropdown-link">4 Ways</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item" id="fMistakes">
+                <a href="#" class="header__dropdown-link">5 Deadly Mistakes</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Other Resources</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Gallery</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav--menu-item menu__item">
+            <a href="#" class="header__nav--menu-link">Trips</a>
+            <ul class="header__nav--dropdown menu__dropdown">
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">The Bulletin</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Trail Picker</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Recommended Trails</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__nav--menu-item menu__item">
+            <a href="#" class="header__nav--menu-link">Blog</a>
+            <ul class="header__nav--dropdown menu__dropdown">
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Latest Posts</a>
+              </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Most Read</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="landing-content">
+      <section class="landing-content__main">
+        <div class="landing-content__main--video">
+          <video class="landing-content__main--video-content" autoplay muted loop>
+            <source src="img/landingpage-videoCoverted.mp4" type="video/mp4" />
+            <source src="img/landingpage-videoCoverted.webm" type="video/webm" />
+            Sorry, your browser does not support embedded videos!
+          </video>
         </div>
-        <nav class="header__nav menu__box">
-          <ul class="header__nav--menu menu">
-            <li class="header__nav--menu-item menu__item">
-              <a
-                href="#"
-                class="header__nav--menu-link"
-                target="_blank"
-                >About</a
-              >
-              <ul class="header__nav--dropdown menu__dropdown">
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">The Creator</a>
-                </li>
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">The Partners</a>
-                </li>
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">Disclaimer</a>
-                </li>
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">Privacy Policy</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__nav--menu-item menu__item">
-              <a href="#" class="header__nav--menu-link">Why Taiwan</a>
-              <ul class="header__nav--dropdown menu__dropdown">
-                <li
-                  class="header__nav--dropdown-item menu__dropdown-item"
-                  id="sReasons"
-                >
-                  <a href="seven-reasons-why-visiting-taiwan.html" class="header__dropdown-link">7 Reasons</a>
-                </li>
-                <li
-                  class="header__nav--dropdown-item menu__dropdown-item"
-                  id="eThings"
-                >
-                  <a href="#" class="header__dropdown-link">11 Things</a>
-                </li>
-                <li
-                  class="header__nav--dropdown-item menu__dropdown-item"
-                  id="fWays"
-                >
-                  <a href="#" class="header__dropdown-link">4 Ways</a>
-                </li>
-                <li
-                  class="header__nav--dropdown-item menu__dropdown-item"
-                  id="fMistakes"
-                >
-                  <a href="#" class="header__dropdown-link"
-                    >5 Deadly Mistakes</a
-                  >
-                </li>
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">Other Resources</a>
-                </li>
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">Gallery</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__nav--menu-item menu__item">
-              <a href="#" class="header__nav--menu-link">Trips</a>
-              <ul class="header__nav--dropdown menu__dropdown">
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">The Bulletin</a>
-                </li>
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">Trail Picker</a>
-                </li>
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link"
-                    >Recommended Trails</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="header__nav--menu-item menu__item">
-              <a href="#" class="header__nav--menu-link">Blog</a>
-              <ul class="header__nav--dropdown menu__dropdown">
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">Latest Posts</a>
-                </li>
-                <li class="header__nav--dropdown-item menu__dropdown-item">
-                  <a href="#" class="header__dropdown-link">Most Read</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main class="landing-content">
-        <section class="landing-content__main">
-          <div class="landing-content__main--video">
-            <video
-              class="landing-content__main--video-content"
-              autoplay
-              muted
-              loop
-            >
-              <source
-                src="img/landingpage-videoCoverted.mp4"
-                type="video/mp4"
-              />
-              <source
-                src="img/landingpage-videoCoverted.webm"
-                type="video/webm"
-              />
-              Sorry, your browser does not support embedded videos!
-            </video>
-          </div>
-          <div class="landing-content__main--title">
-            <h1>
-              <a
-                href="https://www.cnn.com"
-                target="_blank"
-                class="landing-content__main--title-text bounceInDown"
-                >7 Reasons Why You Should Hike in Taiwan</a
-              >
-            </h1>
-          </div>
-        </section>
-
-        <section class="landing-content__sidebar sidebar">
-          <h2 class="sidebar__heading">Latest Hiking Trips</h2>
-          <div class="sidebar__trip trip-1">
-            <div class="sidebar__trip--avatar">
-              <img
-                src="img/hike-photos/ex01.jpg"
-                class="sidebar__trip--avatar-img"
-                alt="Hike trip avatar"
-              />
-            </div>
-            <div class="sidebar__trip--img">
-              <svg                
-                width="32px"
-                height="32px"
-                viewBox="0 0 32 32"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-              >
-                <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                <title>icon 45 note list</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                  sketch:type="MSPage"
-                >
-                  <g
-                    id="icon-45-note-list"
-                    class="sidebar__trip--img-calender svg-icon"
-                    sketch:type="MSArtboardGroup"   
-                  >
-                    <path
-                      d="M5,11 L5,25.9991358 C5,27.0983727 5.8927712,28 6.99406028,28 L21,28 L21,21.9981014 C21,20.8867064 21.8980806,20 23.0059191,20 L28,20 L28,11 L5,11 L5,11 Z M5,10 L5,7.00086422 C5,5.89581743 5.90162726,5 7.00086422,5 L25.9991358,5 C27.1041826,5 28,5.89339733 28,6.99188419 L28,10 L5,10 L5,10 Z M22,28 L22,22.0029293 C22,21.4490268 22.4509752,21 22.990778,21 L28,21 L22,28 L22,28 Z M13,18 L13,19 L20,19 L20,18 L13,18 L13,18 Z M8,17 L8,20 L11,20 L11,17 L8,17 L8,17 Z M9,18 L9,19 L10,19 L10,18 L9,18 L9,18 Z M13,14 L13,15 L25,15 L25,14 L13,14 L13,14 Z M8,13 L8,16 L11,16 L11,13 L8,13 L8,13 Z M9,14 L9,15 L10,15 L10,14 L9,14 L9,14 Z M13,22 L13,23 L19,23 L19,22 L13,22 L13,22 Z M8,21 L8,24 L11,24 L11,21 L8,21 L8,21 Z M9,22 L9,23 L10,23 L10,22 L9,22 L9,22 Z"
-                      id="note-list"
-                      sketch:type="MSShapeGroup"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <div class="sidebar__trip--text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              ratione maxime obcaecat...
-            </div>
-            <div class="sidebar__trip--click btn-click">
-              <a href="#" class="sidebar__trip--link">
-                  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                  <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                      <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                      <title>icon 24 one finger tap</title>
-                      <desc>Created with Sketch.</desc>
-                      <defs></defs>
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                          <g id="icon-24-one-finger-tap"  class="tap-img svg-icon" sketch:type="MSArtboardGroup" fill="#157EFB">
-                              <path d="M16,8.94949144 C16.6185935,8.3182229 17,7.4536526 17,6.5 C17,4.56700328 15.4329967,3 13.5,3 C11.5670033,3 10,4.56700328 10,6.5 C10,7.4536526 10.3814065,8.3182229 11,8.94949144 L11,6.50098635 C11,5.12893087 12.1192881,4 13.5,4 C14.8903379,4 16,5.11972973 16,6.50098635 L16,8.94949144 L16,8.94949144 Z M19,11.4908981 C19,10.6674978 18.3342028,10 17.5,10 C16.6715729,10 16,10.6762201 16,11.4908981 L16,13.4325233 L16,16 L15,16 L15,13.5 L15,6.50863659 C15,5.67543961 14.3342028,5 13.5,5 C12.6715729,5 12,5.66642015 12,6.50863659 L12,16.7983451 C9.94160039,14.5979243 7.23162978,12.1791206 6.12103271,13.2957153 C5.03386293,14.3887562 7.83536199,17.4007216 11.7473755,23.9830936 C13.5099958,26.9488875 15.7402849,28.9995418 19.5,29 C23.6421358,29 27,25.6421358 27,21.5 L27,18.2468012 L27,13.5063976 C27,12.6744372 26.3342028,12 25.5,12 C24.6715729,12 24,12.6764628 24,13.5063976 L24,15.7497253 L24,16 L23,16 L23,13.6781559 L23,12.4912653 C23,11.6676622 22.3342028,11 21.5,11 C20.6715729,11 20,11.6625444 20,12.4912653 L20,13.5082011 L20,15 L19,15 L19,13.5082011 L19,11.4908981 L19,11.4908981 Z" id="one-finger-tap" sketch:type="MSShapeGroup"></path>
-                          </g>
-                      </g>
-                  </svg>
-            </a>
-            </div>
-          </div>
-          <div class="sidebar__trip trip-2">
-            <div class="sidebar__trip--avatar">
-              <img
-                src="img/hike-photos/ex02.jpg"
-                class="sidebar__trip--avatar-img"
-                alt="Hike trip avatar"
-              />
-            </div>
-            <div class="sidebar__trip--img svg-icon">
-                <svg                
-                width="32px"
-                height="32px"
-                viewBox="0 0 32 32"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-              >
-                <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                <title>icon 45 note list</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                  sketch:type="MSPage"
-                >
-                  <g
-                    id="icon-45-note-list"
-                    class="sidebar__trip--img-calender svg-icon"
-                    sketch:type="MSArtboardGroup"   
-                  >
-                    <path
-                      d="M5,11 L5,25.9991358 C5,27.0983727 5.8927712,28 6.99406028,28 L21,28 L21,21.9981014 C21,20.8867064 21.8980806,20 23.0059191,20 L28,20 L28,11 L5,11 L5,11 Z M5,10 L5,7.00086422 C5,5.89581743 5.90162726,5 7.00086422,5 L25.9991358,5 C27.1041826,5 28,5.89339733 28,6.99188419 L28,10 L5,10 L5,10 Z M22,28 L22,22.0029293 C22,21.4490268 22.4509752,21 22.990778,21 L28,21 L22,28 L22,28 Z M13,18 L13,19 L20,19 L20,18 L13,18 L13,18 Z M8,17 L8,20 L11,20 L11,17 L8,17 L8,17 Z M9,18 L9,19 L10,19 L10,18 L9,18 L9,18 Z M13,14 L13,15 L25,15 L25,14 L13,14 L13,14 Z M8,13 L8,16 L11,16 L11,13 L8,13 L8,13 Z M9,14 L9,15 L10,15 L10,14 L9,14 L9,14 Z M13,22 L13,23 L19,23 L19,22 L13,22 L13,22 Z M8,21 L8,24 L11,24 L11,21 L8,21 L8,21 Z M9,22 L9,23 L10,23 L10,22 L9,22 L9,22 Z"
-                      id="note-list"
-                      sketch:type="MSShapeGroup"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <div class="sidebar__trip--text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              ratione maxime obcaecat...
-            </div>
-            <div class="sidebar__trip--click btn-click">
-              <a href="#" class="sidebar__trip--link">
-                  <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                    <title>icon 24 one finger tap</title>
-                    <desc>Created with Sketch.</desc>
-                    <defs></defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                        <g id="icon-24-one-finger-tap"  class="tap-img svg-icon" sketch:type="MSArtboardGroup" fill="#157EFB">
-                            <path d="M16,8.94949144 C16.6185935,8.3182229 17,7.4536526 17,6.5 C17,4.56700328 15.4329967,3 13.5,3 C11.5670033,3 10,4.56700328 10,6.5 C10,7.4536526 10.3814065,8.3182229 11,8.94949144 L11,6.50098635 C11,5.12893087 12.1192881,4 13.5,4 C14.8903379,4 16,5.11972973 16,6.50098635 L16,8.94949144 L16,8.94949144 Z M19,11.4908981 C19,10.6674978 18.3342028,10 17.5,10 C16.6715729,10 16,10.6762201 16,11.4908981 L16,13.4325233 L16,16 L15,16 L15,13.5 L15,6.50863659 C15,5.67543961 14.3342028,5 13.5,5 C12.6715729,5 12,5.66642015 12,6.50863659 L12,16.7983451 C9.94160039,14.5979243 7.23162978,12.1791206 6.12103271,13.2957153 C5.03386293,14.3887562 7.83536199,17.4007216 11.7473755,23.9830936 C13.5099958,26.9488875 15.7402849,28.9995418 19.5,29 C23.6421358,29 27,25.6421358 27,21.5 L27,18.2468012 L27,13.5063976 C27,12.6744372 26.3342028,12 25.5,12 C24.6715729,12 24,12.6764628 24,13.5063976 L24,15.7497253 L24,16 L23,16 L23,13.6781559 L23,12.4912653 C23,11.6676622 22.3342028,11 21.5,11 C20.6715729,11 20,11.6625444 20,12.4912653 L20,13.5082011 L20,15 L19,15 L19,13.5082011 L19,11.4908981 L19,11.4908981 Z" id="one-finger-tap" sketch:type="MSShapeGroup"></path>
-                        </g>
-                    </g>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="sidebar__trip trip-3">
-            <div class="sidebar__trip--avatar">
-              <img
-                src="img/hike-photos/ex03.jpg"
-                class="sidebar__trip--avatar-img"
-                alt="Hike trip avatar"
-              />
-            </div>
-            <div class="sidebar__trip--img svg-icon">
-                <svg                
-                width="32px"
-                height="32px"
-                viewBox="0 0 32 32"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-              >
-                <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                <title>icon 45 note list</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                  sketch:type="MSPage"
-                >
-                  <g
-                    id="icon-45-note-list"
-                    class="sidebar__trip--img-calender svg-icon"
-                    sketch:type="MSArtboardGroup"   
-                  >
-                    <path
-                      d="M5,11 L5,25.9991358 C5,27.0983727 5.8927712,28 6.99406028,28 L21,28 L21,21.9981014 C21,20.8867064 21.8980806,20 23.0059191,20 L28,20 L28,11 L5,11 L5,11 Z M5,10 L5,7.00086422 C5,5.89581743 5.90162726,5 7.00086422,5 L25.9991358,5 C27.1041826,5 28,5.89339733 28,6.99188419 L28,10 L5,10 L5,10 Z M22,28 L22,22.0029293 C22,21.4490268 22.4509752,21 22.990778,21 L28,21 L22,28 L22,28 Z M13,18 L13,19 L20,19 L20,18 L13,18 L13,18 Z M8,17 L8,20 L11,20 L11,17 L8,17 L8,17 Z M9,18 L9,19 L10,19 L10,18 L9,18 L9,18 Z M13,14 L13,15 L25,15 L25,14 L13,14 L13,14 Z M8,13 L8,16 L11,16 L11,13 L8,13 L8,13 Z M9,14 L9,15 L10,15 L10,14 L9,14 L9,14 Z M13,22 L13,23 L19,23 L19,22 L13,22 L13,22 Z M8,21 L8,24 L11,24 L11,21 L8,21 L8,21 Z M9,22 L9,23 L10,23 L10,22 L9,22 L9,22 Z"
-                      id="note-list"
-                      sketch:type="MSShapeGroup"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <div class="sidebar__trip--text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              ratione maxime obcaecat...
-            </div>
-            <div class="sidebar__trip--click btn-click">
-              <a href="#" class="sidebar__trip--link">
-                  <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                    <title>icon 24 one finger tap</title>
-                    <desc>Created with Sketch.</desc>
-                    <defs></defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                        <g id="icon-24-one-finger-tap"  class="tap-img svg-icon" sketch:type="MSArtboardGroup" fill="#157EFB">
-                            <path d="M16,8.94949144 C16.6185935,8.3182229 17,7.4536526 17,6.5 C17,4.56700328 15.4329967,3 13.5,3 C11.5670033,3 10,4.56700328 10,6.5 C10,7.4536526 10.3814065,8.3182229 11,8.94949144 L11,6.50098635 C11,5.12893087 12.1192881,4 13.5,4 C14.8903379,4 16,5.11972973 16,6.50098635 L16,8.94949144 L16,8.94949144 Z M19,11.4908981 C19,10.6674978 18.3342028,10 17.5,10 C16.6715729,10 16,10.6762201 16,11.4908981 L16,13.4325233 L16,16 L15,16 L15,13.5 L15,6.50863659 C15,5.67543961 14.3342028,5 13.5,5 C12.6715729,5 12,5.66642015 12,6.50863659 L12,16.7983451 C9.94160039,14.5979243 7.23162978,12.1791206 6.12103271,13.2957153 C5.03386293,14.3887562 7.83536199,17.4007216 11.7473755,23.9830936 C13.5099958,26.9488875 15.7402849,28.9995418 19.5,29 C23.6421358,29 27,25.6421358 27,21.5 L27,18.2468012 L27,13.5063976 C27,12.6744372 26.3342028,12 25.5,12 C24.6715729,12 24,12.6764628 24,13.5063976 L24,15.7497253 L24,16 L23,16 L23,13.6781559 L23,12.4912653 C23,11.6676622 22.3342028,11 21.5,11 C20.6715729,11 20,11.6625444 20,12.4912653 L20,13.5082011 L20,15 L19,15 L19,13.5082011 L19,11.4908981 L19,11.4908981 Z" id="one-finger-tap" sketch:type="MSShapeGroup"></path>
-                        </g>
-                    </g>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="sidebar__trip trip-4">
-            <div class="sidebar__trip--avatar svg-icon">
-              <img
-                src="img/hike-photos/ex04.jpg"
-                class="sidebar__trip--avatar-img"
-                alt="Hike trip avatar"
-              />
-            </div>
-            <div class="sidebar__trip--img svg-icon">
-                <svg                
-                width="32px"
-                height="32px"
-                viewBox="0 0 32 32"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-              >
-                <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                <title>icon 45 note list</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  stroke-width="1"
-                  fill="none"
-                  fill-rule="evenodd"
-                  sketch:type="MSPage"
-                >
-                  <g
-                    id="icon-45-note-list"
-                    class="sidebar__trip--img-calender svg-icon"
-                    sketch:type="MSArtboardGroup"   
-                  >
-                    <path
-                      d="M5,11 L5,25.9991358 C5,27.0983727 5.8927712,28 6.99406028,28 L21,28 L21,21.9981014 C21,20.8867064 21.8980806,20 23.0059191,20 L28,20 L28,11 L5,11 L5,11 Z M5,10 L5,7.00086422 C5,5.89581743 5.90162726,5 7.00086422,5 L25.9991358,5 C27.1041826,5 28,5.89339733 28,6.99188419 L28,10 L5,10 L5,10 Z M22,28 L22,22.0029293 C22,21.4490268 22.4509752,21 22.990778,21 L28,21 L22,28 L22,28 Z M13,18 L13,19 L20,19 L20,18 L13,18 L13,18 Z M8,17 L8,20 L11,20 L11,17 L8,17 L8,17 Z M9,18 L9,19 L10,19 L10,18 L9,18 L9,18 Z M13,14 L13,15 L25,15 L25,14 L13,14 L13,14 Z M8,13 L8,16 L11,16 L11,13 L8,13 L8,13 Z M9,14 L9,15 L10,15 L10,14 L9,14 L9,14 Z M13,22 L13,23 L19,23 L19,22 L13,22 L13,22 Z M8,21 L8,24 L11,24 L11,21 L8,21 L8,21 Z M9,22 L9,23 L10,23 L10,22 L9,22 L9,22 Z"
-                      id="note-list"
-                      sketch:type="MSShapeGroup"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </div>
-            <div class="sidebar__trip--text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
-              ratione maxime obcaecat...
-            </div>
-            <div class="sidebar__trip--click btn-click">
-              <a href="#" class="sidebar__trip--link">
-                  <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                    <title>icon 24 one finger tap</title>
-                    <desc>Created with Sketch.</desc>
-                    <defs></defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                        <g id="icon-24-one-finger-tap"  class="tap-img svg-icon" sketch:type="MSArtboardGroup" fill="#157EFB">
-                            <path d="M16,8.94949144 C16.6185935,8.3182229 17,7.4536526 17,6.5 C17,4.56700328 15.4329967,3 13.5,3 C11.5670033,3 10,4.56700328 10,6.5 C10,7.4536526 10.3814065,8.3182229 11,8.94949144 L11,6.50098635 C11,5.12893087 12.1192881,4 13.5,4 C14.8903379,4 16,5.11972973 16,6.50098635 L16,8.94949144 L16,8.94949144 Z M19,11.4908981 C19,10.6674978 18.3342028,10 17.5,10 C16.6715729,10 16,10.6762201 16,11.4908981 L16,13.4325233 L16,16 L15,16 L15,13.5 L15,6.50863659 C15,5.67543961 14.3342028,5 13.5,5 C12.6715729,5 12,5.66642015 12,6.50863659 L12,16.7983451 C9.94160039,14.5979243 7.23162978,12.1791206 6.12103271,13.2957153 C5.03386293,14.3887562 7.83536199,17.4007216 11.7473755,23.9830936 C13.5099958,26.9488875 15.7402849,28.9995418 19.5,29 C23.6421358,29 27,25.6421358 27,21.5 L27,18.2468012 L27,13.5063976 C27,12.6744372 26.3342028,12 25.5,12 C24.6715729,12 24,12.6764628 24,13.5063976 L24,15.7497253 L24,16 L23,16 L23,13.6781559 L23,12.4912653 C23,11.6676622 22.3342028,11 21.5,11 C20.6715729,11 20,11.6625444 20,12.4912653 L20,13.5082011 L20,15 L19,15 L19,13.5082011 L19,11.4908981 L19,11.4908981 Z" id="one-finger-tap" sketch:type="MSShapeGroup"></path>
-                        </g>
-                    </g>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="landing-content__testimonials testimonials">
-          <h2 class="testimonials__heading">Testimonials</h2>
-          <div class="testimonials__block block-1 btn-click">
-            <figure class="testimonials__block--person">
-                <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                  <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                  <title>icon 6 smiling face</title>
-                  <desc>Created with Sketch.</desc>
-                  <defs></defs>
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                      <g id="icon-6-smiling-face" class="testimonials__block--person-photo svg-icon" sketch:type="MSArtboardGroup">
-                          <path d="M16.5,29 C23.4035597,29 29,23.4035597 29,16.5 C29,9.59644029 23.4035597,4 16.5,4 C9.59644029,4 4,9.59644029 4,16.5 C4,23.4035597 9.59644029,29 16.5,29 Z M12,14 C12.5522848,14 13,13.5522848 13,13 C13,12.4477152 12.5522848,12 12,12 C11.4477152,12 11,12.4477152 11,13 C11,13.5522848 11.4477152,14 12,14 Z M21,14 C21.5522848,14 22,13.5522848 22,13 C22,12.4477152 21.5522848,12 21,12 C20.4477152,12 20,12.4477152 20,13 C20,13.5522848 20.4477152,14 21,14 Z M16.4813232,22 C13,22 11,20 11,20 L11,21 C11,21 13,23 16.4813232,23 C19.9626465,23 22,21 22,21 L22,20 C22,20 19.9626465,22 16.4813232,22 Z" id="smiling-face" sketch:type="MSShapeGroup"></path>
-                      </g>
-                  </g>
-              </svg>
-              <figcaption class="testimonials__block--person-name">
-                John S
-              </figcaption>
-            </figure>
-            <p class="testimonials__block--text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
-              debitis sed consectetur aut, aperiam, hic eum alias alissa labore
-              quo nesciunt magnam quidem fuga culpa ad itaque.
-            </p>
-          </div>
-          <div class="testimonials__block block-2 btn-click">
-            <figure class="testimonials__block--person">
-                <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                  <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
-                  <title>icon 10 winking face</title>
-                  <desc>Created with Sketch.</desc>
-                  <defs></defs>
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                      <g id="icon-10-winking-face" class="testimonials__block--person-photo svg-icon" sketch:type="MSArtboardGroup">
-                          <path d="M16.5,29 C23.4035597,29 29,23.4035597 29,16.5 C29,9.59644029 23.4035597,4 16.5,4 C9.59644029,4 4,9.59644029 4,16.5 C4,23.4035597 9.59644029,29 16.5,29 Z M15.5186768,22 L18.5077842,22 C19.3319123,22 20,21.3228912 20,20.5046844 L20,20 L21,20 C21,20 21,20.5 21,21 C21,22 20,23 19,23 L15.5186768,23 L12,23 L12,22 L15.5186768,22 Z M21,14 C21.5522848,14 22,13.5522848 22,13 C22,12.4477152 21.5522848,12 21,12 C20.4477152,12 20,12.4477152 20,13 C20,13.5522848 20.4477152,14 21,14 Z M11,13 L11,14 L15,14 L15,13 L11,13 Z" id="winking-face" sketch:type="MSShapeGroup"></path>
-                      </g>
-                  </g>
-              </svg>
-              <figcaption class="testimonials__block--person-name">
-                Jane W.
-              </figcaption>
-            </figure>
-            <p class="testimonials__block--text">
-              Ipsum dolor sit amet consectetur adipisicing elit. Ratione rem a
-              beatae officia quae nemo eligendi! Asperiores quisquam ipsam
-              fugiat sed eaque reiciendis!
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer">
-        <div class="footer__logo">
-          <div class="footer__logo--box">
-            <img src="img/logo.svg" alt="logo" class="footer__logo--box-img" />
-          </div>
+        <div class="landing-content__main--title">
+          <h1>
+            <a href="seven-reasons-why-visiting-taiwan.html" target="_blank"
+              class="landing-content__main--title-text bounceInDown">7 Reasons Why You Should Hike in Taiwan</a>
+          </h1>
         </div>
-        <div class="footer__nav">
-          <ul class="footer__nav--list">
-            <li class="footer__nav--list-item footer-item1">
-              About
-              <ul class="footer__nav--nested">
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">The Creator</a>
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">The Partners</a>
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">Disclaimer</a>
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">Privacy Policy</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav--list-item footer-item2">
-              Why Taiwan
-              <ul class="footer__nav--nested">
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link"
-                    >7 Reasons Why You Should Hike in Taiwan</a
-                  >
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link"
-                    >11 Things to Know Before You Hike in Taiwan</a
-                  >
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link"
-                    >4 Ways to Enjoy Hikes in Taiwan</a
-                  >
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link"
-                    >5 Deadly Mistakes to Avoid While Hiking in Taiwan</a
-                  >
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">Other Resources</a>
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">Gallery</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav--list-item footer-item3">
-              Trips
-              <ul class="footer__nav--nested">
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">Trip Bulletin</a>
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">Trail Picker</a>
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">
-                    Recommended Trails
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__nav--list-item footer-item4">
-              Blog
-              <ul class="footer__nav--nested">
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">Latest Posts</a>
-                </li>
-                <li class="footer__nav--nested-list">
-                  <a href="#" class="footer__link">Most Read</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__copyright">
-          <div class="footer__copyright-text-box footer-box1">
-            Built by
-            <a href="#" class="footer__copyright-text footer__link"
-              >Anusha Lee</a
-            >
-            with
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" class="footer__copyright-img love svg-icon">
-              <title>heart</title>
-              <path d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z"></path>
-              </svg>.
-          </div>
+      </section>
 
-          <div class="footer__copyright-text-box footer-box2">
-            Copyright &copy; by Anusha Lee
+      <section class="landing-content__sidebar sidebar">
+        <h2 class="sidebar__heading">Latest Hiking Trips</h2>
+        <div class="sidebar__trip trip-1">
+          <div class="sidebar__trip--avatar">
+            <img src="img/hike-photos/ex01.jpg" class="sidebar__trip--avatar-img" alt="Hike trip avatar" />
           </div>
-          <div class="footer__copyright-text-box social-media">
-            <a href="#" class="footer-link" target="_blank">
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 32 32"
-                class="footer__copyright-social-facebook
-                svg-icon"
-              >
-                <title>facebook</title>
-                <path
-                  d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" class="footer-link" target="_blank">
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 32 32"
-                class="footer__copyright-social-twitter svg-icon"
-              >
-                <title>twitter</title>
-                <path
-                  d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" class="footer-link" target="_blank"></a>
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 32 32"
-                class="footer__copyright-social-instagram svg-icon"
-              >
-                <title>instagram</title>
-                <path
-                  d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"
-                ></path>
-                <path
-                  d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"
-                ></path>
-                <path
-                  d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"
-                ></path>
+          <div class="sidebar__trip--img">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+              <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+              <title>icon 45 note list</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <g id="icon-45-note-list" class="sidebar__trip--img-calender svg-icon" sketch:type="MSArtboardGroup">
+                  <path
+                    d="M5,11 L5,25.9991358 C5,27.0983727 5.8927712,28 6.99406028,28 L21,28 L21,21.9981014 C21,20.8867064 21.8980806,20 23.0059191,20 L28,20 L28,11 L5,11 L5,11 Z M5,10 L5,7.00086422 C5,5.89581743 5.90162726,5 7.00086422,5 L25.9991358,5 C27.1041826,5 28,5.89339733 28,6.99188419 L28,10 L5,10 L5,10 Z M22,28 L22,22.0029293 C22,21.4490268 22.4509752,21 22.990778,21 L28,21 L22,28 L22,28 Z M13,18 L13,19 L20,19 L20,18 L13,18 L13,18 Z M8,17 L8,20 L11,20 L11,17 L8,17 L8,17 Z M9,18 L9,19 L10,19 L10,18 L9,18 L9,18 Z M13,14 L13,15 L25,15 L25,14 L13,14 L13,14 Z M8,13 L8,16 L11,16 L11,13 L8,13 L8,13 Z M9,14 L9,15 L10,15 L10,14 L9,14 L9,14 Z M13,22 L13,23 L19,23 L19,22 L13,22 L13,22 Z M8,21 L8,24 L11,24 L11,21 L8,21 L8,21 Z M9,22 L9,23 L10,23 L10,22 L9,22 L9,22 Z"
+                    id="note-list" sketch:type="MSShapeGroup"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="sidebar__trip--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            ratione maxime obcaecat...
+          </div>
+          <div class="sidebar__trip--click btn-click">
+            <a href="#" class="sidebar__trip--link">
+              <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+              <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+                <title>icon 24 one finger tap</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                  <g id="icon-24-one-finger-tap" class="tap-img svg-icon" sketch:type="MSArtboardGroup" fill="#157EFB">
+                    <path
+                      d="M16,8.94949144 C16.6185935,8.3182229 17,7.4536526 17,6.5 C17,4.56700328 15.4329967,3 13.5,3 C11.5670033,3 10,4.56700328 10,6.5 C10,7.4536526 10.3814065,8.3182229 11,8.94949144 L11,6.50098635 C11,5.12893087 12.1192881,4 13.5,4 C14.8903379,4 16,5.11972973 16,6.50098635 L16,8.94949144 L16,8.94949144 Z M19,11.4908981 C19,10.6674978 18.3342028,10 17.5,10 C16.6715729,10 16,10.6762201 16,11.4908981 L16,13.4325233 L16,16 L15,16 L15,13.5 L15,6.50863659 C15,5.67543961 14.3342028,5 13.5,5 C12.6715729,5 12,5.66642015 12,6.50863659 L12,16.7983451 C9.94160039,14.5979243 7.23162978,12.1791206 6.12103271,13.2957153 C5.03386293,14.3887562 7.83536199,17.4007216 11.7473755,23.9830936 C13.5099958,26.9488875 15.7402849,28.9995418 19.5,29 C23.6421358,29 27,25.6421358 27,21.5 L27,18.2468012 L27,13.5063976 C27,12.6744372 26.3342028,12 25.5,12 C24.6715729,12 24,12.6764628 24,13.5063976 L24,15.7497253 L24,16 L23,16 L23,13.6781559 L23,12.4912653 C23,11.6676622 22.3342028,11 21.5,11 C20.6715729,11 20,11.6625444 20,12.4912653 L20,13.5082011 L20,15 L19,15 L19,13.5082011 L19,11.4908981 L19,11.4908981 Z"
+                      id="one-finger-tap" sketch:type="MSShapeGroup"></path>
+                  </g>
+                </g>
               </svg>
             </a>
           </div>
         </div>
-      </footer>
-    </div>
+        <div class="sidebar__trip trip-2">
+          <div class="sidebar__trip--avatar">
+            <img src="img/hike-photos/ex02.jpg" class="sidebar__trip--avatar-img" alt="Hike trip avatar" />
+          </div>
+          <div class="sidebar__trip--img svg-icon">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+              <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+              <title>icon 45 note list</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <g id="icon-45-note-list" class="sidebar__trip--img-calender svg-icon" sketch:type="MSArtboardGroup">
+                  <path
+                    d="M5,11 L5,25.9991358 C5,27.0983727 5.8927712,28 6.99406028,28 L21,28 L21,21.9981014 C21,20.8867064 21.8980806,20 23.0059191,20 L28,20 L28,11 L5,11 L5,11 Z M5,10 L5,7.00086422 C5,5.89581743 5.90162726,5 7.00086422,5 L25.9991358,5 C27.1041826,5 28,5.89339733 28,6.99188419 L28,10 L5,10 L5,10 Z M22,28 L22,22.0029293 C22,21.4490268 22.4509752,21 22.990778,21 L28,21 L22,28 L22,28 Z M13,18 L13,19 L20,19 L20,18 L13,18 L13,18 Z M8,17 L8,20 L11,20 L11,17 L8,17 L8,17 Z M9,18 L9,19 L10,19 L10,18 L9,18 L9,18 Z M13,14 L13,15 L25,15 L25,14 L13,14 L13,14 Z M8,13 L8,16 L11,16 L11,13 L8,13 L8,13 Z M9,14 L9,15 L10,15 L10,14 L9,14 L9,14 Z M13,22 L13,23 L19,23 L19,22 L13,22 L13,22 Z M8,21 L8,24 L11,24 L11,21 L8,21 L8,21 Z M9,22 L9,23 L10,23 L10,22 L9,22 L9,22 Z"
+                    id="note-list" sketch:type="MSShapeGroup"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="sidebar__trip--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            ratione maxime obcaecat...
+          </div>
+          <div class="sidebar__trip--click btn-click">
+            <a href="#" class="sidebar__trip--link">
+              <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+                <title>icon 24 one finger tap</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                  <g id="icon-24-one-finger-tap" class="tap-img svg-icon" sketch:type="MSArtboardGroup" fill="#157EFB">
+                    <path
+                      d="M16,8.94949144 C16.6185935,8.3182229 17,7.4536526 17,6.5 C17,4.56700328 15.4329967,3 13.5,3 C11.5670033,3 10,4.56700328 10,6.5 C10,7.4536526 10.3814065,8.3182229 11,8.94949144 L11,6.50098635 C11,5.12893087 12.1192881,4 13.5,4 C14.8903379,4 16,5.11972973 16,6.50098635 L16,8.94949144 L16,8.94949144 Z M19,11.4908981 C19,10.6674978 18.3342028,10 17.5,10 C16.6715729,10 16,10.6762201 16,11.4908981 L16,13.4325233 L16,16 L15,16 L15,13.5 L15,6.50863659 C15,5.67543961 14.3342028,5 13.5,5 C12.6715729,5 12,5.66642015 12,6.50863659 L12,16.7983451 C9.94160039,14.5979243 7.23162978,12.1791206 6.12103271,13.2957153 C5.03386293,14.3887562 7.83536199,17.4007216 11.7473755,23.9830936 C13.5099958,26.9488875 15.7402849,28.9995418 19.5,29 C23.6421358,29 27,25.6421358 27,21.5 L27,18.2468012 L27,13.5063976 C27,12.6744372 26.3342028,12 25.5,12 C24.6715729,12 24,12.6764628 24,13.5063976 L24,15.7497253 L24,16 L23,16 L23,13.6781559 L23,12.4912653 C23,11.6676622 22.3342028,11 21.5,11 C20.6715729,11 20,11.6625444 20,12.4912653 L20,13.5082011 L20,15 L19,15 L19,13.5082011 L19,11.4908981 L19,11.4908981 Z"
+                      id="one-finger-tap" sketch:type="MSShapeGroup"></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="sidebar__trip trip-3">
+          <div class="sidebar__trip--avatar">
+            <img src="img/hike-photos/ex03.jpg" class="sidebar__trip--avatar-img" alt="Hike trip avatar" />
+          </div>
+          <div class="sidebar__trip--img svg-icon">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+              <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+              <title>icon 45 note list</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <g id="icon-45-note-list" class="sidebar__trip--img-calender svg-icon" sketch:type="MSArtboardGroup">
+                  <path
+                    d="M5,11 L5,25.9991358 C5,27.0983727 5.8927712,28 6.99406028,28 L21,28 L21,21.9981014 C21,20.8867064 21.8980806,20 23.0059191,20 L28,20 L28,11 L5,11 L5,11 Z M5,10 L5,7.00086422 C5,5.89581743 5.90162726,5 7.00086422,5 L25.9991358,5 C27.1041826,5 28,5.89339733 28,6.99188419 L28,10 L5,10 L5,10 Z M22,28 L22,22.0029293 C22,21.4490268 22.4509752,21 22.990778,21 L28,21 L22,28 L22,28 Z M13,18 L13,19 L20,19 L20,18 L13,18 L13,18 Z M8,17 L8,20 L11,20 L11,17 L8,17 L8,17 Z M9,18 L9,19 L10,19 L10,18 L9,18 L9,18 Z M13,14 L13,15 L25,15 L25,14 L13,14 L13,14 Z M8,13 L8,16 L11,16 L11,13 L8,13 L8,13 Z M9,14 L9,15 L10,15 L10,14 L9,14 L9,14 Z M13,22 L13,23 L19,23 L19,22 L13,22 L13,22 Z M8,21 L8,24 L11,24 L11,21 L8,21 L8,21 Z M9,22 L9,23 L10,23 L10,22 L9,22 L9,22 Z"
+                    id="note-list" sketch:type="MSShapeGroup"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="sidebar__trip--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            ratione maxime obcaecat...
+          </div>
+          <div class="sidebar__trip--click btn-click">
+            <a href="#" class="sidebar__trip--link">
+              <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+                <title>icon 24 one finger tap</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                  <g id="icon-24-one-finger-tap" class="tap-img svg-icon" sketch:type="MSArtboardGroup" fill="#157EFB">
+                    <path
+                      d="M16,8.94949144 C16.6185935,8.3182229 17,7.4536526 17,6.5 C17,4.56700328 15.4329967,3 13.5,3 C11.5670033,3 10,4.56700328 10,6.5 C10,7.4536526 10.3814065,8.3182229 11,8.94949144 L11,6.50098635 C11,5.12893087 12.1192881,4 13.5,4 C14.8903379,4 16,5.11972973 16,6.50098635 L16,8.94949144 L16,8.94949144 Z M19,11.4908981 C19,10.6674978 18.3342028,10 17.5,10 C16.6715729,10 16,10.6762201 16,11.4908981 L16,13.4325233 L16,16 L15,16 L15,13.5 L15,6.50863659 C15,5.67543961 14.3342028,5 13.5,5 C12.6715729,5 12,5.66642015 12,6.50863659 L12,16.7983451 C9.94160039,14.5979243 7.23162978,12.1791206 6.12103271,13.2957153 C5.03386293,14.3887562 7.83536199,17.4007216 11.7473755,23.9830936 C13.5099958,26.9488875 15.7402849,28.9995418 19.5,29 C23.6421358,29 27,25.6421358 27,21.5 L27,18.2468012 L27,13.5063976 C27,12.6744372 26.3342028,12 25.5,12 C24.6715729,12 24,12.6764628 24,13.5063976 L24,15.7497253 L24,16 L23,16 L23,13.6781559 L23,12.4912653 C23,11.6676622 22.3342028,11 21.5,11 C20.6715729,11 20,11.6625444 20,12.4912653 L20,13.5082011 L20,15 L19,15 L19,13.5082011 L19,11.4908981 L19,11.4908981 Z"
+                      id="one-finger-tap" sketch:type="MSShapeGroup"></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="sidebar__trip trip-4">
+          <div class="sidebar__trip--avatar svg-icon">
+            <img src="img/hike-photos/ex04.jpg" class="sidebar__trip--avatar-img" alt="Hike trip avatar" />
+          </div>
+          <div class="sidebar__trip--img svg-icon">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+              <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+              <title>icon 45 note list</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <g id="icon-45-note-list" class="sidebar__trip--img-calender svg-icon" sketch:type="MSArtboardGroup">
+                  <path
+                    d="M5,11 L5,25.9991358 C5,27.0983727 5.8927712,28 6.99406028,28 L21,28 L21,21.9981014 C21,20.8867064 21.8980806,20 23.0059191,20 L28,20 L28,11 L5,11 L5,11 Z M5,10 L5,7.00086422 C5,5.89581743 5.90162726,5 7.00086422,5 L25.9991358,5 C27.1041826,5 28,5.89339733 28,6.99188419 L28,10 L5,10 L5,10 Z M22,28 L22,22.0029293 C22,21.4490268 22.4509752,21 22.990778,21 L28,21 L22,28 L22,28 Z M13,18 L13,19 L20,19 L20,18 L13,18 L13,18 Z M8,17 L8,20 L11,20 L11,17 L8,17 L8,17 Z M9,18 L9,19 L10,19 L10,18 L9,18 L9,18 Z M13,14 L13,15 L25,15 L25,14 L13,14 L13,14 Z M8,13 L8,16 L11,16 L11,13 L8,13 L8,13 Z M9,14 L9,15 L10,15 L10,14 L9,14 L9,14 Z M13,22 L13,23 L19,23 L19,22 L13,22 L13,22 Z M8,21 L8,24 L11,24 L11,21 L8,21 L8,21 Z M9,22 L9,23 L10,23 L10,22 L9,22 L9,22 Z"
+                    id="note-list" sketch:type="MSShapeGroup"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="sidebar__trip--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+            ratione maxime obcaecat...
+          </div>
+          <div class="sidebar__trip--click btn-click">
+            <a href="#" class="sidebar__trip--link">
+              <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+                <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+                <title>icon 24 one finger tap</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                  <g id="icon-24-one-finger-tap" class="tap-img svg-icon" sketch:type="MSArtboardGroup" fill="#157EFB">
+                    <path
+                      d="M16,8.94949144 C16.6185935,8.3182229 17,7.4536526 17,6.5 C17,4.56700328 15.4329967,3 13.5,3 C11.5670033,3 10,4.56700328 10,6.5 C10,7.4536526 10.3814065,8.3182229 11,8.94949144 L11,6.50098635 C11,5.12893087 12.1192881,4 13.5,4 C14.8903379,4 16,5.11972973 16,6.50098635 L16,8.94949144 L16,8.94949144 Z M19,11.4908981 C19,10.6674978 18.3342028,10 17.5,10 C16.6715729,10 16,10.6762201 16,11.4908981 L16,13.4325233 L16,16 L15,16 L15,13.5 L15,6.50863659 C15,5.67543961 14.3342028,5 13.5,5 C12.6715729,5 12,5.66642015 12,6.50863659 L12,16.7983451 C9.94160039,14.5979243 7.23162978,12.1791206 6.12103271,13.2957153 C5.03386293,14.3887562 7.83536199,17.4007216 11.7473755,23.9830936 C13.5099958,26.9488875 15.7402849,28.9995418 19.5,29 C23.6421358,29 27,25.6421358 27,21.5 L27,18.2468012 L27,13.5063976 C27,12.6744372 26.3342028,12 25.5,12 C24.6715729,12 24,12.6764628 24,13.5063976 L24,15.7497253 L24,16 L23,16 L23,13.6781559 L23,12.4912653 C23,11.6676622 22.3342028,11 21.5,11 C20.6715729,11 20,11.6625444 20,12.4912653 L20,13.5082011 L20,15 L19,15 L19,13.5082011 L19,11.4908981 L19,11.4908981 Z"
+                      id="one-finger-tap" sketch:type="MSShapeGroup"></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
 
-    <script src="./index.js"></script>
-  </body>
+      <section class="landing-content__testimonials testimonials">
+        <h2 class="testimonials__heading">Testimonials</h2>
+        <div class="testimonials__block block-1 btn-click">
+          <figure class="testimonials__block--person">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+              <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+              <title>icon 6 smiling face</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <g id="icon-6-smiling-face" class="testimonials__block--person-photo svg-icon"
+                  sketch:type="MSArtboardGroup">
+                  <path
+                    d="M16.5,29 C23.4035597,29 29,23.4035597 29,16.5 C29,9.59644029 23.4035597,4 16.5,4 C9.59644029,4 4,9.59644029 4,16.5 C4,23.4035597 9.59644029,29 16.5,29 Z M12,14 C12.5522848,14 13,13.5522848 13,13 C13,12.4477152 12.5522848,12 12,12 C11.4477152,12 11,12.4477152 11,13 C11,13.5522848 11.4477152,14 12,14 Z M21,14 C21.5522848,14 22,13.5522848 22,13 C22,12.4477152 21.5522848,12 21,12 C20.4477152,12 20,12.4477152 20,13 C20,13.5522848 20.4477152,14 21,14 Z M16.4813232,22 C13,22 11,20 11,20 L11,21 C11,21 13,23 16.4813232,23 C19.9626465,23 22,21 22,21 L22,20 C22,20 19.9626465,22 16.4813232,22 Z"
+                    id="smiling-face" sketch:type="MSShapeGroup"></path>
+                </g>
+              </g>
+            </svg>
+            <figcaption class="testimonials__block--person-name">
+              John S
+            </figcaption>
+          </figure>
+          <p class="testimonials__block--text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            debitis sed consectetur aut, aperiam, hic eum alias alissa labore
+            quo nesciunt magnam quidem fuga culpa ad itaque.
+          </p>
+        </div>
+        <div class="testimonials__block block-2 btn-click">
+          <figure class="testimonials__block--person">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+              <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+              <title>icon 10 winking face</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                <g id="icon-10-winking-face" class="testimonials__block--person-photo svg-icon"
+                  sketch:type="MSArtboardGroup">
+                  <path
+                    d="M16.5,29 C23.4035597,29 29,23.4035597 29,16.5 C29,9.59644029 23.4035597,4 16.5,4 C9.59644029,4 4,9.59644029 4,16.5 C4,23.4035597 9.59644029,29 16.5,29 Z M15.5186768,22 L18.5077842,22 C19.3319123,22 20,21.3228912 20,20.5046844 L20,20 L21,20 C21,20 21,20.5 21,21 C21,22 20,23 19,23 L15.5186768,23 L12,23 L12,22 L15.5186768,22 Z M21,14 C21.5522848,14 22,13.5522848 22,13 C22,12.4477152 21.5522848,12 21,12 C20.4477152,12 20,12.4477152 20,13 C20,13.5522848 20.4477152,14 21,14 Z M11,13 L11,14 L15,14 L15,13 L11,13 Z"
+                    id="winking-face" sketch:type="MSShapeGroup"></path>
+                </g>
+              </g>
+            </svg>
+            <figcaption class="testimonials__block--person-name">
+              Jane W.
+            </figcaption>
+          </figure>
+          <p class="testimonials__block--text">
+            Ipsum dolor sit amet consectetur adipisicing elit. Ratione rem a
+            beatae officia quae nemo eligendi! Asperiores quisquam ipsam
+            fugiat sed eaque reiciendis!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <div class="footer__logo--box">
+          <img src="img/logo.svg" alt="logo" class="footer__logo--box-img" />
+        </div>
+      </div>
+      <div class="footer__nav">
+        <ul class="footer__nav--list">
+          <li class="footer__nav--list-item footer-item1">
+            About
+            <ul class="footer__nav--nested">
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">The Creator</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">The Partners</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">Disclaimer</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">Privacy Policy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__nav--list-item footer-item2">
+            Why Taiwan
+            <ul class="footer__nav--nested">
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">7 Reasons Why You Should Hike in Taiwan</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">11 Things to Know Before You Hike in Taiwan</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">4 Ways to Enjoy Hikes in Taiwan</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">5 Deadly Mistakes to Avoid While Hiking in Taiwan</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">Other Resources</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">Gallery</a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__nav--list-item footer-item3">
+            Trips
+            <ul class="footer__nav--nested">
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">Trip Bulletin</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">Trail Picker</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">
+                  Recommended Trails
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="footer__nav--list-item footer-item4">
+            Blog
+            <ul class="footer__nav--nested">
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">Latest Posts</a>
+              </li>
+              <li class="footer__nav--nested-list">
+                <a href="#" class="footer__link">Most Read</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer__copyright-text-box footer-box1">
+          Built by
+          <a href="#" class="footer__copyright-text footer__link">Anusha Lee</a>
+          with
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+            class="footer__copyright-img love svg-icon">
+            <title>heart</title>
+            <path
+              d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
+            </path>
+          </svg>.
+        </div>
+
+        <div class="footer__copyright-text-box footer-box2">
+          Copyright &copy; by Anusha Lee
+        </div>
+        <div class="footer__copyright-text-box social-media">
+          <a href="#" class="footer-link" target="_blank">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="footer__copyright-social-facebook
+                svg-icon">
+              <title>facebook</title>
+              <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+            </svg>
+          </a>
+          <a href="#" class="footer-link" target="_blank">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+              class="footer__copyright-social-twitter svg-icon">
+              <title>twitter</title>
+              <path
+                d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+              </path>
+            </svg>
+          </a>
+          <a href="#" class="footer-link" target="_blank"></a>
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+            class="footer__copyright-social-instagram svg-icon">
+            <title>instagram</title>
+            <path
+              d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+            </path>
+            <path
+              d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+            </path>
+            <path
+              d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+            </path>
+          </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
 </html>
