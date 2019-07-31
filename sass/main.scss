@@ -1,17 +1,20 @@
-@import "02abstracts/variables";
-@import "02abstracts/mixins";
+@import '02abstracts/variables';
+@import '02abstracts/mixins';
 
-@import "01base/base";
-@import "01base/typography";
+@import '01base/base';
+@import '01base/typography';
 
-@import "03components/bg-video";
-@import "03components/hamburger-menu";
-@import "03components/image-style";
-@import "03components/sidebar";
-@import "03components/testimonials";
+@import '03components/bg-video';
+@import '03components/btn';
+@import '03components/hamburger-menu';
+@import '03components/image-style';
+@import '03components/sidebar';
+@import '03components/testimonials';
 
-@import "04layout/header";
-@import "04layout/landing-page";
-@import "04layout/footer";
+@import '04layout/header';
+@import '04layout/landing-page';
+@import '04layout/footer';
 
-@import "06vendors/animations";
+@import '05pages/seven-reasons';
+
+@import '06vendors/animations';

@@ -34,3 +34,7 @@ a {
 .container {
   margin: 0 auto;
 }
+
+::selection {
+  background: $color-grey;
+}

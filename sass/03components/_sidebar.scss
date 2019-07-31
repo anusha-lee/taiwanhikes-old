@@ -3,13 +3,62 @@
   height: auto;
   margin: 2rem auto;
   padding: 2rem;
+  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 15%, repeat(4, 1fr);
   justify-content: space-between;
   align-content: center;
 
+  @include responsive(tab-land) {
+    margin: 2rem;
+    min-height: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(40%, 48%));
+    grid-template-rows: 12% repeat(2, minmax(37%, 45%));
+  }
+
+  @include responsive(sm-desktop) {
+    margin: 1rem auto;
+    width: 75%;
+    grid-template-rows: 12% repeat(2, minmax(32%, 42%));
+  }
+
+  @include responsive(normal-desktop) {
+    margin: 2rem auto;
+    grid-template-rows: 15% repeat(2, auto);
+    //grid-template-rows: 15% repeat(2, minmax(30%, 40%));
+  }
+
+  @include responsive(big-desktop) {
+    margin-top: 1rem;
+    width: 100%;
+    max-height: 90%;
+    //padding: 0.5rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8% repeat(4, 1fr); // 8% repeat(4, minmax(20%, 24%));
+    // grid-template-rows: 8vh repeat(4, 18vh);
+    //grid-row-gap: 0rem;
+    justify-content: space-between;
+  }
+
   &__heading {
     @include sm-screen-heading;
+
+    @include responsive(tab-land) {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0;
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+    }
+
+    @include responsive(big-desktop) {
+      margin-bottom: 1rem;
+      // height: auto;
+
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
   }
 
   // us JavaScript to make the trip section clickable
@@ -21,6 +70,29 @@
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
     box-shadow: 10px 5px 35px -12px $color-grey;
+
+    @include responsive(sm-desktop) {
+      padding: 1rem;
+      margin: 0.5rem auto;
+      min-height: 12rem;
+      grid-template-columns: 12% 85%;
+      grid-template-rows: 12% 84%;
+    }
+
+    @include responsive(normal-desktop) {
+      min-height: 8rem;
+      padding: 1rem;
+      grid-template-columns: 12% 85%;
+      grid-template-rows: 2fr 1fr;
+      // justify-content: 80% 15%;
+    }
+
+    @include responsive(big-desktop) {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      grid-template-columns: 1fr 5fr;
+      grid-template-rows: 72% 25%;
+    }
 
     &--avatar {
       display: none;
@@ -46,6 +118,10 @@
       justify-self: end;
       align-self: end;
       z-index: 100;
+    }
+    &:hover {
+      background-color: lighten($color-grey, 40%);
+      transition: all 0.3s ease-in-out;
     }
   }
 }

@@ -8,6 +8,16 @@
   justify-content: space-between;
   grid-column-gap: 0.5rem;
   align-items: center;
+
+  @include responsive(normal-desktop) {
+    background-color: $default-color;
+    grid-template-columns: 32% 63%;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    grid-column-gap: 0.5rem;
+    align-items: center;
+  }
+
   &__logo-box {
     height: auto;
     padding: 1rem;
@@ -17,6 +27,12 @@
 
     display: grid;
     grid-column: repeat(3, 1fr);
+
+    @include responsive(normal-desktop) {
+      width: 100%;
+      padding-left: 3.5rem;
+      grid-column: 1 / 2;
+    }
 
     &-img {
       width: 5.5rem;
@@ -31,6 +47,15 @@
     display: none;
     grid-column: 2 / 4;
     grid-row: 1 / 2;
+
+    @include responsive(normal-desktop) {
+      display: block;
+      // grid-column: 2 / 3;
+      // grid-row: 1 / 2;
+      // letter-spacing: 2px;
+      padding-left: 1rem;
+      font-size: $font-size-big;
+    }
   }
   &__heading a:link,
   &__heading a:visited {
@@ -51,6 +76,12 @@
     grid-column: 1 / 4;
     grid-row: 2 / 3;
 
+    @include responsive(normal-desktop) {
+      margin-right: 1rem;
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
     &--menu {
       display: grid;
       grid-template-columns: 1fr;
@@ -58,12 +89,21 @@
       justify-content: space-around;
       align-content: center;
 
+      @include responsive(sm-desktop) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+      }
+
+      // @include responsive(normal-desktop) {
+      //   color: $color-white;
+      //   z-index: 999;
+      // }
+
       &-item {
         display: inline-block;
         width: 100%;
         text-align: center;
-        margin: 0;
-        padding: 0.2rem;
+        //padding: 0.2rem;
         transition: all 0.5s ease-in-out;
         -webkit-transition: all 0.5s ease-in-out;
         -moz-transition: all 0.5s ease-in-out;
@@ -72,6 +112,9 @@
       }
       &-item:not(:last-child) {
         border-bottom: 1px solid $default-color;
+        @include responsive(sm-desktop) {
+          border-bottom: none;
+        }
       }
 
       &-link:link,
@@ -79,7 +122,24 @@
         display: block;
         color: $default-color;
         width: 100%;
+        // height: 100%;
         font-size: $font-size-medium;
+        transition: all 0.4s ease-in-out;
+
+        @include responsive(sm-desktop) {
+          background-image: linear-gradient(
+            120deg,
+            transparent 0%,
+            transparent 50%,
+            $default-color-heading 50%
+          );
+          background-size: 250%;
+          // transition: all 0.4s ease-in-out;
+        }
+
+        @include responsive(normal-desktop) {
+          color: $color-white;
+        }
       }
 
       &-link:hover,
@@ -87,17 +147,109 @@
         font-style: italic;
         font-weight: 700;
         color: $color-white;
+        background-color: $default-color-heading;
+        // margin: 0;
+        @include responsive(sm-desktop) {
+          background-position: 100%;
+        }
       }
 
       &-item:hover {
-        background-color: $default-color-heading;
+        // background-color: $default-color-heading;
+
+        @include responsive(normal-desktop) {
+          background-color: $default-color;
+        }
       }
     }
   }
 }
 
+// Dropdown Menu
 .menu__dropdown {
   display: none;
+}
+
+@include responsive(normal-desktop) {
+  .menu {
+    display: flex;
+    position: relative;
+
+    li:hover &__dropdown {
+      display: block;
+    }
+
+    &__item > a {
+      display: inline-block;
+      width: 100%;
+    }
+
+    &__item:hover {
+      z-index: 4000;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+
+      &-item {
+        font-size: $font-size-sm;
+        width: 11vw;
+        padding: 0.8rem;
+        text-align: left;
+        //color: $color-white;
+        display: flex;
+        flex-direction: column;
+        background-color: $default-color;
+        transition: all 0.5s ease-in-out;
+        a {
+          color: $color-dark;
+        }
+      }
+      &-item:link,
+      &-item:visited {
+        color: $color-grey;
+      }
+      &-item:hover,
+      &-item:active {
+        background-color: darken($default-color, 10%);
+
+        a {
+          color: $color-white;
+          font-style: italic;
+        }
+      }
+    }
+  }
+
+  // Dropdown hover effects
+  #sReasons,
+  #eThings,
+  #fWays,
+  #fMistakes {
+    position: relative;
+  }
+  #sReasons:hover::after {
+    content: "7 Reasons Why You Should Hike in Taiwan";
+    @include dropdown-menu-effect;
+  }
+  #eThings:hover::after {
+    content: "11 Things to Know before You Hike in Taiwan";
+    @include dropdown-menu-effect;
+  }
+  #fWays:hover::after {
+    content: "4 Ways to Enjoy Hikes in Taiwan";
+    @include dropdown-menu-effect;
+  }
+  #fMistakes:hover::after {
+    content: "5 Deadly Mistakes to Avoid While Hiking in Taiwan";
+    @include dropdown-menu-effect;
+  }
 }
 
 /* =========================== Desktop CSS ================================

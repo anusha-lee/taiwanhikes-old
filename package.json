@@ -1,28 +1,27 @@
 {
-  "name": "taiwanhikes-code",
+  "name": "TaiwanHikes-code",
   "version": "1.0.0",
   "description": "Taiwan Hikes website",
   "main": "index.js",
+  "dependencies": {
+    "node": "^12.4.0",
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {
+    "sass": "^1.22.9"
+  },
   "scripts": {
-    "compile:sass": "node-sass --watch sass/main.scss css/style.css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anusha-lee/taiwanhikes.git"
   },
-  "keywords": [
-    "hiking",
-    "taiwan"
-  ],
-  "author": "Anusha Lee",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/anusha-lee/taiwanhikes/issues"
   },
-  "homepage": "https://github.com/anusha-lee/taiwanhikes#readme",
-  "dependencies": {},
-  "devDependencies": {
-    "node": "^12.4.0",
-    "node-sass": "^4.12.0"
-  }
+  "homepage": "https://github.com/anusha-lee/taiwanhikes#readme"
 }
