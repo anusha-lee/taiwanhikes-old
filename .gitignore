@@ -1,1 +1,18 @@
+<<<<<<< master
+node_modules
+build
+npm-debug.log
+.env
+.DS_Store
+=======
+dist/
+node_modules/
+.vscode
+.cache
+.sass-cache
 
+dist/
+node_modules/
+.vscode
+.cache 
+>>>>>>> master
