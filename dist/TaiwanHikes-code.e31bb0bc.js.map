@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAY,yBAAZ;AACAD,OAAO,CAACC,GAAR,CAAY,UAAZ","file":"TaiwanHikes-code.e31bb0bc.js","sourceRoot":"..","sourcesContent":["console.log(\"Hello World from Taiwan\");\r\nconsole.log(\"Test 123\");\r\n"]}
