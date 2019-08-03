@@ -1,9 +1,13 @@
+p {
+    font-size: $font-size-sm;
+}
+
 .seven {
     // for testing
-    background-color: red;
+    background-color: $color-white;
 
     &__heading {
-        font-size: 50px;
+        font-size: $font-size-xl;
     }
 
 }
