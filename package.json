@@ -8,10 +8,11 @@
     "node-sass": "^4.12.0"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.3",
     "sass": "^1.22.9"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel *.html"
   },
   "repository": {
     "type": "git",
