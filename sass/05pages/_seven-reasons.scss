@@ -1,6 +1,8 @@
 p {
     font-size: $font-size-sm;
     font-family: $font-text2;
+    margin: 1rem auto;
+    text-indent: 1.5rem;
 }
 
 .seven {
@@ -11,14 +13,36 @@ p {
     background-color: $color-white;
 
     &__heading {
+        margin: 1.5rem auto;
         font-size: $font-size-xl;
         color: $default-color-heading;
+        line-height: 1;
+        text-align: center;
     }
 
     &__image-box {
         width: 100%;
-        height: 20rem;
+        height: auto;
         background-color: greenyellow;
+
+        &--image {
+            // something wrong and need to be fixed
+
+            border: 1px solid blue;
+
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        &--caption {
+            font-weight: 600;
+        }
+
+    }
+
+    &__intro {
+        margin: 1rem auto;
+        //text-indent: 2rem;
     }
 
 }

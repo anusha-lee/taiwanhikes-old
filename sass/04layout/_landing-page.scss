@@ -2,7 +2,6 @@
   // main section is on big-video file
   display: grid;
   grid-template-columns: 1fr;
-  //grid-template-rows: repeat(2, auto-fit);
   grid-template-rows: repeat(auto-fit);
 
   @include responsive(big-desktop) {
@@ -31,61 +30,3 @@
     }
   }
 }
-
-/* ============== Desktop CSS ===================
-
-.landing-content {
-  margin: 3rem auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  //grid-template-rows: repeat(2, minmax(30rem, 40rem)), 70rem;
-  // ****************************
-  // the following makes the landing-content fit the length automatically
-  // ******************************
-  grid-template-rows: repeat(auto-fit);
-  grid-gap: 0.5rem;
-  justify-content: space-between;
-  align-content: start;
-
-  @media only screen and (max-width: $bp-large) {
-    width: 96%;
-    border: 3px solid pink;
-  }
-
-  @media only screen and (max-width: $bp-m2) {
-    width: 100%;
-    border: 3px solid blue;
-  }
-
-  // delete this later
-  @media only screen and (max-width: $bp-sm) {
-    border: 3px solid peru;
-  }
-
-  &__main {
-    grid-column: 2 / 9;
-    grid-row: 1 / 2;
-    // check _bg-video.scss for details
-
-    @media only screen and (max-width: $bp-large) {
-      grid-column: 1 / 9;
-    }
-    @media only screen and (max-width: $bp-m2) {
-      grid-column: 2 / 12;
-    }
-  }
-  
-  // check _testimonials.scss for details
-  &__testimonials {
-    grid-column: 2 / 12;
-    grid-row: 3 / 4;
-
-    @media only screen and (max-width: $bp-sm) {
-      margin-top: 2rem;
-      height: 90rem;
-    }
-  }
-}
-
-=============================================================== */
