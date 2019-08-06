@@ -21,9 +21,8 @@ p {
     }
 
     &__image-box {
-        width: 100%;
-        height: auto;
-        background-color: greenyellow;
+
+
 
         &--image {
             // something wrong and need to be fixed
@@ -45,4 +44,8 @@ p {
         //text-indent: 2rem;
     }
 
+}
+
+#test {
+    border: 2px solid red;
 }
