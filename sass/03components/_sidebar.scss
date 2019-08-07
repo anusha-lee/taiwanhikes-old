@@ -36,8 +36,6 @@
     //padding: 0.5rem;
     grid-template-columns: 1fr;
     grid-template-rows: 8% repeat(4, 1fr); // 8% repeat(4, minmax(20%, 24%));
-    // grid-template-rows: 8vh repeat(4, 18vh);
-    //grid-row-gap: 0rem;
     justify-content: space-between;
   }
 
@@ -61,7 +59,7 @@
     }
   }
 
-  // us JavaScript to make the trip section clickable
+  // use JavaScript to make the trip section clickable
   &__trip {
     margin: 2rem auto;
     padding: 2rem 1rem;
@@ -119,6 +117,7 @@
       align-self: end;
       z-index: 100;
     }
+
     &:hover {
       background-color: lighten($color-grey, 40%);
       transition: all 0.3s ease-in-out;
