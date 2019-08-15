@@ -1,16 +1,12 @@
-.landing-content {
-  margin: 0 auto;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(1fr);
-}
+// .landing-content {
+//   margin: 0 auto;
+//   width: 100%;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: repeat(1fr);
+// }
 
-/*
-===================================
-Temporarily remove original styling
-to make a simpler version first
-====================================
+
 .landing-content {
   // main section is on big-video file
   display: grid;
@@ -42,6 +38,6 @@ to make a simpler version first
       grid-row: 2 / 3;
     }
   }
+
 }
 
-*/
