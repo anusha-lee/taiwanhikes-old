@@ -9,41 +9,6 @@
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-
-  @include responsive(normal-desktop) {
-    // background-image: url("../img/hike-photos/background-heading.jpg");
-    background-color: khaki;
-    width: 88%;
-    height: 65vh;
-  }
-
-  @include responsive(big-desktop) {
-    //background-image: url("../img/hike-photos/background-heading.jpg");
-    background-color: pink;
-    grid-template-rows: repeat(2, 1fr);
-
-    height: 70vh;
-  }
-}
-
-/*
-===================================
-Temporarily remove original styling
-to make a simpler version first
-====================================
-
-.landing-content__main {
-  margin: 4rem auto;
-  width: 90%;
-  height: 70vh;
-  background-image: url("../img/hike-photos/background-heading.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
 
   @include responsive(tab-land) {
@@ -125,4 +90,3 @@ to make a simpler version first
     }
   }
 }
-*/
