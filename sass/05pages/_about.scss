@@ -1,32 +1,45 @@
 .landing-content__about {
-    background-color: Seashell;
-    margin: 2rem auto 4rem;
-    padding: 1rem;
-    width: 90%;
+  background-color: Seashell;
+  margin: 2rem auto 4rem;
+  padding: 1rem;
+  width: 90%;
 
-    // @include responsive(tab-land) {
-    //     width: 70%;
-    //     background-color: pink;
-    // }
+  @include responsive(tab-land) {
+    width: 70%;
+    background-color: aqua;
+  }
 
-    // @include responsive(normal-desktop) {
-    //     width: 60%;
-    //     background-color: orange;
-    // }
+  @include responsive(sm-desktop) {
+    width: 55%;
+    background-color: greenyellow;
+  }
 
-    // @include responsive(big-desktop) {
-    //     width: 45%;
-    //     background-color: green;
-    // }
+  @include responsive(normal-desktop) {
+    background-color: lemonchiffon;
+  }
 
-    h2 {
-        font-size: $font-size-medium;
-        color: $default-color-heading;
-    }
+  // @include responsive(tab-land) {
+  //     width: 70%;
+  //     background-color: pink;
+  // }
 
-    h3 {
-        font-size: $font-size-sm;
-        color: $color-dark;
-    }
-      
+  // @include responsive(normal-desktop) {
+  //     width: 60%;
+  //     background-color: orange;
+  // }
+
+  // @include responsive(big-desktop) {
+  //     width: 45%;
+  //     background-color: green;
+  // }
+
+  h2 {
+    font-size: $font-size-medium;
+    color: $default-color-heading;
+  }
+
+  h3 {
+    font-size: $font-size-sm;
+    color: $default-color-heading;
+  }
 }

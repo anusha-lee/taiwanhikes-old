@@ -6,18 +6,29 @@
 //   grid-template-rows: repeat(1fr);
 // }
 
-
 .landing-content {
   // main section is on big-video file
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit);
 
+  // @include responsive(tab-land) {
+  //   border: 5px dotted blue;
+  // }
+
+  // @include responsive(sm-desktop) {
+  //   border: 2px solid purple;
+  // }
+
+  // @include responsive(normal-desktop) {
+  //   border: 2px solid cornflowerblue;
+  // }
+
   @include responsive(big-desktop) {
     width: 100%;
 
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: minmax(45%, 55%) auto;
+    grid-template-rows: minmax(45%, 55%) auto auto;
     justify-content: space-between;
     align-content: start;
 
@@ -37,7 +48,10 @@
       grid-column: 2 / 12;
       grid-row: 2 / 3;
     }
+
+    &__about {
+      grid-column: 3 / 11;
+      grid-row: 3 / 4;
+    }
   }
-
 }
-
