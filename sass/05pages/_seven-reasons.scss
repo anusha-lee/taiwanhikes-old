@@ -93,6 +93,18 @@ p {
       text-align: center;
     }
   }
+
+  @include responsive(tab-land) {
+    width: 70%;
+  }
+
+  @include responsive(sm-desktop) {
+    width: 55%;
+  }
+
+  @include responsive(normal-desktop) {
+    width: 45%;
+  }
 }
 
 .size__comparison--pair-tw {
