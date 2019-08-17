@@ -1,21 +1,42 @@
 .landing-content__about {
-  background-color: Seashell;
+  // background-color: Seashell;
+  box-shadow: 10px 5px 35px -12px $color-grey;
   margin: 2rem auto 4rem;
   padding: 1rem;
   width: 90%;
 
+  p {
+    transition: all 0.5s ease-in-out;
+  }
+  p:hover {
+    background-color: lighten($color-grey, 42%);
+  }
+
+  p a {
+    //display: inline-block;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    &:link,
+    &:visited {
+      text-decoration: underline wavy $default-color;
+      color: $default-color;
+    }
+    &:hover {
+      color: $default-color-heading;
+      text-decoration: underline solid darken($default-color-heading, 10%);
+    }
+  }
+
   @include responsive(tab-land) {
     width: 70%;
-    background-color: aqua;
   }
 
   @include responsive(sm-desktop) {
     width: 55%;
-    background-color: greenyellow;
   }
 
-  @include responsive(normal-desktop) {
-    background-color: lemonchiffon;
+  @include responsive(big-desktop) {
+  width: 70%;
   }
 
   // @include responsive(tab-land) {
