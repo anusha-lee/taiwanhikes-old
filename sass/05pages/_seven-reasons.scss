@@ -3,6 +3,7 @@ p {
   font-family: $font-text2;
   margin: 1rem auto;
   text-indent: 1.5rem;
+  
 
   a {
     @include link-style;
