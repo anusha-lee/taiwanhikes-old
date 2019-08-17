@@ -12,18 +12,35 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit);
 
-  // @include responsive(tab-land) {
-  //   border: 5px dotted blue;
-  // }
+  @include responsive(tab-land) {
+    &__scroll-btn {
+      position: fixed;
+      right: 2rem;
+      bottom: 20rem;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: radial-gradient($default-color 15%, $color-dark 85%);
+      z-index: 99;
 
-  // @include responsive(sm-desktop) {
-  //   border: 2px solid purple;
-  // }
+      &--box {
+        position: relative;
+        &--up {
+        position: absolute;
+        left: 20%;
+        top: 20%;
+        color: red;
+        font-size: 20px;
 
-  // @include responsive(normal-desktop) {
-  //   border: 2px solid cornflowerblue;
-  // }
+        &--up {
+          color: $color-white;
+        }
+        }
+      }      
+    }
+  }
 
+ 
   @include responsive(big-desktop) {
     width: 100%;
 

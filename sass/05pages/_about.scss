@@ -12,19 +12,17 @@
     background-color: lighten($color-grey, 42%);
   }
 
-  p a {
-    //display: inline-block;
-    position: relative;
-    transition: all 0.5s ease-in-out;
-    &:link,
-    &:visited {
-      text-decoration: underline wavy $default-color;
-      color: $default-color;
-    }
-    &:hover {
-      color: $default-color-heading;
-      text-decoration: underline solid darken($default-color-heading, 10%);
-    }
+  p a {    
+    @include link-style;
+    // &:link,
+    // &:visited {
+    //   text-decoration: underline wavy $default-color;
+    //   color: $default-color;
+    // }
+    // &:hover {
+    //   color: $default-color-heading;
+    //   text-decoration: underline solid darken($default-color-heading, 10%);
+    // }
   }
 
   @include responsive(tab-land) {
