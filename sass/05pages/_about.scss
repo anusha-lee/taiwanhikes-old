@@ -12,17 +12,8 @@
     background-color: lighten($color-grey, 42%);
   }
 
-  p a {    
+  p a {
     @include link-style;
-    // &:link,
-    // &:visited {
-    //   text-decoration: underline wavy $default-color;
-    //   color: $default-color;
-    // }
-    // &:hover {
-    //   color: $default-color-heading;
-    //   text-decoration: underline solid darken($default-color-heading, 10%);
-    // }
   }
 
   @include responsive(tab-land) {
@@ -34,7 +25,7 @@
   }
 
   @include responsive(big-desktop) {
-  width: 70%;
+    width: 70%;
   }
 
   // @include responsive(tab-land) {

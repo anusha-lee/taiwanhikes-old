@@ -1,11 +1,3 @@
-// .landing-content {
-//   margin: 0 auto;
-//   width: 100%;
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   grid-template-rows: repeat(1fr);
-// }
-
 .landing-content {
   // main section is on big-video file
   display: grid;
@@ -26,21 +18,20 @@
       &--box {
         position: relative;
         &--up {
-        position: absolute;
-        left: 20%;
-        top: 20%;
-        color: red;
-        font-size: 20px;
+          position: absolute;
+          left: 20%;
+          top: 20%;
+          color: red;
+          font-size: 20px;
 
-        &--up {
-          color: $color-white;
+          &--up {
+            color: $color-white;
+          }
         }
-        }
-      }      
+      }
     }
   }
 
- 
   @include responsive(big-desktop) {
     width: 100%;
 

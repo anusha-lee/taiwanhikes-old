@@ -1,37 +1,24 @@
 .footer {
   width: 100%;
+  height: 32rem;
   padding: 3rem;
   background-color: $default-color;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto-fit;
-  justify-content: space-around;
   color: $default-color-heading;
 
-  @include responsive(normal-desktop) {
-    padding-top: 3rem;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    // grid-template-rows: 70% 20%;
-    grid-row-gap: 2rem;
-  }
-
   &__logo {
-    margin: 1rem auto;
-    padding: 0.5rem 1rem 1rem 1rem;
+    margin: 0 auto;
+    padding: 0;
     width: 100%;
+    height: 4rem;
     text-align: center;
-    // border: 2px dotted firebrick;
-    &--box-img {
-      width: 5rem;
+
+    img {
+      width: 4rem;
+      height: 4rem;
     }
-    // @include responsive(normal-desktop) {
-    //   grid-column: 1 / 2;
-    //   grid-row: 1 / 2;
-    // }
   }
 
+  /* hide footer nav for now
   &__nav {
     display: none;
 
@@ -85,6 +72,7 @@
       }
     }
   }
+*/
 
   // @include responsive(big-desktop) {
   //   grid-template-columns: repeat(4, 1fr);
@@ -92,35 +80,36 @@
 
   &__copyright {
     width: 100%;
-    min-height: 14rem;
+    max-height: 13rem;
     font-size: $font-size-sm;
     color: $color-dark;
-    //height: 10rem;
-    margin: 2rem auto;
-    padding: 1rem;
 
     &-text-box {
-      margin: 0.5rem auto;
+      margin: 0 auto;
       text-align: center;
     }
 
-    &-social-facebook,
-    &-social-instagram,
-    &-social-twitter {
-      margin: 0 1.5rem;
-      width: 2.5rem;
+    a {
+      color: $color-white !important;
+      @include link-style;
     }
+    // &-social-facebook,
+    // &-social-instagram,
+    // &-social-twitter {
+    //   margin: 0 1.5rem;
+    //   width: 2.5rem;
+    // }
 
-    @include responsive(normal-desktop) {
-      margin: 1rem auto 0;
-      padding: 0.5rem;
-      grid-column: 1 / 3;
-      grid-row: 2 / 3;
-    }
+    // @include responsive(normal-desktop) {
+    //   margin: 1rem auto 0;
+    //   padding: 0.5rem;
+    //   grid-column: 1 / 3;
+    //   grid-row: 2 / 3;
+    // }
   }
 
   &__flaticon {
-    margin: 0 auto;
+    margin: 3rem auto 0;
     width: 90%;
     font-size: 1rem;
     text-align: center;
@@ -131,71 +120,3 @@
   // fill: $default-color-heading;
   fill: $default-color-heading;
 }
-
-/* =========================== Desktop CSS ================================
-
-.footer {
-  width: 100%;
-  padding: 2rem;
-  background-color: $default-color;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 2fr 1fr;
-  justify-content: space-around;
-  color: $default-color-heading;
-
-  &__logo {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    &--box {
-      display: grid;
-      justify-content: start;
-      align-content: center;
-      &-img {
-        width: 8rem;
-      }
-    }
-  }
-
-  &__nav {
-    grid-column: 4 / 12;
-    grid-row: 1 / 3;
-
-    &--list {
-      display: flex;
-      justify-content: space-around;
-      font-size: $font-size-sm;
-      //border: 2px solid blue;
-      &-item {
-        width: 100%;
-        padding: 1rem;
-      }
-      & a:link,
-      & a:visited {
-        color: $color-white;
-        transition: all 0.3s ease-in-out;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -ms-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-      }
-
-      & a:hover,
-      & a:active {
-        color: $color-dark;
-      }
-    }
-  }
-
-  &__copyright {
-    grid-column: 4 / 10;
-    grid-row: 3 / 4;
-    font-size: $font-size-sm;
-    display: inline-block;
-    padding-top: 1rem;
-    text-align: center;
-    color: $color-white;
-    //border: 2px solid pink;
-  }
-}
-================================================================ */
