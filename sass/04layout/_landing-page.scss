@@ -1,65 +1,65 @@
 .landing-content {
-  // main section is on big-video file
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto-fit);
+	// main section is on big-video file
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(auto-fit);
 
-  @include responsive(tab-land) {
-    &__scroll-btn {
-      position: fixed;
-      right: 2rem;
-      bottom: 20rem;
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      background: radial-gradient($default-color 15%, $color-dark 85%);
-      z-index: 99;
+	@include responsive(tab-land) {
+		&__scroll-btn {
+			position: fixed;
+			right: 2rem;
+			bottom: 20rem;
+			width: 4rem;
+			height: 4rem;
+			border-radius: 50%;
+			background: radial-gradient($default-color 15%, $color-dark 85%);
+			z-index: 99;
 
-      &--box {
-        position: relative;
-        &--up {
-          position: absolute;
-          left: 20%;
-          top: 20%;
-          color: red;
-          font-size: 20px;
+			&--box {
+				position: relative;
+				&--up {
+					position: absolute;
+					left: 20%;
+					top: 20%;
+					color: red;
+					font-size: 20px;
 
-          &--up {
-            color: $color-white;
-          }
-        }
-      }
-    }
-  }
+					&--up {
+						color: $color-white;
+					}
+				}
+			}
+		}
+	}
 
-  @include responsive(big-desktop) {
-    width: 100%;
+	@include responsive(big-desktop) {
+		width: 100%;
 
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: minmax(45%, 55%) auto auto;
-    justify-content: space-between;
-    align-content: start;
+		grid-template-columns: repeat(12, 1fr);
+		// grid-template-rows: minmax(45%, 55%) auto auto;
+		justify-content: space-between;
+		align-content: start;
 
-    &__main {
-      width: 100%;
-      grid-column: 2 / 9;
-      grid-row: 1 / 2;
-      // check _bg-video.scss for details
-    }
+		&__main {
+			width: 100%;
+			grid-column: 2 / 9;
+			grid-row: 1 / 2;
+			// check _bg-video.scss for details
+		}
 
-    &__sidebar {
-      grid-column: 9 / 12;
-      grid-row: 1 / 2;
-    }
+		&__sidebar {
+			grid-column: 9 / 12;
+			grid-row: 1 / 2;
+		}
 
-    &__testimonials {
-      grid-column: 2 / 12;
-      grid-row: 2 / 3;
-    }
+		&__testimonials {
+			grid-column: 2 / 12;
+			grid-row: 2 / 3;
+		}
 
-    &__about {
-      grid-column: 3 / 11;
-      grid-row: 3 / 4;
-    }
-  }
+		&__about {
+			grid-column: 3 / 11;
+			grid-row: 3 / 4;
+		}
+	}
 }
