@@ -16,6 +16,11 @@ p {
   width: 95%;
   background-color: $color-white;
 
+  @include responsive(tab-land) {
+    border: 5px solid pink;
+    width: 70%;
+  }
+
   &__heading {
     margin: 1.5rem auto;
     font-size: $font-size-xl;

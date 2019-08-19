@@ -1,5 +1,6 @@
 .landing-content {
   // main section is on big-video file
+  border: 5px solid pink;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit);
@@ -21,7 +22,7 @@
           position: absolute;
           left: 20%;
           top: 20%;
-          color: red;
+          color: default-color-heading;
           font-size: 20px;
 
           &--up {
