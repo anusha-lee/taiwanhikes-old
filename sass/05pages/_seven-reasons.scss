@@ -10,7 +10,6 @@ p {
 }
 
 .seven {
-  border: 2px solid peru;
   margin: 1rem auto 3rem;
   padding: 1rem;
   width: 95%;
@@ -19,12 +18,10 @@ p {
   flex-direction: column;
 
   @include responsive(tab-land) {
-    border: 5px solid pink;
     width: 70%;
   }
 
   @include responsive(sm-desktop) {
-    border: 5px solid greenyellow;
     width: 60%;
   }
 
@@ -72,10 +69,53 @@ p {
 }
 
 .reasons {
-  border: 3px solid turquoise;
   margin: 3rem auto;
   padding: 1rem;
   width: 100%;
+
+  @include responsive(sm-desktop) {
+    box-shadow: 10px 5px 35px -12px $default-color;
+  }
+
+  &__reason {
+    margin: 2rem auto;
+  }
+
+  &__heading {
+    margin: 1rem auto;
+    font-size: $font-size-medium;
+    color: $default-color-heading;
+    line-height: 1.2;
+  }
+
+  &__image {
+    display: flex;
+    flex-direction: column;
+    // border: 2px solid peru;
+    padding: 0.5rem;
+
+    img {
+      margin: 0 auto;
+      width: 70%;
+      box-shadow: 10px 5px 35px -12px $color-grey;
+      background-size: cover;
+
+      @include responsive(sm-desktop) {
+        width: 60%;
+      }
+
+      @include responsive(normal-desktop) {
+        //border: 7px solid royalblue;
+        width: 45%;
+      }
+    }
+
+    &--caption {
+      margin: 0.6rem 0;
+      font-size: $font-size-sm;
+      text-align: center;
+    }
+  }
 }
 
 /*
