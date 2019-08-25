@@ -4,37 +4,14 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit);
 
-  @include responsive(tab-land) {
-    &__scroll-btn {
-      position: fixed;
-      right: 2rem;
-      bottom: 20rem;
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      background: radial-gradient($default-color 15%, $color-dark 85%);
-      z-index: 99;
+  // @include responsive(tab-land) {
+  // }
+  // @include responsive(sm-desktop) {
 
-      &--box {
-        position: relative;
-        &--up {
-          position: absolute;
-          left: 20%;
-          top: 20%;
-          color: default-color-heading;
-          font-size: 20px;
-
-          &--up {
-            color: $color-white;
-          }
-        }
-      }
-    }
-  }
+  // }
 
   @include responsive(big-desktop) {
     width: 100%;
-
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: minmax(45%, 55%) auto auto;
     justify-content: space-between;

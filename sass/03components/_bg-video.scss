@@ -14,7 +14,7 @@
   @include responsive(tab-land) {
     position: relative;
     width: 70%;
-    height: 85vh;
+    height: 80vh;
     grid-template-rows: repeat(4, 1fr);
   }
   @include responsive(normal-desktop) {

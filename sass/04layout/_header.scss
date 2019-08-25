@@ -227,6 +227,25 @@
     }
   }
 
+  // Fixed navigation and remove Taiwan Hikes
+  // after scrolling down
+  .fixedNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    height: 6vh;
+    opacity: 0.9;
+
+    & div img {
+      margin-top: -0.6rem;
+      width: 4rem;
+    }
+    & div div {
+      display: none;
+    }
+  }
+
   // Dropdown hover effects
   #sReasons,
   #eThings,

@@ -1,15 +1,18 @@
-import './sass/main.scss'
+import "./sass/main.scss";
 
-let navFixed = document.querySelectorAll('header');
+window.addEventListener("scroll", function() {
+  const navFixed = document.querySelector("header");
+  const fromTop = window.scrollY;
 
-window.addEventListener("scroll", function(e) {
-    //console.log("you scroll");
-    let fromTop = window.scrollY;
-    if (fromTop > 500) {
-        console.log(fromTop, "You scroll down");
-    } else if (fromTop < 0) {
-        console.log("You scroll up");
-    }
-    
-})
+  if (fromTop > 550) {
+    navFixed.classList.add("fixedNav");
+  } else {
+    navFixed.classList.remove("fixedNav");
+    console.log("remove fixed");
+  }
+});
 
+window.addEventListener("click", function() {
+  const scrollUp = document.querySelector(".scroll-up");
+  console.log(scrollUp);
+});
