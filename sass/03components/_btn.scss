@@ -6,6 +6,8 @@
 }
 
 .scroll-up {
+  display: none;
+
   @include responsive(sm-desktop) {
     position: fixed;
     width: 5rem;
@@ -15,7 +17,7 @@
     right: 5%;
     background: radial-gradient($default-color 15%, $color-dark 85%);
     cursor: pointer;
-    z-index: 700;
+    z-index: 300;
 
     &__arrow {
       position: absolute;
