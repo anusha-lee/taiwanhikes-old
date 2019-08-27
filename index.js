@@ -33,6 +33,28 @@ window.addEventListener("scroll", function scrollUp() {
   }
 });
 
+// Make a function to check scrollTop position
+// If scrollTop > 20, change style.display = “block”
+// else style.display = “none”
+
+window.addEventListener("scroll", function showScroll() {
+  const top = window.scrollY;
+  if (top > 100) {
+    document.querySelector(".scroll-up").style.display = "block";
+  } else {
+    document.querySelector(".scroll-up").style.display = "none";
+  }
+});
+
+const click = document.querySelector(".scroll-up");
+const container = document.querySelector(".container");
+click.addEventListener("click", function() {
+  container.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+});
+
 /*
 function addScrollUp() {
   // 2) Write an insertScrollUpDiv function, inside this function:
