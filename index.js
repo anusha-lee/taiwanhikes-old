@@ -54,22 +54,3 @@ click.addEventListener("click", function() {
     block: "start"
   });
 });
-
-/*
-function addScrollUp() {
-  // 2) Write an insertScrollUpDiv function, inside this function:
-  // Create a new div element
-  let insertScrollUpDiv = document.createElement("button");
-  // Create a text
-  let content = "Scroll Up";
-  // Add content text to the new div
-  let scrollUpContent = document.createTextNode(content);
-  // Add the text node to the newly created div
-  insertScrollUpDiv.appendChild(scrollUpContent);
-
-  // Add .insertScrollUpDiv and its content into the DOM
-  let scrollUp = document.querySelector(".scroll-box");
-  document.body.insertBefore(insertScrollUpDiv, scrollUp);
-}
-addScrollUp();
-*/

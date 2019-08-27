@@ -4,12 +4,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit);
 
-  // @include responsive(tab-land) {
-  // }
-  // @include responsive(sm-desktop) {
-
-  // }
-
   @include responsive(big-desktop) {
     width: 100%;
     grid-template-columns: repeat(12, 1fr);
@@ -37,6 +31,11 @@
     &__about {
       grid-column: 3 / 11;
       grid-row: 3 / 4;
+    }
+
+    &__form {
+      grid-column: 1 / 13;
+      grid-row: 4 / 5;
     }
   }
 }
