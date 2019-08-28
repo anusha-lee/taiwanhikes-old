@@ -7,7 +7,6 @@
 
 .scroll-up {
   display: none;
-
   @include responsive(sm-desktop) {
     position: fixed;
     width: 5rem;

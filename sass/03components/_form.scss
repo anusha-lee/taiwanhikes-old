@@ -1,18 +1,87 @@
 .form {
-  background-color: aquamarine;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
+  grid-template-rows: minmax(15vh, 35vh);
+  background-color: lighten($color-grey, 40%);
 
   &__box {
-    &__box {
-      & fieldset {
-        border: none;
-        & legend {
-          color: teal;
-          // font-size: 30px;
-          font-weight: 700;
+    margin: 2rem 0;
+    grid-column: 1 / 13;
+
+    // justify-content: end;
+    // align-content: center;
+
+    @include responsive(sm-desktop) {
+      grid-column: 3 / 11;
+    }
+
+    @include responsive(normal-desktop) {
+      grid-column: 4 / 10;
+    }
+
+    & fieldset {
+      padding: 2rem 1rem;
+      border: none;
+
+      & legend {
+        display: block;
+        border: 3px solid peru;
+        font-size: $font-size-medium;
+        color: $default-color-heading;
+        //text-align: center;
+        line-height: 1.1;
+
+        @include responsive(sm-desktop) {
+          border: 3px solid teal;
+          font-size: $font-size-big;
+          text-align: center;
         }
+      }
+    }
+    &__name,
+    &__email {
+      transition: all 3s ease-in;
+      //outline: none;
+
+      &--input {
+        &:focus {
+          border: 1px solid LightSeaGreen;
+          background-color: LightCyan;
+        }
+        &:focus:invalid {
+          border: 1px solid red;
+        }
+      }
+    }
+
+    // need to check below again
+
+    &__text {
+      color: orangered;
+    }
+
+    &__submit {
+      background-color: Salmon;
+      border: none;
+      height: 50px;
+      width: 200px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        transform: scale (1.1);
+        font-size: 15px;
+        color: white;
+      }
+      &:active,
+      &:vsited {
+        width: 45px;
+        width: 180px;
+      }
+
+      &::after {
+        content: "";
       }
     }
   }
