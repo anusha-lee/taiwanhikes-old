@@ -1,7 +1,8 @@
 .form {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: minmax(15vh, 35vh);
+  grid-template-rows: minmax(15vh, 50vh);
   background-color: lighten($color-grey, 40%);
 
   &__box {
@@ -26,9 +27,9 @@
       & legend {
         display: block;
         border: 3px solid peru;
-        font-size: $font-size-medium;
+        font-size: $font-size-big;
         color: $default-color-heading;
-        //text-align: center;
+        text-align: center;
         line-height: 1.1;
 
         @include responsive(sm-desktop) {
@@ -38,51 +39,68 @@
         }
       }
     }
-    &__name,
-    &__email {
-      transition: all 3s ease-in;
-      //outline: none;
+  }
+  &__name,
+  &__email {
+    // margin: 1rem;
+    // padding: 1rem;
+    transition: all 3s ease-in;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    // justify-content: space-around;
+    // align-content: space-around;
+    grid-gap: 0.4rem;
+    //outline: none;
 
-      &--input {
-        &:focus {
-          border: 1px solid LightSeaGreen;
-          background-color: LightCyan;
-        }
-        &:focus:invalid {
-          border: 1px solid red;
-        }
-      }
+    &--label {
+      display: block;
+      // width: 30%;
+      font-size: $font-size-sm;
+      border: 2px solid salmon;
     }
 
-    // need to check below again
+    &--input {
+      margin-left: 0.5rem;
+      width: 80vw;
+      height: 5rem;
+      &:focus {
+        border: 0.2rem solid lighten($default-color, 5%);
+        background-color: lighten($default-color, 30%);
+      }
+      &:focus:invalid {
+        border: 1px solid red;
+      }
+    }
+  }
 
-    &__text {
-      color: orangered;
+  // need to check below again
+
+  &__text {
+    color: orangered;
+  }
+
+  &__submit {
+    background-color: Salmon;
+    border: none;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      transform: scale (1.1);
+      font-size: 15px;
+      color: white;
+    }
+    &:active,
+    &:vsited {
+      width: 45px;
+      width: 180px;
     }
 
-    &__submit {
-      background-color: Salmon;
-      border: none;
-      height: 50px;
-      width: 200px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease-in;
-
-      &:hover {
-        transform: scale (1.1);
-        font-size: 15px;
-        color: white;
-      }
-      &:active,
-      &:vsited {
-        width: 45px;
-        width: 180px;
-      }
-
-      &::after {
-        content: "";
-      }
+    &::after {
+      content: "";
     }
   }
 }
