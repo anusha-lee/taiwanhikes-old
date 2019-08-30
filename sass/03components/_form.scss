@@ -1,34 +1,36 @@
 .form {
+  margin: 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto-fit;
+  grid-template-rows: 1fr;
   background-color: lighten($color-grey, 40%);
 
   &__box {
     margin: 2rem 0;
     grid-column: 1 / 13;
 
-    @include responsive(tab-land) {
-      grid-column: 2 / 12;
-    }
+    // @include responsive(tab-land) {
+    //   grid-column: 3 / 11;
+    // }
 
-    @include responsive(sm-desktop) {
-      grid-column: 3 / 11;
-    }
+    // @include responsive(sm-desktop) {
+    //   grid-column: 3 / 11;
+    // }
 
-    @include responsive(normal-desktop) {
-      grid-column: 4 / 10;
-    }
+    // @include responsive(normal-desktop) {
+    //   grid-column: 4 / 10;
+    // }
 
     & fieldset {
       padding: 2rem 1rem;
       border: none;
 
-      @include responsive(tab-land) {
-      }
+      // @include responsive(tab-land) {
+      // }
 
       & legend {
+        width: 100%;
         display: block;
         font-family: "Averia Gruesa Libre", cursive;
         font-size: $font-size-big;
@@ -38,7 +40,6 @@
         padding: 0.3rem 0.3rem 0;
 
         @include responsive(sm-desktop) {
-          border: 3px solid teal;
           font-size: $font-size-big;
           text-align: center;
         }
