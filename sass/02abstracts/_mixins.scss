@@ -33,16 +33,44 @@ how to apply:
 }
 
 @mixin link-style {
-   transition: all 0.5s ease-in-out;
-   &:link,
-   &:visited {
-      text-decoration: underline wavy $default-color;
-      color: $default-color;
+  transition: all 0.5s ease-in-out;
+  &:link,
+  &:visited {
+    text-decoration: underline wavy $default-color;
+    color: $default-color;
+  }
+  &:hover {
+    color: $default-color-heading;
+    text-decoration: underline solid darken($default-color-heading, 10%);
+  }
+}
+
+@mixin form-lable-email-style {
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+
+  &--label {
+    display: block;
+    font-size: $font-size-medium;
+    justify-self: start;
+    align-self: center;
+  }
+
+  &--input {
+    margin-left: 0.5rem;
+    height: 4rem;
+    border: 1px solid $default-color;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+
+    &:focus {
+      box-shadow: 3px 3px 6px lighten($default-color, 5%);
     }
-    &:hover {
-      color: $default-color-heading;
-      text-decoration: underline solid darken($default-color-heading, 10%);
+    &:focus:invalid {
+      border: 1px solid red;
     }
+  }
 }
 
 @mixin responsive($breakpoint) {
