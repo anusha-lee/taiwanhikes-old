@@ -20,21 +20,19 @@
   <body>
     <div class="container">
       <header class="header">
-        <div class="header__logo-box">
-          <img src="img/logo.svg" alt="logo" class="header__logo-box-img" />
-          <div class="header__heading bounceInDown">
-            <a href="index.html">Taiwan Hikes</a>
+          <div class="header__logo-box">
+              <a href="index.html"><img src="img/logo.svg" alt="logo" class="header__logo-box-img" /></a>
+            <div class="header__heading">
+              <a href="index.html">Taiwan Hikes</a>
+            </div>
           </div>
-        </div>
 
         <nav class="header__nav menu__box">
           <ul class="header__nav--menu menu">
             <li class="header__nav--menu-item menu__item">
               <a
-                href="https://www.cnn.com"
-                class="header__nav--menu-link"
-                target="_blank"
-                >About</a>
+                href="#about"
+                class="header__nav--menu-link">About</a>
               <!--
             <ul class="header__nav--dropdown menu__dropdown">
               <li class="header__nav--dropdown-item menu__dropdown-item">
@@ -53,7 +51,7 @@
           -->
             </li>
             <li class="header__nav--menu-item menu__item">
-              <a href="#" class="header__nav--menu-link">Why Taiwan</a>
+              <a href="seven-reasons-why-visiting-taiwan.html" class="header__nav--menu-link">Why Taiwan</a>
               <ul class="header__nav--dropdown menu__dropdown">
                 <li
                   class="header__nav--dropdown-item menu__dropdown-item"
@@ -96,7 +94,7 @@
               </ul>
             </li>
             <li class="header__nav--menu-item menu__item">
-              <a href="#" class="header__nav--menu-link">Trips</a>
+              <a href="trips.html" class="header__nav--menu-link">Trips</a>
               <!--
               <ul class="header__nav--dropdown menu__dropdown">
                 <li class="header__nav--dropdown-item menu__dropdown-item">
@@ -733,25 +731,25 @@
           </p>
           </div>         
         </div>
-
-        <section class="landing-content__form form">
-          <form class="form__box">
-            <fieldset>
-               <legend>Sign up with your email below to receive news and updates.</legend>
-               <div class="form__name">
-                  <label class="form__name--label">Name</label>
-                  <input class="form__name--input" type="text" placeholder="Your Name"></input>
-               </div>
-               <div class="form__email">
-                  <label class="form__name--label">E-mail</label>
-                  <input class="form__name--input" type="email" placeholder="Your E-mail"></input>
-               </div>
-               <button class="form__submit">Get the updates!</button>
-               <p class="form__text">We all hate spam, so no spam, ever. Your email address will only ever be used for Taiwan Hikes.</p>
-            </fieldset>      
-          </form>
-        </section> 
       </main>
+
+      <section class="landing-content__form form">
+        <form class="form__box">
+          <fieldset>
+             <legend>Sign up with your email to receive news and updates.</legend>
+             <div class="form__name">
+                <label class="form__name--label" for="form-name">Name:</label>
+                <input class="form__name--input" type="text" placeholder="Your Name" id="form-name"></input>
+             </div>
+             <div class="form__email">
+                <label class="form__name--label" for="form-email">E-mail:</label>
+                <input class="form__name--input" type="email" placeholder="Your E-mail" id="form-email"></input>
+             </div>
+             <p class="form__text">We all hate span, so no spam, ever.</br> Your email address will only ever be used for Taiwan Hikes.</p>
+             <button class="form__submit">Get the updates!</button>
+          </fieldset>      
+        </form>
+      </section> 
 
       <div class="scroll-box">
         <div class="scroll-up">              

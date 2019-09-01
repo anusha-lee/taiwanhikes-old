@@ -46,11 +46,28 @@ window.addEventListener("scroll", function showScroll() {
   }
 });
 
-const click = document.querySelector(".scroll-up");
+const click = document.querySelector(".scroll-box");
 const container = document.querySelector(".container");
 click.addEventListener("click", function() {
   container.scrollIntoView({
     behavior: "smooth",
     block: "start"
   });
+});
+
+// Form input validation
+const name = document.getElementById("form-name");
+const email = document.getElementById("form-email");
+const form = document.querySelector(".form__box");
+
+form.addEventListener("submit", function(e) {
+  let message = [];
+  if (name.value === "" || name.value === null) {
+    e.preventDefault();
+    alert("Name is required.");
+  }
+  if (email.value === "" || email.value === null) {
+    e.preventDefault();
+    alert("Please enter your valid email.");
+  }
 });
