@@ -10,3 +10,16 @@
   //fill: $default-color-heading;
   fill: $default-color-heading;
 }
+
+// Visual effect of images when scrolling down the pages
+
+.image-gone {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: translateY(2rem);
+}
+
+.image-reappear {
+  opacity: 1;
+  transform: translateY(0);
+}

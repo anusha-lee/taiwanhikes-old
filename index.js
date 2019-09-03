@@ -71,3 +71,21 @@ form.addEventListener("submit", function(e) {
     alert("Please enter your valid email.");
   }
 });
+
+// Visual effect of images when scrolling down the pages
+// CSS is on image-style.scss
+window.addEventListener("scroll", function scrollAppear() {
+  const imgGone = document.querySelectorAll(".image-gone");
+  const imgPosition = img.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 2;
+
+  imgGone.forEach(function() {
+    if (imgPosition < screenPosition) {
+      imgGone.classList.add("image-reappear");
+    }
+  });
+
+  // if (imgPosition < screenPosition) {
+  //   imgGone.classList.add("image-reappear");
+  // }
+});
