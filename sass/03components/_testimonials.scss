@@ -2,6 +2,7 @@
   background-image: url("../img/hike-photos/background.jpg");
   background-size: cover;
   margin: 2rem auto 4rem;
+  padding-bottom: 4rem;
   height: auto;
   width: 95%;
   box-shadow: 10px 5px 35px -12px $color-grey;
@@ -10,7 +11,7 @@
     width: 90%;
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 15% 1fr;
   }
 
@@ -29,8 +30,9 @@
   // }
 
   @include responsive(big-desktop) {
-    max-width: 75%;
-    max-height: 85%;
+    // max-width: 75%;
+    // max-height: 85%;
+    height: auto;
   }
 
   &__heading {
@@ -52,9 +54,10 @@
     font-size: $font-size-sm;
     padding: 2rem;
     width: 80%;
-    min-height: 13rem;
-    max-height: 82%;
+    // min-height: 13rem;
+    // max-height: 82%;
     //overflow: hidden;
+    height: auto;
     line-height: 1.2;
     background-color: rgba($color-white, 0.5);
     box-shadow: 10px 10px 35px -12px $color-dark;
@@ -68,7 +71,7 @@
     }
 
     @include responsive(normal-desktop) {
-      width: 85%;
+      width: 75%;
       height: auto;
       padding: 3rem;
       -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
@@ -76,7 +79,8 @@
     }
 
     @include responsive(big-desktop) {
-      width: 75%;
+      margin-top: 0;
+      width: 60%;
     }
 
     &--person {
