@@ -6,7 +6,9 @@
 }
 
 .scroll-box {
+  display: none;
   .scroll-up {
+    border: 2px solid red;
     @include responsive(sm-desktop) {
       position: fixed;
       width: 5rem;
@@ -21,7 +23,7 @@
       &__arrow {
         position: absolute;
         top: 13%;
-        left: 11%;
+        left: 10%;
         font-size: 4rem;
         color: $color-white;
         text-shadow: 0.1rem 0.1rem 0.2rem $color-grey;

@@ -5,6 +5,10 @@
 // when user scrolling down
 
 .hamburger {
+  @include responsive(normal-desktop) {
+    display: none;
+  }
+
   &__checkbox {
     display: none;
   }
@@ -30,10 +34,10 @@
     position: fixed;
     top: 1.4rem;
     right: 2rem;
-    background-image: radial-gradient(
-      $default-color 10%,
-      darken($color-dark, 20%)
-    );
+    // background-image: radial-gradient(
+    //   $default-color 10%,
+    //   darken($color-dark, 20%)
+    // );
     z-index: 1000;
     transition: transform 0.6s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 

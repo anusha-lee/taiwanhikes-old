@@ -25,7 +25,7 @@ window.addEventListener("scroll", function() {
 
 window.addEventListener("scroll", function scrollUp() {
   const scrollDown = document.body.scrollTop;
-  const scrollButton = document.querySelector(".scroll-up");
+  const scrollButton = document.querySelector(".scroll-box");
   if (scrollDown > 20) {
     scrollButton.style.display = "block";
   } else {
@@ -40,9 +40,9 @@ window.addEventListener("scroll", function scrollUp() {
 window.addEventListener("scroll", function showScroll() {
   const top = window.scrollY;
   if (top > 100) {
-    document.querySelector(".scroll-up").style.display = "block";
+    document.querySelector(".scroll-box").style.display = "block";
   } else {
-    document.querySelector(".scroll-up").style.display = "none";
+    document.querySelector(".scroll-box").style.display = "none";
   }
 });
 
