@@ -4,7 +4,7 @@ import "./sass/main.scss";
 window.addEventListener("scroll", function() {
   const navFixed = document.querySelector("header");
   const fromTop = window.scrollY;
-  if (fromTop > 550) {
+  if (fromTop > 450) {
     navFixed.classList.add("fixedNav");
   } else {
     navFixed.classList.remove("fixedNav");
@@ -26,7 +26,7 @@ window.addEventListener("scroll", function() {
 window.addEventListener("scroll", function scrollUp() {
   const scrollDown = document.body.scrollTop;
   const scrollButton = document.querySelector(".scroll-up");
-  if (scrollDown > 100) {
+  if (scrollDown > 20) {
     scrollButton.style.display = "block";
   } else {
     scrollButton.style.display = "none";

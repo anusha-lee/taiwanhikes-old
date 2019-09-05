@@ -4,9 +4,9 @@
     transform: translateY(-0.5rem);
   }
 }
+
 .scroll-box {
-  & .scroll-up {
-    display: none;
+  .scroll-up {
     @include responsive(sm-desktop) {
       position: fixed;
       width: 5rem;
