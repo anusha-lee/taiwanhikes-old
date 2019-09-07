@@ -8,4 +8,3 @@ node_modules/
 .cache
 .sass-cache
 .map
-trips.json
