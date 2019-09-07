@@ -71,3 +71,17 @@ form.addEventListener("submit", function(e) {
     alert("Please enter your valid email.");
   }
 });
+
+/***************** Weather App *****************
+This app is for users to check the local weather in Taiwan
+There is a dropdown option for users to 
+select the location's weather they want to know.
+
+1) Dropdown options on HTML
+2) Style the app
+
+3) JavaScript structure
+    a) Fetch weather data from websites, preferably Weather Forecast Bureau in Taiwan
+    b) Receive input from users and connect that to data 
+
+***********************************************/
