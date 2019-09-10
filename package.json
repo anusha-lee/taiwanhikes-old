@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
+    "posthtml-include": "^1.2.0",
     "sass": "^1.22.9"
   },
   "scripts": {

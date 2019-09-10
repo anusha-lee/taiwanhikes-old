@@ -1,4 +1,5 @@
 import "./sass/main.scss";
+import { defaultCoreCipherList } from "constants";
 
 // Sticky navigation while scrolling down
 window.addEventListener("scroll", function() {
@@ -85,3 +86,19 @@ select the location's weather they want to know.
     b) Receive input from users and connect that to data 
 
 ***********************************************/
+
+let trips = document.querySelectorAll(".trips");
+let fakeJson = "http://jsonplaceholder.typicode.com/posts";
+
+fetch(fakeJson)
+  .then(res => {
+    if (res.ok) {
+      return res.json;
+    } else {
+      throw new Error("Data do not work!");
+    }
+  })
+  .then(data => {
+    console.log(data);
+    //trips.innerHTML = data.names;
+  });
