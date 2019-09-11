@@ -1,6 +1,35 @@
 .trips {
   margin: 0 auto;
   width: 100%;
-  height: 50vh;
+  height: auto;
   background-color: khaki;
+
+  &__box {
+    border: 2px solid palevioletred;
+    margin: 1rem auto;
+    width: 90%;
+    height: 600px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(1fr, auto));
+
+    &--trail {
+      width: 80%;
+      height: 150px;
+      background-color: greenyellow;
+    }
+
+    &--date {
+      width: 80%;
+      height: 150px;
+      background-color: blueviolet;
+    }
+
+    &--fee {
+      width: 80%;
+      height: 150px;
+      background-color: lightblue;
+    }
+  }
 }

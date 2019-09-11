@@ -87,18 +87,19 @@ select the location's weather they want to know.
 
 ***********************************************/
 
-let trips = document.querySelectorAll(".trips");
-let fakeJson = "http://jsonplaceholder.typicode.com/posts";
+/****************************************
+Trips api
+*****************************************/
+let tripsBox = document.querySelector(".trips__box--trail");
+let tripsJson = "https://api.myjson.com/bins/fwk01";
 
-fetch(fakeJson)
-  .then(res => {
-    if (res.ok) {
-      return res.json;
-    } else {
-      throw new Error("Data do not work!");
-    }
-  })
+fetch(tripsJson)
+  .then(res => res.json())
   .then(data => {
+    // let dataObj = JSON.parse(data);
     console.log(data);
-    //trips.innerHTML = data.names;
-  });
+    tripsBox.textContent = data;
+  })
+  .catch(err => alert("Something went wrong.", err));
+
+// Make JSON file: http://myjson.com/fwk01
