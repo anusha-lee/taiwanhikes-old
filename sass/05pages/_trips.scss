@@ -1,35 +1,78 @@
+h2 {
+  font-size: $font-size-medium;
+  color: $default-color-heading;
+  
+}
+
 .trips {
   margin: 0 auto;
   width: 100%;
   height: auto;
-  background-color: khaki;
+  overflow: auto;
+  border: 2px solid purple;
 
-  &__box {
-    border: 2px solid palevioletred;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  
+  &__disclaimer {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
     margin: 1rem auto;
-    width: 90%;
-    height: 600px;
+    padding: 1rem 2rem;
+    width: 95%;
+    height: 40vh;
+    overflow: auto;
+    box-shadow: 10px 5px 35px -12px $color-grey;
 
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, minmax(1fr, auto));
+    &--heading {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;      
 
-    &--trail {
-      width: 80%;
-      height: 150px;
-      background-color: greenyellow;
+      text-align: center;
+      text-decoration: underline;
     }
 
-    &--date {
-      width: 80%;
-      height: 150px;
-      background-color: blueviolet;
-    }
+    &--text {
 
-    &--fee {
-      width: 80%;
-      height: 150px;
-      background-color: lightblue;
+      &-title {
+        font-size: $font-size-sm;
+        color: $default-color-heading;
+      }
     }
   }
+
+  &__events {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  
+    height: auto;
+  }
 }
+
+.events {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+
+  &__note {
+    font-size: $font-size-sm;
+    color: $default-color-heading;    
+  }
+
+  &__oneDayFree {
+    background-color: pink;
+  }
+
+  &__paid {
+    background-color: greenyellow;
+  }
+
+  &__three {
+    background-color: peru;
+  }
+}
+
+
+

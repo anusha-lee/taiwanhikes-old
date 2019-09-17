@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "node": "^12.4.0",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.12.0",
+    "translate-json-object": "^2.3.3"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
