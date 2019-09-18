@@ -5,35 +5,30 @@
   }
 }
 
-.scroll-box {
-  border: 2px solid blue;
+.scroll-up {
   display: none;
-  .scroll-up {
-    border: 2px solid red;
-    @include responsive(sm-desktop) {
-      position: fixed;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      bottom: 10%;
-      right: 5%;
-      background: radial-gradient($default-color 15%, $color-dark 85%);
-      cursor: pointer;
-      z-index: 300;
 
-      &__arrow {
-        position: absolute;
-        top: 13%;
-        left: 10%;
-        font-size: 4rem;
-        color: $color-white;
-        text-shadow: 0.1rem 0.1rem 0.2rem $color-grey;
-        transition: all 0.2s ease-in-out;
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  bottom: 10%;
+  right: 5%;
+  background: radial-gradient($default-color 15%, $color-dark 85%);
+  cursor: pointer;
+  z-index: 300;
 
-        &:hover {
-          transform: translateY(-0.4rem);
-        }
-      }
+  &__arrow {
+    position: absolute;
+    top: 13%;
+    left: 10%;
+    font-size: 4rem;
+    color: $color-white;
+    text-shadow: 0.1rem 0.1rem 0.2rem $color-grey;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(-0.4rem);
     }
   }
 }
