@@ -1,83 +1,80 @@
 h2 {
-  font-size: $font-size-medium;
-  color: $default-color-heading;
-  
+    font-size: $font-size-medium;
+    color: $default-color-heading;
+}
+
+h3 {
+    font-size: $font-size-sm;
+    color: lighten($default-color-heading, 5%);
 }
 
 .trips {
-  margin: 0 auto;
-  width: 100%;
-  height: auto;
-  overflow: auto;
-  border: 2px solid purple;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto-fill;
-  
-  &__disclaimer {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-
-    margin: 1rem auto;
-    padding: 1rem 2rem;
+    margin: 0 auto;
     width: 95%;
-    height: 40vh;
-    overflow: auto;
-    box-shadow: 10px 5px 35px -12px $color-grey;
-
-    &--heading {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;      
-
-      text-align: center;
-      text-decoration: underline;
-    }
-
-    &--text {
-
-      &-title {
-        font-size: $font-size-sm;
-        color: $default-color-heading;
-      }
-    }
-  }
-
-  &__events {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  
     height: auto;
-  }
+    overflow: auto;
+    border: 2px solid purple;
+    
+    &__box {
+        border: 3px solid orange;
+    }
 
-  &__customized {
-    background-color: paleturquoise;
-    height: 10rem;
-  }
+    &__disclaimer {
+        margin: 1rem auto;
+        padding: 1rem 2rem;
+        width: 95%;
+        height: 40vh;
+        overflow: auto;
+        box-shadow: 10px 5px 35px -12px $color-grey;
+
+        &--heading {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        &--text {
+            
+            &-title {
+                font-size: $font-size-sm;
+                color: $default-color-heading;
+            }
+        }
+    }
+
+    &__events {
+        height: auto;
+    }
+
+    &__customized {
+        background-color: paleturquoise;
+        height: 10rem;
+    }
 }
 
 .events {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
 
-  &__note {
-    font-size: $font-size-sm;
-    color: $default-color-heading;    
-  }
+    &__note {
+        font-size: $font-size-sm;
+        color: darken($default-color, 20%);
+    }
 
-  &__oneDayFree {
-    background-color: pink;
-  }
+//    &__oneDayFree {
+//        background-color: pink;
+//    }
 
-  &__paid {
-    background-color: greenyellow;
-  }
+    &__paid {
+        background-color: greenyellow;
+    }
 
-  &__three {
-    background-color: peru;
-  }
+    &__three {
+        background-color: peru;
+    }
 }
 
-
+.freeTrip {
+    margin: 1rem auto;
+    width: 95%;
+    padding: 1rem;
+    box-shadow: 10px 5px 35px -12px $color-grey;
+}
 
