@@ -13,7 +13,7 @@ h2 {
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr auto-fill;
   
   &__disclaimer {
     grid-column: 1 / 2;
@@ -48,6 +48,11 @@ h2 {
     grid-row: 2 / 3;
   
     height: auto;
+  }
+
+  &__customized {
+    background-color: paleturquoise;
+    height: 10rem;
   }
 }
 
