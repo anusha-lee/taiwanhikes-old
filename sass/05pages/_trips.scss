@@ -57,21 +57,11 @@ h3 {
         font-size: $font-size-sm;
         color: darken($default-color, 20%);
     }
-
-//    &__oneDayFree {
-//        background-color: pink;
-//    }
-
-    &__paid {
-        background-color: greenyellow;
-    }
-
-    &__three {
-        background-color: peru;
-    }
 }
 
-.freeTrip {
+.freeTrip,
+.paidTrip,
+.threeTrip {
     margin: 1rem auto;
     width: 95%;
     padding: 1rem;
