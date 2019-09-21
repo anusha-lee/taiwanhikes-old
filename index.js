@@ -85,29 +85,30 @@ https://api.myjson.com/bins/19v4xp  (not so good one)
 //let tripsBox = document.querySelector(".trips__box--trail");
 let url = "https://api.myjson.com/bins/ckfdx";
 
-//function createTripName(ele) {
-//    let eventTitle = document.getElementById('freeTrip1');
-//    return eventTitle.innerHTML(ele);
-//}
-
 fetch(url)
   .then(res => res.json())
   .then(data => {
-   // let trips = data.trips;
-    console.log(data.trips);
-    console.log(data.trips[2].集合Meetup_Info.交通Transportation);
-    console.log(data.trips[3].社團Hiking_Club);
+   let trips = data.trips;    
+  //  console.log(JSON.parse(trips));
+
+// data retrieval testing 
+//    console.log(trips[3].社團Hiking_Club);
     
-//    trips.map(function(trip) {
-//         
-//        console.log(trips[1]);
-//        //console.log(data.trips["社團Hiking Club"]);
-//   })
+    trips.map(function(trip) {
+        let tripTitle = trip.活動Event;
+        let tripDate = trip.日期Date;
+        let tripClub = trip.社團Hiking_Club;
+        
+        console.log(`Event: ${tripTitle}, Date: ${tripDate}, Club: ${tripClub}`);
+   })  
+    
+//    document.getElementById('test').innerHTML = tripTitle;
+    
   })
   .catch(err => alert("Something went wrong.", err));
 
 
-
+ 
 
 
 

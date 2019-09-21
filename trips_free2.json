@@ -1,0 +1,228 @@
+{
+	"trips": [
+    {
+        "活動Event": "復興坑Fu xing keng",
+		"日期Date": "2019/10/06",
+        "集合Meetup_Info":{
+            "集合時間Time": "08:30",
+            "集合地點Meetup_Point": "HOU cave railway station",
+            "交通Transportation": "火車區間車Local Train 4148"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "9KM",
+            "難度Level": "A+"
+        },
+        "社團Hiking_Club": "台北市新興登山會Xinxing",
+		"響導Guide": "Xie Chang Hong",
+        "路線簡介About_the_trail": "The monkey cave is the Yilan Line Railroad of the bus, passengers more will be at the monkey cave near the station hostel overnight rest, after the trailing edge of the recess of the Creek upstream of the mountain road, through the prestige of the monument, to peony the pit, the top Shuangxi, overlooking the pit, and then crossed a grass Ridge Trail, into Yilan, steep slopes need to pull the rope. "
+    },
+    {
+		"活動Event": "茅草埔Mao cao pu",
+        "日期Date": "2019/10/13",
+        "集合Meetup_Info":{
+            "集合時間Time": "08:30",
+            "集合地點Meetup_Point": "China University of Science and technology station",
+            "交通Transportation": "公車 Bus 205, 270, 620, 306"
+        },
+        "難度Difficulty_Level":{
+			"里程Distance": "7KM",
+			"難度Level": "A"
+		},
+        "社團Hiking_Club": "台北市新興登山會Xinxing",
+        "響導Guide": "Liu Sheng Hsiung",
+        "路線簡介About_the_trail": "China University of Science and technology→military cemetery→thatched po Hill(140m)→four points in the hill(250M)→land of the Temple→Mountain Temple→Fuxing Park Matsuyama mercy Hall →bus station."
+    },
+    {
+		"活動Event": "峰頭越嶺Feng tou yue ling",
+        "日期Date": "2019/10/27",
+        "集合Meetup_Info": {
+            "集合時間Time": "07:30",
+            "集合地點Meetup_Point": "捷運木柵站 MRT Mucha Station",
+            "交通Transportation": "公車 Bus 795"
+        },
+        "難度Difficulty_Level": {
+            "里程Distance": "9KM",
+			"難度Level": "A"
+        },
+        "社團Hiking_Club": "台北市新興登山會Xinxing",
+        "響導Guide": "Chang Guang Jung",
+        "路線簡介About_the_trail": "By the Pingxi Junior high Play Den, the row 东势 grid the Ridge Trail, all the way to a sustained climb will go through the Central tip, the peak of the head tip of the East Peak, stinky head mountain forks in the road are not taken, in 东势 grid No. 13 homes after there is a small iron bridge and turn right, officially entered the Ridge Road, the trail inside Old House, the terraces split down, always stay ahead of the people in this life remains, a Cinnamoroll Ling Fude Palace"
+    },
+    {
+		"活動Event": "大格門Da ge men",
+        "日期Date": "2019/11/03",
+        "集合Meetup_Info": {
+            "集合時間Time": "08:00",
+            "集合地點Meetup_Point": "新店捷運站 MRT Xindian Station, 公車 Bus Green 12",
+            "交通Transportation": "公車 Bus Green 12 坪林 route "
+        },
+        "難度Difficulty_Level": {
+            "里程Distance": "9KM",
+            "難度Level": "A+"
+        },
+        "社團Hiking_Club": "台北市新興登山會Xinxing",
+        "響導Guide": "Xie Chang Hong",
+        "路線簡介About_the_trail": "Large grid Gate trail\"by underwater Liu climb over the large grid door saddle to Ukrainian painted caves, is the early two residents between the roads, which full of the trail the remains of the Keep Krabi road, is probably a light blue trail spur one small segment, but there is the ancient bridge, the courtyard of the ancient house, a kraal stone bolt hole of the column"
+    },
+    {
+		"活動Event": "荷蘭古道He lan gu dao",
+        "日期Date": "2019/11/10",
+        "集合Meetup_Info": {
+            "集合時間Time": "07:30",
+            "集合地點Meetup_Point": "捷運劍潭站1號出口, MRT Jiantan Station, Exit 1",
+            "交通Transportation": "公車小18, Bus Small 18"
+        },
+        "難度Difficulty_Level": {
+            "里程Distance": "7KM",
+			"難度Level": "A"
+        },
+        "社團Hiking_Club": "台北市新興登山會Xinxing",
+        "響導Guide": "Liu Sheng Hsiung",
+        "路線簡介About_the_trail": "The small 18 bus departure→Dengfeng Chun→Holland Road→High Top Mountain →North mountain→under the cut within the Sungai (lunch, water source)→ping top of the ancient Chun know→small 18 bus"
+    },
+    {
+		"活動Event": "十分古道She fen gu dao",
+        "日期Date": "2019/11/17",
+        "集合Meetup_Info":{
+            "集合時間Time": "08:30",
+            "集合地點Meetup_Point": "Carpool",
+            "交通Transportation": "Carpool"
+		},
+        "難度Difficulty_Level": {
+            "里程Distance": "9KM",
+            "難度Level": "A"
+        },
+        "社團Hiking_Club": "台北市新興登山會Xinxing",
+        "響導Guide": "Liu Ke Sheng",
+        "路線簡介About_the_trail": "Very the trail to the trailhead→荖 House pits stone house-荖 House pit coal mine ruins→is the trail fork in the road the right． Uplink）→stone shed land→ridge head Mumford Palace →five-point Hill(757M)(original path return)→ridge head Mumford Palace→stone shed Land pavilion."
+    },
+    {
+		"活動Event": "九芎坑Jiu quiong keng",
+        "日期Date": "2019/11/24",
+        "集合Meetup_Info":{
+            "集合時間Time": "08:00",
+            "集合地點Meetup_Point": "Teng Liao Keng Stop",
+            "交通Transportation": "Carpool"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "12KM",
+            "難度Level": "A+"
+        },
+        "社團Hiking_Club": "台北市新興登山會Xinxing",
+        "響導Guide": "Lin Ching Xiang",
+        "路線簡介About_the_trail": "The division of public bun Tail Mountain(840m)early 坪林 no priests（master）in this industry, the township has this requirement, so it was climb over the mountain to Pingxi Apprentice apprenticeship, due to the mountain shape exactly like the Grand Master head of the bun, and therefore it is called The\"Lion male bun Tail Mountain\"."
+    },
+    {
+		"活動Event": "小觀音山Xiao guan yin shan",
+        "日期Date": "2019/10/06",
+        "集合Meetup_Info":{
+            "集合時間Time": "08:30",
+            "集合地點Meetup_Point": "巴拉卡公路鞍部停車場Baraka road saddle car Park",
+            "交通Transportation": "公車Bus 108 or carpool"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "12KM",
+            "難度Level": "A+"
+        },
+        "社團Hiking_Club": "新北市嘟嘟健行登山協會Dudu",
+        "響導Guide": "Peng Jia Yu",
+        "路線簡介About_the_trail": " Small Guanyin Mountain View is vast, because just is located in the Datun volcano area, three major peaks between the center position and become enjoy the Datun mountain, and Qixing mountain, bamboo mountain and other magnificent mountain content a great location. Route: Balaka road saddle car Park→Mountain Home→small Guanyin Shanxi peak→charcoal kiln ruins→North bamboo mountain→carrot cake Napoleon Hill→North peak→peak→operational know→volcano patron→Mountain House. O-about 12 km."
+    },
+    {
+		"活動Event": "新溪洲Sin xi zhou",
+        "日期Date": "2019/10/13",
+        "集合Meetup_Info":{
+            "集合時間Time": "08:00",
+            "集合地點Meetup_Point": "桃園車站收費閘門Taoyuan Station toll gate",
+            "交通Transportation": "火車區間車Local Train 1121"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "12KM",
+			"難度Level": "A"
+        },
+        "社團Hiking_Club": "新北市嘟嘟健行登山協會Dudu",
+        "響導Guide": "HOU Chih Pin",
+        "路線簡介About_the_trail": "Creek African mountain－located in Taoyuan County Big Creek, Hiking trails but most of the acacia trees, the forest phase of the original good to go, the way of Prospect Point, visible to the Shimen reservoir water storage district and the Taoyuan Tableland, the beautiful scenery, belongs to the Taoyuan region's most popular suburbs of the Mountain line."
+    },
+    {
+		"活動Event": "三峽藻壁San xia zao bi",
+        "日期Date": "2019/10/20",
+		"集合Meetup_Info":{
+            "集合時間Time": "07:20",
+            "集合地點Meetup_Point": "捷運新埔站2號出口, MRT Xinpu Station Exit 2",
+            "交通Transportation": "公車 Bus 910"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "16KM",
+            "難度Level": "B+"
+        },
+        "社團Hiking_Club": "新北市嘟嘟健行登山協會Dudu",
+        "響導Guide": "Liang Rong Zong",
+        "路線簡介About_the_trail": " Among the most popular of the Three Gorges algae wall+II lots mountain O line. Welcome to invite partners to participate in(1)please prepare the lunch, rain gear, drinking water, wearing rain shoes. (2)can drive a carpool, please meet, from 08:00 to the Three Gorges hemp Park Road or Datong road 286 lane white line within the scope of the Parking, and the rendezvous."
+    },
+    {
+		"活動Event": "加九嶺Jia jiu ling",
+        "日期Date": "2019/10/27",
+        "集合Meetup_Info":{
+            "集合時間Time": "07:30",
+            "集合地點Meetup_Point": "捷運永寧站4出口, MRT Yongning Station Exit 4",
+            "交通Transportation": "公車 Bus 916"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "N/A",
+			"難度Level": "N/A"
+        },
+        "社團Hiking_Club": "新北市嘟嘟健行登山協會Dudu",
+        "響導Guide": "Chen Dong Yi",
+        "路線簡介About_the_trail": "Three Gorges Dam → the bear empty the last home(about 350m) → large stone wall Area → Mountain monkey cave → the birth canal crossing → a vegetable garden Bear Mountain trailhead → Bear Mountain → bamboo pit Hill(lunch) → Prospect Point(views of Lion's head mountain, Jade reservoirs) → the bamboo pit fork → add nine Ling mountain(the original circuit Foldback) → the bamboo pit fork → large stone wall(steep) → the birth canal trailhead → bear air bridge → the bear empty the last home"
+    },
+    {
+		"活動Event": "南子吝山Nan zi lin shan",
+        "日期Date": "2019/10/06",
+		"集合Meetup_Info":{
+            "集合時間Time": "07:15",
+            "集合地點Meetup_Point": "台北車站南三門Taipei Railway Station South 3 Exit",
+            "交通Transportation": ", 台鐵自強號272班次, Tze-Chiang Limited Train 272"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "N/A",
+			"難度Level": "N/A"
+        },
+        "社團Hiking_Club": "新北市嘟嘟健行登山協會Dudu",
+        "響導Guide": "Jian Xue Xing",
+        "路線簡介About_the_trail": "First on the South Sub-stingy mountain~the lower half of the screen of the Creek~on the Stegosaurus Ridge, a small cone foot to admire the view, and then the original road back and forth. Return via the South Sub-stingy South-East Peak~The New opens up the mountain back to the South of the new Palace is an O-trip."
+    },
+    {
+		"活動Event": "行修宮Xing xiu gong",
+        "日期Date": "2019/11/10",
+        "集合Meetup_Info":{
+            "集合時間Time": "07:20",
+            "集合地點Meetup_Point": "台北客運三峽一站(大勇路), San Xia 1st Station",
+            "交通Transportation": "公車 Bus 778"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "14KM",
+			"難度Level": "A+"
+        },
+        "社團Hiking_Club": "新北市嘟嘟健行登山協會Dudu",
+        "響導Guide":"Liang Rong Zong",
+        "路線簡介About_the_trail": "Line repair Palace→justice-the pit→white chicken Mountain→Chicken housing mountain→Myrtle forest→sixth house Napoleon Hill→tianhou temple→Poly methyl road→line repair Palace Car Park"
+    },
+    {
+		"活動Event": "復興坑Fu xing keng",
+        "日期Date": "2019/11/17",
+        "集合Meetup_Info":{
+            "集合時間Time": "08:30",
+            "集合地點Meetup_Point": "侯硐火車站, Houtong Railway Station",
+            "交通Transportation": "火車區間車 Loca Train 4148"
+        },
+        "難度Difficulty_Level":{
+            "里程Distance": "9KM",
+            "難度Level": "A+"
+        },
+        "社團Hiking_Club": "新北市嘟嘟健行登山協會Dudu",
+        "響導Guide": "Chang Hong",
+        "路線簡介About_the_trail": " After recess the trail---Taisho 8 years（1919）monkey cave is the Yilan Line Railroad of the bus, passengers more will be at the monkey cave near the station hostel overnight rest, after the trailing edge of the concave Creek upstream mountain road, through the prestige of the monument, to peony the pit, the top Shuangxi, overlooking the pit, and then crossed a grass Ridge Trail, go four it."
+    }
+	]
+}
