@@ -1,15 +1,17 @@
 import './sass/main.scss';
-import { defaultCoreCipherList } from 'constants';
+import {
+    defaultCoreCipherList
+} from 'constants';
 
 // Sticky navigation while scrolling down
-window.addEventListener('scroll', function() {
-  const navFixed = document.querySelector('header');
-  const fromTop = window.scrollY;
-  if (fromTop > 450) {
-    navFixed.classList.add('fixedNav');
-  } else {
-    navFixed.classList.remove('fixedNav');
-  }
+window.addEventListener('scroll', function () {
+    const navFixed = document.querySelector('header');
+    const fromTop = window.scrollY;
+    if (fromTop > 450) {
+        navFixed.classList.add('fixedNav');
+    } else {
+        navFixed.classList.remove('fixedNav');
+    }
 });
 
 /******************************************
@@ -25,13 +27,13 @@ window.addEventListener('scroll', function() {
  ******************************************/
 
 window.addEventListener('scroll', function scrollUp() {
-  const scrollDown = document.body.scrollTop;
-  const scrollButton = document.querySelector('.scroll-up');
-  if (scrollDown > 20) {
-    scrollButton.style.display = 'block';
-  } else {
-    scrollButton.style.display = 'none';
-  }
+    const scrollDown = document.body.scrollTop;
+    const scrollButton = document.querySelector('.scroll-up');
+    if (scrollDown > 20) {
+        scrollButton.style.display = 'block';
+    } else {
+        scrollButton.style.display = 'none';
+    }
 });
 
 // Make a function to check scrollTop position
@@ -39,21 +41,21 @@ window.addEventListener('scroll', function scrollUp() {
 // else style.display = “none”
 
 window.addEventListener('scroll', function showScroll() {
-  const top = window.scrollY;
-  if (top > 100) {
-    document.querySelector('.scroll-up').style.display = 'block';
-  } else {
-    document.querySelector('.scroll-up').style.display = 'none';
-  }
+    const top = window.scrollY;
+    if (top > 100) {
+        document.querySelector('.scroll-up').style.display = 'block';
+    } else {
+        document.querySelector('.scroll-up').style.display = 'none';
+    }
 });
 
 const click = document.querySelector('.scroll-up');
 const container = document.querySelector('.container');
-click.addEventListener('click', function() {
-  container.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-  });
+click.addEventListener('click', function () {
+    container.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+    });
 });
 
 // Form input validation
@@ -61,64 +63,74 @@ const name = document.getElementById('form-name');
 const email = document.getElementById('form-email');
 const form = document.querySelector('.form__box');
 
-form.addEventListener('submit', function(e) {
-  let message = [];
-  if (name.value === '' || name.value === null) {
-    e.preventDefault();
-    alert('Name is required.');
-  }
-  if (email.value === '' || email.value === null) {
-    e.preventDefault();
-    alert('Please enter your valid email.');
-  }
+form.addEventListener('submit', function (e) {
+    let message = [];
+    if (name.value === '' || name.value === null) {
+        e.preventDefault();
+        alert('Name is required.');
+    }
+    if (email.value === '' || email.value === null) {
+        e.preventDefault();
+        alert('Please enter your valid email.');
+    }
 });
 
 /****************************************
 Trips api:
 JSON file: https://api.myjson.com/bins/ckfdx
-
-https://api.myjson.com/bins/yks2t
-https://api.myjson.com/bins/bxfgd  (oldest one)
-https://api.myjson.com/bins/19v4xp  (not so good one)
 *****************************************/
 
-//let tripsBox = document.querySelector(".trips__box--trail");
-let url = "https://api.myjson.com/bins/ckfdx";
+let tripsBox = document.getElementById("test");
+const url = "https://api.myjson.com/bins/ckfdx";
+let tripsJson;
 
-fetch(url)
-  .then(res => res.json())
-  .then(data => {
-   let trips = data.trips;    
-  //  console.log(JSON.parse(trips));
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        tripsJson = data.trips;
 
-// data retrieval testing 
-//    console.log(trips[3].社團Hiking_Club);
-    
-    trips.map(function(trip) {
+        // data retrieval testing 
+        //    console.log(trips[3].社團Hiking_Club);
+     
+    tripsJson.map(function(trip) {
         let tripTitle = trip.活動Event;
         let tripDate = trip.日期Date;
         let tripClub = trip.社團Hiking_Club;
+        // document.getElementById('test').innerHTML = tripTitle;
         
         console.log(`Event: ${tripTitle}, Date: ${tripDate}, Club: ${tripClub}`);
    })  
     
-//    document.getElementById('test').innerHTML = tripTitle;
-    
-  })
-  .catch(err => alert("Something went wrong.", err));
+    })
+    .catch(err => alert("Something went wrong.", err));
+
+/*
+const newHTMLContentFree = `
+    <div class="events__oneDayFree--trip freeTrip">           
+                <h3><a href="#"></a>${tripTitle}</h3>
+                <div class="freeTrip__date"></div>
+                <div class="freeTrip__meetupInfo">
+                    <div class="freeTrip__meetupInfo--time">Test</div>
+                    <div class="freeTrip__meetupInfo--meetingPoint"></div>
+                    <div class="freeTrip__meetupInfo--transport"></div>
+                </div>
+                <div class="freeTrip__difficulty">
+                    <div class="freeTrip__difficulty--distance"></div>
+                    <div class="freeTrip__difficulty--level"></div>
+                </div>
+                <div class="freeTrip__club">
+                    <div class="freeTrip__club--name"><a href="#"></a></div>
+                    <div class="freeTrip__club--guide"></div>
+                </div>
+                <div class="freeTrip__about"><a href="#"></a></div>
+            </div>
+`;
+*/
+
+test.innerHTML = newHTMLContentFree;
 
 
- 
 
-
-
-/**********************************
- * Can I write JavaScript functions to sort out the Chinese JSON file?
- * like automatically change certain names or word in the file?
- * For example: function 找到"嘟嘟登山隊", 自動換成對應的英文名字?
- * The 2nd example: 找到日期或同義字, 自動換成對應的Date?
- *
- * *******************************/
 
 
 
@@ -135,6 +147,3 @@ select the location's weather they want to know.
     b) Receive input from users and connect that to data 
 
 ***********************************************/
-
-
-
