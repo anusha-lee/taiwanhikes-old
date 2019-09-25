@@ -78,7 +78,7 @@ form.addEventListener('submit', function (e) {
 /****************************************
 Trips api:
 JSON file: https://api.myjson.com/bins/ckfdx
-*****************************************/
+
 
 let tripsBox = document.getElementById("test");
 const url = "https://api.myjson.com/bins/ckfdx";
@@ -89,14 +89,13 @@ let tripsJson;
     .then(data => {
         tripsJson = data.trips;
 
-        // data retrieval testing 
-        //    console.log(trips[3].社團Hiking_Club);
+        data retrieval testing 
+        console.log(trips[3].社團Hiking_Club);
      
     tripsJson.map(function(trip) {
         let tripTitle = trip.活動Event;
         let tripDate = trip.日期Date;
         let tripClub = trip.社團Hiking_Club;
-        // document.getElementById('test').innerHTML = tripTitle;
         
         console.log(`Event: ${tripTitle}, Date: ${tripDate}, Club: ${tripClub}`);
    })  
@@ -104,7 +103,7 @@ let tripsJson;
     })
     .catch(err => alert("Something went wrong.", err));
 
-/*
+
 const newHTMLContentFree = `
     <div class="events__oneDayFree--trip freeTrip">           
                 <h3><a href="#"></a>${tripTitle}</h3>
@@ -125,13 +124,34 @@ const newHTMLContentFree = `
                 <div class="freeTrip__about"><a href="#"></a></div>
             </div>
 `;
-*/
+
 
 test.innerHTML = newHTMLContentFree;
 
+*****************************************/
 
+let trips = [];
+// just one trip
+let url = "https://api.myjson.com/bins/13q8up"; 
+// multiple trips
+//let url = "https://api.myjson.com/bins/ckfdx";
 
-
+fetch(url)
+    .then(res => res.json())
+    .then(loadedTrip => {
+        let event = loadedTrip.trips.活動Event;
+        let date = loadedTrip.trips.日期Date;
+        let time = loadedTrip.trips.集合Meetup_Info.Time;
+        //console.log(loadedTrip.trips.活動Event, loadedTrip.trips.集合Meetup_Info.Time);
+        
+        let newHTML = document.getElementById("test");
+//        loadedTrip.map( trip => {
+//            newHTML.innerHTML = `<div>Trail: ${event}, Date: ${date}, Time: ${time}</div>`;
+//        })
+        
+    newHTML.innerHTML = `<div class="test">Trail: ${event}</div><div class="test">Date: ${date}</div><div class="test">Time: ${time}</div>`;    
+    })
+    .catch( err => console.error("Something went wrong!", err));
 
 
 /***************** Weather App *****************
