@@ -142,6 +142,8 @@ fetch(url)
         let event = loadedTrip.trips.活動Event;
         let date = loadedTrip.trips.日期Date;
         let time = loadedTrip.trips.集合Meetup_Info.Time;
+    
+        let manyTrips = loadedTrip;
         //console.log(loadedTrip.trips.活動Event, loadedTrip.trips.集合Meetup_Info.Time);
         
         let newHTML = document.getElementById("test");
@@ -149,9 +151,75 @@ fetch(url)
 //            newHTML.innerHTML = `<div>Trail: ${event}, Date: ${date}, Time: ${time}</div>`;
 //        })
         
-    newHTML.innerHTML = `<div class="test">Trail: ${event}</div><div class="test">Date: ${date}</div><div class="test">Time: ${time}</div>`;    
+    newHTML.innerHTML = `<div class="test">Trail: ${event}</div><div class="test">Date: ${date}</div><div class="test">Time: ${time}</div><div class="test">${manyTrips}</div>`;    
     })
     .catch( err => console.error("Something went wrong!", err));
+
+/**********************************************************
+multiple trips
+https://stackoverflow.com/questions/8430336/get-keys-of-json-object-in-javascript
+let url2 = "https://api.myjson.com/bins/ckfdx";
+let url3 = "https://jsonplaceholder.typicode.com/todos";
+**********************************************************/
+
+let url2trips = "https://api.myjson.com/bins/r6k4l";
+let newHTML2 = document.getElementById("test2");
+
+fetch(url2trips)
+    .then(res3 => res3.json())
+    .then(arr => {       
+        
+        let eleKey = Object.keys(arr);
+        let eleVal = Object.values(arr);
+        let elePair = Object.entries(arr);
+   
+   // loop through eleVal array to get inside those objects
+        function createNode(element) {
+             return document.createElement(element);
+        }           
+        function append(parent, ele) {
+             return parent.appendChild(ele);
+        }
+        /*
+        eleVal.map(val => {
+            let div = createNode('div');
+            div.innerHTML = `
+                <div class="mul"><strong>活動Event:</strong> ${val.活動Event}</div>
+                <div class="mul"><strong>日期Date:</strong> ${val.日期Date}</div>
+                <div class="mul"><strong>集合時間Meetup Time:</strong> ${val.集合時間Meetup_Time}</div>
+                <div class="mul"><strong>集合地點Meetup Point:</strong> ${val.集合地點Meetup_Point}</div>
+                <div class="mul"><strong>交通Transportation:</strong> ${val.交通Transportation}</div>
+                <div class="mul"><strong>里程Distance:</strong> ${val.里程Distance}</div>
+                <div class="mul"><strong>難度Difficulty Level:</strong> ${val.難度Difficulty_Level}</div>
+                <div class="mul"><strong>社團Hiking Club:</strong> <a href="#">${val.社團Hiking_Club}</a></div>
+                <div class="mul"><strong>領隊Guide:</strong> ${val.響導Guide}</div>
+                <div class="mul"><strong>路線簡介About the trail: <br></strong> ${val.路線簡介About_the_trail}</div>
+            `;
+        })
+    */
+        if (eleVal.length >= 1) {
+          for (let val of eleVal) {
+
+            // Create and append the li's to the ul or divs to the parent div
+             newHTML2.innerHTML = `
+                <div class="mul"><strong>活動Event:</strong> ${val.活動Event}</div>
+                <div class="mul"><strong>日期Date:</strong> ${val.日期Date}</div>
+                <div class="mul"><strong>集合時間Meetup Time:</strong> ${val.集合時間Meetup_Time}</div>
+                <div class="mul"><strong>集合地點Meetup Point:</strong> ${val.集合地點Meetup_Point}</div>
+                <div class="mul"><strong>交通Transportation:</strong> ${val.交通Transportation}</div>
+                <div class="mul"><strong>里程Distance:</strong> ${val.里程Distance}</div>
+                <div class="mul"><strong>難度Difficulty Level:</strong> ${val.難度Difficulty_Level}</div>
+                <div class="mul"><strong>社團Hiking Club:</strong> <a href="#">${val.社團Hiking_Club}</a></div>
+                <div class="mul"><strong>領隊Guide:</strong> ${val.響導Guide}</div>
+                <div class="mul"><strong>路線簡介About the trail: <br></strong> ${val.路線簡介About_the_trail}</div>
+            `;
+           }
+        }
+            
+   })
+    .catch( err => console.error("Something went wrong!", err));
+
+
 
 
 /***************** Weather App *****************
