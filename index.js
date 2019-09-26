@@ -160,6 +160,10 @@ multiple trips
 https://stackoverflow.com/questions/8430336/get-keys-of-json-object-in-javascript
 let url2 = "https://api.myjson.com/bins/ckfdx";
 let url3 = "https://jsonplaceholder.typicode.com/todos";
+
+https://stackoverflow.com/questions/8430336/get-keys-of-json-object-in-javascript
+let url2 = "https://api.myjson.com/bins/ckfdx";
+let url3 = "https://jsonplaceholder.typicode.com/todos";
 **********************************************************/
 
 let url2trips = "https://api.myjson.com/bins/r6k4l";
@@ -201,17 +205,19 @@ fetch(url2trips)
           for (let val of eleVal) {
 
             // Create and append the li's to the ul or divs to the parent div
-             newHTML2.innerHTML = `
-                <div class="mul"><strong>活動Event:</strong> ${val.活動Event}</div>
-                <div class="mul"><strong>日期Date:</strong> ${val.日期Date}</div>
-                <div class="mul"><strong>集合時間Meetup Time:</strong> ${val.集合時間Meetup_Time}</div>
-                <div class="mul"><strong>集合地點Meetup Point:</strong> ${val.集合地點Meetup_Point}</div>
-                <div class="mul"><strong>交通Transportation:</strong> ${val.交通Transportation}</div>
-                <div class="mul"><strong>里程Distance:</strong> ${val.里程Distance}</div>
-                <div class="mul"><strong>難度Difficulty Level:</strong> ${val.難度Difficulty_Level}</div>
-                <div class="mul"><strong>社團Hiking Club:</strong> <a href="#">${val.社團Hiking_Club}</a></div>
-                <div class="mul"><strong>領隊Guide:</strong> ${val.響導Guide}</div>
-                <div class="mul"><strong>路線簡介About the trail: <br></strong> ${val.路線簡介About_the_trail}</div>
+             newHTML2.innerHTML += `
+                <div class="events__oneDayFree--trip freeTrip">
+                    <h3 id="freeTrip1">活動Event:${val.活動Event}</h3>
+                    <div class="freeTrip__date"><strong>日期Date:</strong> ${val.日期Date}</div>
+                    
+                    <div class="mul"><strong>集合時間Meetup Time:</strong> ${val.集合時間Meetup_Time}</div>
+                    <div class="mul"><strong>集合地點Meetup Point:</strong> ${val.集合地點Meetup_Point}</div>
+                    <div class="mul"><strong>交通Transportation:</strong> ${val.交通Transportation}</div>
+                    <div class="mul"><strong>里程Distance:</strong> ${val.里程Distance}</div>
+                    <div class="mul"><strong>難度Difficulty Level:</strong> ${val.難度Difficulty_Level}</div>
+                    <div class="mul"><strong>社團Hiking Club:</strong> <a href="#">${val.社團Hiking_Club}</a></div>
+                    <div class="mul"><strong>領隊Guide:</strong> ${val.響導Guide}</div>
+                    <div class="mul"><strong>路線簡介About the trail: <br></strong> ${val.路線簡介About_the_trail}</div>
             `;
            }
         }
