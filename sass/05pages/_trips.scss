@@ -4,8 +4,11 @@ h2 {
 }
 
 h3 {
-    font-size: $font-size-sm;
-    color: lighten($default-color-heading, 5%);
+    color: darken($default-color, 10%);
+    font-size: $font-size-medium;
+    line-height: 1.1;
+    margin: 1rem .5rem;
+    text-align: center;
 }
 
 .trips {
@@ -13,11 +16,10 @@ h3 {
     width: 95%;
     height: auto;
     overflow: auto;
-    border: 2px solid purple;
     
-    &__box {
-        border: 3px solid orange;
-    }
+//    &__box {
+//        border: 3px solid orange;
+//    }
 
     &__disclaimer {
         margin: 1rem auto;
@@ -25,7 +27,7 @@ h3 {
         width: 95%;
         height: 40vh;
         overflow: auto;
-        box-shadow: 10px 5px 35px -12px $color-grey;
+        border: 1px solid $default-color-heading;
 
         &--heading {
             text-align: center;
@@ -52,40 +54,77 @@ h3 {
 }
 
 .events {
-
+    
     &__note {
         font-size: $font-size-sm;
-        color: darken($default-color, 20%);
+        color: darken($default-color, 23%);
     }
+    
+    &__oneDayFree {
+        
+         @include responsive(normal-desktop) {
+             width: 90%;
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+             grid-template-rows: auto;
+         
+        }
+        
+         @include responsive(normal-desktop) {
+             
+         
+        }
+
+        @include responsive(xl-desktop) {
+            
+        }
+    }
+    
 }
 
 .freeTrip,
 .paidTrip,
 .threeTrip {
-    margin: 1rem auto;
-    width: 95%;
+    margin: 2rem auto;
+    width: 90%;
     padding: 1rem;
+    //background-color: beige;
     box-shadow: 10px 5px 35px -12px $color-grey;
+    
+    div {
+        font-size: $font-size-xs;
+        font-family: $font-text2;
+    }
+    
+    @include responsive(tab-land) {
+      width: 60%;
+    }
+
+    @include responsive(sm-desktop) {
+      width: 32rem;
+    }
+
+    @include responsive(normal-desktop) {
+      margin: 2rem auto;
+      
+    }
+
+//    @include responsive(xl-desktop) {
+//      width: 40%;
+//    }
 }
 
-.test {
-    width: 80%;
-    min-height: 50px;
-    max-height: auto;
-    margin: 20px auto;
-    font-size: 20px;
-    background-color: #A9C9FF;
-    background-image: linear-gradient(45deg, #A9C9FF 0%, #FFBBEC 100%);
+.freeTrip {    
+    transition: all .3s ease-in-out;
+    
+    &:hover {
+        background-color: lighten($default-color, 41%);
+    }
+    
+//    &:hover > h3:hover {
+//        color: $default-color-heading;
+//    }
+    
 }
 
-#test2 {
-   margin: 10px auto;
-   width: 90%;
-   border: 5px solid LightSkyBlue;
-}
-.mul {
-   margin: 10px 20px;
-   background-color: LightCyan;
-   padding: 5px 10px;
-   font-size: 16px;
-}
+
