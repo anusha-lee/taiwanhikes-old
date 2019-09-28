@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Averia+Gruesa+Libre&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <link rel="next" href="seven-reasons-why-visiting-taiwan.html" />
+    
+    <link rel="shortcut icon" href="img/favicon-logo.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>Taiwan Hikes | Disclaimer</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Averia+Gruesa+Libre&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./sass/main.scss" />
-  <link rel="next" href="seven-reasons-why-visiting-taiwan.html" />
+  <body>
+    <!-- <h1></h1> -->
 
-  <link rel="shortcut icon" href="img/favicon-logo.png" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <title>Taiwan Hikes | Trips</title>
-</head>
+    <div class="container">
+      <header class="header">
+            <div class="header__logo-box">
+                    <a href="index.html"><img src="img/logo.svg" alt="logo" class="header__logo-box-img" /></a>
+                  <div class="header__heading">
+                    <a href="index.html">Taiwan Hikes</a>
+                  </div>
+            </div>
 
-<body>
-  <!-- <h1></h1> -->
-
-  <div class="container">
-    <header class="header">
-      <div class="header__logo-box">
-        <a href="index.html"><img src="img/logo.svg" alt="logo" class="header__logo-box-img" /></a>
-        <div class="header__heading">
-          <a href="index.html">Taiwan Hikes</a>
-        </div>
-      </div>
-
-      <div class="hamburger">
-        <input type="checkbox" class="hamburger__checkbox" id="hamburger-toggle" />
-        <label for="hamburger-toggle" class="hamburger__icon">
-          <span class="hamburger__line">&nbsp;</span>
-
-        </label>
-        <div class="hamburger__background">&nbsp;</div>
-
-        <nav class="hamburger__nav">
-          <!-- <h2></h2> -->
-          <ul class="hamburger__content">
-            <li class="hamburger__content--menu"><a href="index.html" class="hamburger__content--link">Home</a></li>
-            <li class="hamburger__content--menu"><a href="index.html#about" class="hamburger__content--link">About</a></li>
-            <li class="hamburger__content--menu"><a href="seven-reasons-why-visiting-taiwan.html"
-                class="hamburger__content--link">Why Taiwan</a></li>
-            <li class="hamburger__content--menu"><a href="trips.html" class="hamburger__content--link">Trips</a></li>
-            <li class="hamburger__content--menu"><a href="blog.html" class="hamburger__content--link">Blog</a></li>
-          </ul>
-        </nav>
-      </div>
-
+            <div class="hamburger">
+              <input type="checkbox" class="hamburger__checkbox" id="hamburger-toggle" />
+              <label for="hamburger-toggle" class="hamburger__icon">
+                <span class="hamburger__line">&nbsp;</span>
+          
+              </label>
+              <div class="hamburger__background">&nbsp;</div>
+          
+              <nav class="hamburger__nav">
+                <!-- <h2></h2> -->
+                <ul class="hamburger__content">
+                  <li class="hamburger__content--menu"><a href="index.html" class="hamburger__content--link">Home</a></li>
+                  <li class="hamburger__content--menu"><a href="index.html#about" class="hamburger__content--link">About</a></li>
+                  <li class="hamburger__content--menu"><a href="seven-reasons-why-visiting-taiwan.html" class="hamburger__content--link">Why Taiwan</a></li>
+                  <li class="hamburger__content--menu"><a href="trips.html" class="hamburger__content--link">Trips</a></li>
+                  <li class="hamburger__content--menu"><a href="blog.html" class="hamburger__content--link">Blog</a></li>
+                </ul>
+              </nav>
+            </div>
+        
       <nav class="header__nav menu__box">
         <ul class="header__nav--menu menu">
           <li class="header__nav--menu-item menu__item">
-            <a href="index.html/#abou" class="header__nav--menu-link">About</a>
+            <a href="index.html/#about" class="header__nav--menu-link">About</a>
             <!--
             <ul class="header__nav--dropdown menu__dropdown">
               <li class="header__nav--dropdown-item menu__dropdown-item">
@@ -78,6 +81,9 @@
               <li class="header__nav--dropdown-item menu__dropdown-item" id="sReasons">
                 <a href="seven-reasons-why-visiting-taiwan.html" class="header__dropdown-link">7 Reasons</a>
               </li>
+              <li class="header__nav--dropdown-item menu__dropdown-item">
+                <a href="#" class="header__dropdown-link">Other Resources</a>
+              </li>
               <!--
               <li class="header__nav--dropdown-item menu__dropdown-item" id="eThings">
                 <a href="#" class="header__dropdown-link">11 Things</a>
@@ -99,19 +105,19 @@
           </li>
           <li class="header__nav--menu-item menu__item">
             <a href="trips.html" class="header__nav--menu-link">Trips</a>
-            <!--
             <ul class="header__nav--dropdown menu__dropdown">
               <li class="header__nav--dropdown-item menu__dropdown-item">
-                <a href="#" class="header__dropdown-link">The Bulletin</a>
+                <a href="disclaimer.html" class="header__dropdown-link">Disclaimer</a>
               </li>
               <li class="header__nav--dropdown-item menu__dropdown-item">
-                <a href="#" class="header__dropdown-link">Trail Picker</a>
+                <a href="trips.html" class="header__dropdown-link">Trips</a>
               </li>
+              <!--
               <li class="header__nav--dropdown-item menu__dropdown-item">
                 <a href="#" class="header__dropdown-link">Recommended Trails</a>
               </li>
+              -->
             </ul>
-          -->
           </li>
           <li class="header__nav--menu-item menu__item">
             <a href="blog.html" class="header__nav--menu-link">Blog</a>
@@ -128,55 +134,85 @@
           </li>
         </ul>
       </nav>
+    
+      </header>
+      <h1 class="coming-soon__heading">Disclaimer</h1>
+      <main>
+        <section class="disclaimer">
+          <h2 class="disclaimer--heading">Waiver / Disclaimer / Rules</h2>
+          <div class="disclaimer">
+            <!-- <h2 class="trips__disclaimer--heading">Please Read This First</h2> -->
+            <div class="disclaimer--text">
+              <span class="disclaimer--text-title">
+                <strong>We welcome anyone interested in hiking with those hiking clubs; however, you must agree to the
+                  following and disclaimers on this page before attending any event:</strong>
+              </span>
+              <p>As a participant, you must accept that you participate at your own risk. You must be in good physical
+                health and with a fitness level to walk a minimum of the distance and duration described for the chosen
+                  hike.</p>
+              <p>You should come fully prepared for strenuous activity: enclosed hiking shoes, athletic / hiking pants / top, water, hat, and whatever is needed according to weather. The guides reserve the right to refuse service if you are not properly attired.</p>
+              <p>There is a greater element of risk involved in participation in the following trips. Dangers mayarise including but not limited to hiking or traveling in remote areas, animals, plants, forces of nature, accident and illness. These hazards and dangers could result in personal injury, property damage, and death.</p>
+              <p>The tour guides have experience of the destinations, and their instructions must be obeyed. The tour guides, the following hiking clubs and the creator of Taiwan Hikes cannot be held responsible for any accidents or discomfort that may nevertheless occur. </p>
+              <p>Those trips often take place in areas prone to unfavourable weather conditions and may be based on logistical arrangements that are vulnerable to harsh weather, technical problems or accidents. The guides will always focus on the safety of participants on those hikes.</p>
+              <p>If unexpected situations arise due to weather conditions, temperature, illness,
+              accidents, etc., and the tour guide deems it necessary out of consideration for the
+              participants' safety to change the trip after it has started, you are obliged to
+              comply with the new trip arrangements. Any additional costs incurred in such cases,
+              for example for new tickets, transport costs, board and lodging etc., must be covered
+              by the participants themselves.<p/>
+              <p>Those free hiking trips do not include carpooling, transportation, or transit to
+              and from the hiking trails, and you are personally responsible for all risks
+              associated with any travel to and from the trails.</p>
+              <p>Please carry a personal medical emergency kit and any medications you need.
+              Always remember to let the guides know your health condition and if you are
+              straying from the group. Stay on the trail, never walk alone and use your own
+              common sense.</p>
+              <p>The hiking clubs are not medically trained to handle emergencies. But
+              they will try to help you if needed. You hereby authorize any medical
+              treatment deemed necessary in the trips of any injuries while
+              participating in the trips.</p>
+              <p>By participating in these trips, the following hiking clubs, guides
+              and the creator of Taiwan Hikes do not undertake and do not have any
+              responsibility for the accuracy of any information it provides or to
+              determine or assure the suitability of any hike driver, vehicle or any
+              other event. You agree to not hold liable the hiking clubs, guides and
+              the creator of Taiwan Hikes for the cleanliness, suitability,
+              freshness or safety of any food you may be offered or consume.</p>
+            </div>
+          </div>
+        </section>
 
-    </header>
-    <h1 class="trips-heading coming-soon__heading">Trips</h1>
-    <main>
-      <section class="trips">
-        
-        <div class="trips__note">
-            <strong>For more details, please contact with the trip guides.
-              Please note that you need to sign up in advance for paid trips.
-              For Three-thousanders hikes, it is required to sign up at least one month in advance
-              to go through the application process.</strong>
+        <section class="landing-content__form form">
+          <form class="form__box">
+            <fieldset>
+               <legend>Sign up with your email to receive news and updates.</legend>
+               <div class="form__name">
+                  <label class="form__name--label" for="form-name">Name:</label>
+                  <input class="form__name--input" type="text" placeholder="Your Name" id="form-name"></input>
+               </div>
+               <div class="form__email">
+                  <label class="form__name--label" for="form-email">E-mail:</label>
+                  <input class="form__name--input" type="email" placeholder="Your E-mail" id="form-email"></input>
+               </div>
+               <p class="form__text">We all hate span, so no spam, ever.</br> Your email address will only ever be used for Taiwan Hikes.</p>
+               <button class="form__submit">Get the updates!</button>
+            </fieldset>      
+          </form>
+        </section> 
+
+      </main>
+
+        <div class="scroll-up">              
+          <ion-icon name="arrow-round-up" class="scroll-up__arrow"></ion-icon>
         </div>
 
-        <div class="trips__events events">
-          <div class="trips__events--oneDayFree events__oneDayFree" id="oneDayFree">
-            <h2 class="trips__events--oneDayFree-title events__oneDayFree-title">One Day Free Trips</h2>   
-          </div>
-
-          <div class="trips__events--paid events__paid" id="events__paid">
-            <h2 class="trips__events--paid-title events__paid-title">Paid Trips and Multiple-day Hikes</h2>
-            
-          </div>
-
-          <div class="trips__events--three events__three">
-            <h2 class="trips__events--three-title events__three-title">Paid Three-thousanders Trips</h2>
-              
-          </div>
-        </div>
-        
-      </section>
-        
-      <div class="trips__customized customized">
-          <h2 class="customized">Looking for Customized Trips?</h2>
-          <p>If you prefer to have a customized trip, please contact us to find out more.</p>
       </div>
 
-    </main>
-
-    <include src="./partials/landing-form.html"></include>
-
-    <include src="./partials/scroll-box.html"></include>
-
-  </div>
-
-  <footer class="footer">
-    <div class="footer__logo">
-      <img src="img/logo.svg" alt="logo" class="footer__logo--img" />
-    </div>
-    <!--
+      <footer class="footer">        
+        <div class="footer__logo">          
+            <img src="img/logo.svg" alt="logo" class="footer__logo--img" />          
+        </div>
+        <!--
         <div class="footer__nav">
           <ul class="footer__nav--list">
             <li class="footer__nav--list-item footer-item1">
@@ -257,26 +293,29 @@
           </ul>
         </div>
       -->
+      
+        <div class="footer__copyright">
+          <div class="footer__copyright-text-box footer-box1">
+            Built by
+            <a href="#" class="footer__copyright-text footer__link"
+              >Anusha Lee</a>
+            with
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              class="footer__copyright-img love svg-icon animated infinite heartBeat delay-2s">
+              <title>heart</title>
+              <path
+                d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z"
+              ></path></svg>
+          </div>
 
-    <div class="footer__copyright">
-      <div class="footer__copyright-text-box footer-box1">
-        Built by
-        <a href="#" class="footer__copyright-text footer__link">Anusha Lee</a>
-        with
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-          class="footer__copyright-img love svg-icon animated infinite heartBeat delay-2s">
-          <title>heart</title>
-          <path
-            d="M23.6 2c-3.363 0-6.258 2.736-7.599 5.594-1.342-2.858-4.237-5.594-7.601-5.594-4.637 0-8.4 3.764-8.4 8.401 0 9.433 9.516 11.906 16.001 21.232 6.13-9.268 15.999-12.1 15.999-21.232 0-4.637-3.763-8.401-8.4-8.401z">
-          </path>
-        </svg>
-      </div>
+          <div class="footer__copyright-text-box">
+            Copyright &copy; 2019 Taiwan Hikes
+          </div>
 
-      <div class="footer__copyright-text-box">
-        Copyright &copy; 2019 Taiwan Hikes
-      </div>
-
-      <!--
+          <!--
           <div class="footer__copyright-text-box social-media">
             <a href="#" class="footer-link" target="_blank">
               <svg
@@ -327,17 +366,17 @@
         </div>
       -->
 
-      <div class="footer__flaticon">
-        Icons made by
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik </a>
-        from<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br>
-        is licensed by<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
-          target="_blank"> CC 3.0</a>
-      </div>
-  </footer>
+        <div class="footer__flaticon">
+          Icons made by
+          <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik </a>
+          from<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a><br>
+          is licensed by<a href="http://creativecommons.org/licenses/by/3.0/"
+            title="Creative Commons BY 3.0"
+            target="_blank"> CC 3.0</a>
+        </div>
+      </footer>
 
-  <script src="./index.js"></script>
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-</body>
-
+    <script src="./index.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </body>
 </html>

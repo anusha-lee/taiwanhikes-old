@@ -1,130 +1,155 @@
 h2 {
-    font-size: $font-size-medium;
-    color: $default-color-heading;
+  font-size: $font-size-medium;
+  color: $default-color-heading;
 }
 
 h3 {
-    color: darken($default-color, 10%);
-    font-size: $font-size-medium;
-    line-height: 1.1;
-    margin: 1rem .5rem;
-    text-align: center;
+  color: darken($default-color, 10%);
+  font-size: $font-size-medium;
+  line-height: 1.1;
+  margin: 1rem 0.5rem;
+  text-align: center;
 }
 
 .trips {
-    margin: 0 auto;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+
+  &__note {
     width: 95%;
-    height: auto;
-    overflow: auto;
-    
-//    &__box {
-//        border: 3px solid orange;
-//    }
+    margin: 1rem auto;
+    padding: 0.5rem;
+    font-size: $font-size-sm;
+    font-family: $font-text2;
+    color: darken($default-color, 23%);
 
-    &__disclaimer {
-        margin: 1rem auto;
-        padding: 1rem 2rem;
-        width: 95%;
-        height: 40vh;
-        overflow: auto;
-        border: 1px solid $default-color-heading;
-
-        &--heading {
-            text-align: center;
-            text-decoration: underline;
-        }
-
-        &--text {
-            
-            &-title {
-                font-size: $font-size-sm;
-                color: $default-color-heading;
-            }
-        }
-    }
-
-    &__events {
-        height: auto;
-    }
-
-    &__customized {
-        background-color: paleturquoise;
-        height: 10rem;
-    }
-}
-
-.events {
-    
-    &__note {
-        font-size: $font-size-sm;
-        color: darken($default-color, 23%);
-    }
-    
-    &__oneDayFree {
-        
-         @include responsive(normal-desktop) {
-             width: 90%;
-             display: grid;
-             grid-template-columns: repeat(2, 1fr);
-             grid-template-rows: auto;
-         
-        }
-        
-         @include responsive(normal-desktop) {
-             
-         
-        }
-
-        @include responsive(xl-desktop) {
-            
-        }
-    }
-    
-}
-
-.freeTrip,
-.paidTrip,
-.threeTrip {
-    margin: 2rem auto;
-    width: 90%;
-    padding: 1rem;
-    //background-color: beige;
-    box-shadow: 10px 5px 35px -12px $color-grey;
-    
-    div {
-        font-size: $font-size-xs;
-        font-family: $font-text2;
-    }
-    
     @include responsive(tab-land) {
-      width: 60%;
+      width: 70%;
     }
 
     @include responsive(sm-desktop) {
-      width: 32rem;
+      font-size: $font-size-medium;
+      width: 80%;
     }
 
     @include responsive(normal-desktop) {
-      margin: 2rem auto;
-      
     }
 
-//    @include responsive(xl-desktop) {
-//      width: 40%;
-//    }
-}
-
-.freeTrip {    
-    transition: all .3s ease-in-out;
-    
-    &:hover {
-        background-color: lighten($default-color, 41%);
+    @include responsive(big-desktop) {
+      // width: 90%;
     }
-    
-//    &:hover > h3:hover {
-//        color: $default-color-heading;
-//    }
-    
+
+    @include responsive(xl-desktop) {
+      //width: 75%;
+    }
+  }
+
+  &__events {
+    margin: 2rem auto;
+    width: 90%;
+    height: auto;
+
+    // display: flex;
+    // flex-wrap: wrap;
+  }
+
+  &__customized {
+    margin: 2rem auto 0;
+    padding: 0.5rem;
+    width: 100%;
+    height: auto;
+    background-color: $default-color;
+  }
 }
 
+.events {
+  &__oneDayFree,
+  &__paid,
+  &__three {
+    margin: 0 auto;
+    padding: 1rem;
 
+    border: 2px solid darkturquoise;
+
+    @include responsive(tab-land) {
+    }
+
+    @include responsive(sm-desktop) {
+      border: 2px solid purple;
+      width: 95%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(30rem, 35rem));
+      grid-template-rows: 8rem repeat(autofill, auto);
+      justify-content: center;
+    }
+
+    @include responsive(normal-desktop) {
+      width: 90%;
+      //grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include responsive(big-desktop) {
+      width: 85%;
+      grid-template-columns: repeat(3, minmax(28rem, 33rem));
+    }
+
+    @include responsive(xl-desktop) {
+      width: 75%;
+    }
+
+    &__oneDayFree {
+      &-title {
+        color: blue;
+      }
+      @include responsive(sm-desktop) {
+        color: blueviolet;
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+.events__oneDayFree-title {
+  //color: pink;
+  @include responsive(sm-desktop) {
+    &-title {
+      color: blueviolet;
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.singleTrip {
+  margin: 2.5rem auto;
+  padding: 1rem;
+  font-size: $font-size-xs;
+  font-family: $font-text2;
+  box-shadow: 10px 5px 35px -12px $color-grey;
+  transition: all 0.3s ease-in-out;
+  font-size: $font-size-sm;
+
+  &:hover {
+    transform: translateY(-0.5rem);
+  }
+
+  @include responsive(tab-land) {
+    min-width: 70%;
+    max-width: 80%;
+    max-height: 40rem;
+    overflow: scroll;
+  }
+
+  @include responsive(sm-desktop) {
+    min-width: 27rem;
+  }
+
+  @include responsive(normal-desktop) {
+    min-width: 28rem;
+    max-width: 30rem;
+  }
+
+  @include responsive(big-desktop) {
+    max-width: 30%;
+  }
+}

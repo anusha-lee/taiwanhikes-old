@@ -1,0 +1,24 @@
+.disclaimer {
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  width: 100%;
+  height: auto;
+  font-size: $font-size-big;
+
+  &--heading {
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  &--text {
+    &-title {
+      font-size: $font-size-medium;
+      color: $default-color-heading;
+      line-height: 1.1rem;
+    }
+
+    & p {
+      font-size: $font-size-medium;
+    }
+  }
+}
