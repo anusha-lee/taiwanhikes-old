@@ -1,16 +1,70 @@
+.disclaimer__heading {
+  margin: 2rem auto 0;
+  font-size: $font-size-xl;
+  color: $default-color-heading;
+  text-align: center;
+}
+
 .disclaimer {
   margin: 1rem auto;
   padding: 1rem 2rem;
   width: 100%;
   height: auto;
-  font-size: $font-size-big;
 
-  &--heading {
-    text-align: center;
-    text-decoration: underline;
+  @include responsive(tab-land) {
+    width: 70%;
   }
 
-  &--text {
+  @include responsive(sm-desktop) {
+    font-size: $font-size-medium;
+    width: 60%;
+  }
+
+  @include responsive(normal-desktop) {
+    width: 50%;
+  }
+
+  @include responsive(big-desktop) {
+    width: 50%;
+  }
+
+  @include responsive(xl-desktop) {
+    //width: 75%;
+  }
+
+  &__note {
+    border: 2px solid orchid;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-image: url(../../img/hike-photos/coming-soon-trips.jpg);
+
+    & h2 {
+      font-size: $font-size-medium;
+      text-align: center;
+    }
+
+    @include responsive(tab-land) {
+      height: 70vh;
+    }
+
+    @include responsive(sm-desktop) {
+      height: 80vh;
+    }
+
+    @include responsive(normal-desktop) {
+    }
+
+    @include responsive(big-desktop) {
+    }
+
+    @include responsive(xl-desktop) {
+      //width: 75%;
+    }
+  }
+
+  &__text {
     &-title {
       font-size: $font-size-medium;
       color: $default-color-heading;
@@ -21,4 +75,13 @@
       font-size: $font-size-medium;
     }
   }
+}
+
+// .kenburns-top {
+//   -webkit-animation: kenburns-top 10s ease-in-out both;
+//   animation: kenburns-top 10s ease-in-out both;
+// }
+
+.strong {
+  color: darken($default-color-heading, 10%);
 }

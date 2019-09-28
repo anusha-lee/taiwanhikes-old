@@ -1,3 +1,10 @@
+.trips__heading {
+  margin: 2rem auto 0;
+  font-size: $font-size-xl;
+  color: $default-color-heading;
+  text-align: center;
+}
+
 h2 {
   font-size: $font-size-medium;
   color: $default-color-heading;
@@ -67,21 +74,16 @@ h3 {
   &__oneDayFree,
   &__paid,
   &__three {
-    margin: 0 auto;
     padding: 1rem;
-
     border: 2px solid darkturquoise;
-
-    @include responsive(tab-land) {
-    }
 
     @include responsive(sm-desktop) {
       border: 2px solid purple;
       width: 95%;
+
       display: grid;
       grid-template-columns: repeat(2, minmax(30rem, 35rem));
-      grid-template-rows: 8rem repeat(autofill, auto);
-      justify-content: center;
+      grid-template-rows: repeat(auto-fill, minmax(auto, 1fr));
     }
 
     @include responsive(normal-desktop) {
@@ -95,7 +97,8 @@ h3 {
     }
 
     @include responsive(xl-desktop) {
-      width: 75%;
+      grid-template-columns: repeat(3, minmax(27rem, 33rem));
+      width: 80%;
     }
 
     &__oneDayFree {
@@ -105,19 +108,20 @@ h3 {
       @include responsive(sm-desktop) {
         color: blueviolet;
         grid-column: 1 / -1;
+        grid-row: 1 / 2;
       }
     }
   }
 }
 
 .events__oneDayFree-title {
-  //color: pink;
-  @include responsive(sm-desktop) {
-    &-title {
-      color: blueviolet;
-      grid-column: 1 / -1;
-    }
-  }
+  color: pink;
+  //   @include responsive(sm-desktop) {
+  //     &-title {
+  //       color: blueviolet;
+  //       grid-column: 1 / -1;
+  //     }
+  //   }
 }
 
 .singleTrip {
