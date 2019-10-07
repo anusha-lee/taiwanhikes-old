@@ -28,7 +28,7 @@ h3 {
     margin: 1rem auto;
     padding: 0.5rem;
     font-size: $font-size-sm;
-    font-family: $font-text2;
+    font-family: $font-text;
     color: darken($default-color, 23%);
 
     @include responsive(tab-land) {
@@ -127,7 +127,7 @@ h3 {
   margin: 2.5rem auto;
   padding: 1rem;
   font-size: $font-size-xs;
-  font-family: $font-text2;
+  font-family: $font-text;
   box-shadow: 10px 5px 35px -12px $color-grey;
   transition: all 0.3s ease-in-out;
   font-size: $font-size-sm;

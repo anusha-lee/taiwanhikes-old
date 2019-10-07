@@ -35,7 +35,7 @@
       & legend {
         //width: 100%;
         //display: block;
-        font-family: "Averia Gruesa Libre", cursive;
+        font-family: $font-heading; //"Averia Gruesa Libre", cursive;
         font-size: $font-size-medium;
         color: $default-color-heading;
         text-align: center;
@@ -124,7 +124,7 @@
     border: none;
     height: 5rem;
     width: 100%;
-    font-family: "Averia Gruesa Libre", cursive;
+    font-family: $font-text; //"Averia Gruesa Libre", cursive;
     font-size: $font-size-sm;
     border-radius: 5px;
     cursor: pointer;

@@ -41,7 +41,7 @@ how to apply:
   }
   &:hover {
     color: $default-color-heading;
-    text-decoration: underline solid darken($default-color-heading, 10%);
+    text-decoration: underline solid darken($color-dark, 10%);
   }
 }
 

@@ -4,25 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Averia+Gruesa+Libre&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Archivo&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="./sass/main.scss" />
-    <!-- <link rel="next" href="seven-reasons-why-visiting-taiwan.html" /> -->    
+    <link href="https://fonts.googleapis.com/css?family=Alegreya:500|Karla&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon-logo.png" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <title>Taiwan Hikes | Blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Taiwan Hikes | Blog: hiking in Taiwan</title>
   </head>
 
   <body>
-    <!-- <h1></h1> -->
-
     <div class="container">
       <header class="header">
             <div class="header__logo-box">
@@ -41,7 +31,6 @@
               <div class="hamburger__background">&nbsp;</div>
           
               <nav class="hamburger__nav">
-                <!-- <h2></h2> -->
                 <ul class="hamburger__content">
                   <li class="hamburger__content--menu"><a href="index.html" class="hamburger__content--link">Home</a></li>
                   <li class="hamburger__content--menu"><a href="index.html#about" class="hamburger__content--link">About</a></li>
@@ -144,31 +133,28 @@
             <span>Coming Soon</span>
           </div>
         </section>
-
-        <section class="landing-content__form form">
-          <form class="form__box">
-            <fieldset>
-               <legend>Sign up with your email to receive news and updates.</legend>
-               <div class="form__name">
-                  <label class="form__name--label" for="form-name">Name:</label>
-                  <input class="form__name--input" type="text" placeholder="Your Name" id="form-name"></input>
-               </div>
-               <div class="form__email">
-                  <label class="form__name--label" for="form-email">E-mail:</label>
-                  <input class="form__name--input" type="email" placeholder="Your E-mail" id="form-email"></input>
-               </div>
-               <p class="form__text">We all hate span, so no spam, ever.</br> Your email address will only ever be used for Taiwan Hikes.</p>
-               <button class="form__submit">Get the updates!</button>
-            </fieldset>      
-          </form>
-        </section> 
-
       </main>
 
-        <div class="scroll-up">              
-          <ion-icon name="arrow-round-up" class="scroll-up__arrow"></ion-icon>
-        </div>
+      <section class="landing-content__form form">
+        <form class="form__box">
+          <fieldset>
+             <legend>Sign up with your email to receive news and updates.</legend>
+             <div class="form__name">
+                <label class="form__name--label" for="form-name">Name:</label>
+                <input class="form__name--input" type="text" placeholder="Your Name" id="form-name"></input>
+             </div>
+             <div class="form__email">
+                <label class="form__name--label" for="form-email">E-mail:</label>
+                <input class="form__name--input" type="email" placeholder="Your E-mail" id="form-email"></input>
+             </div>
+             <p class="form__text">We all hate span, so no spam, ever.</br> Your email address will only ever be used for Taiwan Hikes.</p>
+             <button class="form__submit">Get the updates!</button>
+          </fieldset>      
+        </form>
+      </section> 
 
+      <div class="scroll-up">              
+        <ion-icon name="arrow-round-up" class="scroll-up__arrow"></ion-icon>
       </div>
 
       <footer class="footer">        
@@ -338,8 +324,13 @@
             target="_blank"> CC 3.0</a>
         </div>
       </footer>
+    </div>
 
     <script src="./index.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
   </body>
 </html>
